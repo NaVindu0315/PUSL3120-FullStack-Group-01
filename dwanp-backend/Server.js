@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const router = require('./routes/employee_router');
+const emprouter = require('./routes/employee_router');
 
 
 //to import routers
@@ -48,4 +48,4 @@ const server = app.listen(port,host,()=>{
 });
 
 
-app.use('/api',router);
+app.use('/api',emprouter);
