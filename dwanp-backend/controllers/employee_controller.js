@@ -23,3 +23,5 @@ const addEmployee = (req,res,next)=>
             res.json({error})
         });
 }
+
+exports.addEmployee = addEmployee;
