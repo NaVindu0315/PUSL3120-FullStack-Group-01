@@ -5,13 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //imporitng components for paths 
 ///menu
-import { Menu } from '@mui/base';
+import Menu2 from './menu-aruni/Menu';
+import MenuForm from './menu-aruni/MenuForm';
+import MenuTable from './menu-aruni/MenuTable';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+
   </React.StrictMode>
 );
 
