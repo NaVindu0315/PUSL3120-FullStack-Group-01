@@ -47,7 +47,9 @@ const Homepage = ({ props }) => {
                                 <TableCell>
                                 <button className="usr-btn" onClick={()=>navigate('/menu')}>Menu</button>
                                 </TableCell>
-                                <TableCell>3</TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/inventory')}>Inventory</button>
+                                </TableCell>
                             </TableRow>
                 {/*second row */}
                              <TableRow >
