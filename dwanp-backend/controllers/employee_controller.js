@@ -1,5 +1,5 @@
 //navindu
-const { response } = require('../app');
+/*const { response } = require('../app');
 
 const Employees = require ('../models/employee_model');
 
@@ -25,3 +25,5 @@ const addEmployee = (req,res,next)=>
 }
 
 exports.addEmployee = addEmployee;
+
+*/
