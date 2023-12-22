@@ -50,10 +50,10 @@ root.render(
  <Route path ='/employee' element ={<Employee/>}/>
  <Route path ='/employeeform' element ={<EmployeeForm/>}/>
  <Route path ='/employeetable' element ={<EmployeeTable/>}/>
- {/*menu */}
- <Route path ='/' element ={</>}/>
- <Route path ='/' element ={</>}/>
- <Route path ='/' element ={</>}/>
+ {/*table */}
+ <Route path ='/tableview' element ={<TableReserve/>}/>
+ <Route path ='/tableform' element ={<TableForm/>}/>
+ <Route path ='/tabletable' element ={<TableTable/>}/>
 
  </Routes>
  </BrowserRouter>
