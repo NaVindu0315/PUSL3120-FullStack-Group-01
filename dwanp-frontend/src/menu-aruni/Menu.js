@@ -16,10 +16,10 @@ const Menu=()=>
         <Container maxWidth="xl">
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
             <Typography variant="h2" component="h1">
-              Homepage
+              Menu Page
             </Typography>
             <Typography variant="h5" sx={{ mt: 2 }}>
-              Menu Page
+              
             </Typography>
           </Box>
           

@@ -10,7 +10,7 @@ import UsersTable from "./UsersTable";
 import Axios from "axios";
 import { useEffect ,useState } from "react";
 
-const Menu=()=>
+const Inventory=()=>
 {
     return (
         <Container maxWidth="xl">
@@ -28,4 +28,4 @@ const Menu=()=>
       
 }
 
-export default Menu;
+export default Inventory;
