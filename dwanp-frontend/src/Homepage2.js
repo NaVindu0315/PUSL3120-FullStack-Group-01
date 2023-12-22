@@ -49,6 +49,12 @@ const Homepage = ({ props }) => {
                                 <TableCell>2</TableCell>
                                 <TableCell>3</TableCell>
                             </TableRow>
+                 {/*third row */}
+                 <TableRow >
+                                <TableCell>1</TableCell>
+                                <TableCell>2</TableCell>
+                                <TableCell>3</TableCell>
+                            </TableRow>
                         
                     </TableBody>
                 </Table>
