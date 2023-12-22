@@ -12,7 +12,11 @@ import MenuTable from './menu-aruni/MenuTable';
 import  Inventory from './Inventory-pasindu/Inventory';
 import InventoryForm from './Inventory-pasindu/Inventory_Form';
 import InventoryTable from './Inventory-pasindu/Inventory_Table';
-///
+///order
+
+import Order from './Order-wish/Order';
+import OrderTable from './Order-wish/Order_Table';
+import OrderForm from './Order-wish/Order_Form';
 
 
 
