@@ -1,0 +1,11 @@
+{
+  "name": "dwanp-backend",
+  "version": "1.0.0",
+  "description": "resturanet management system backend",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Navindu",
+  "license": "ISC"
+}
