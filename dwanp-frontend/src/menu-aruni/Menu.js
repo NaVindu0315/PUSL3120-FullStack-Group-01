@@ -18,6 +18,10 @@ const Menu2=()=>
     return (
         <Container maxWidth="xl">
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
+          <Typography variant="h5" component="h5"> 
+            <button className="usr-btn" onClick={()=>navigate('/')}>Back</button>
+            
+            </Typography>
             <Typography variant="h2" component="h1">
               Menu Page
             </Typography>
