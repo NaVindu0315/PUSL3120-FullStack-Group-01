@@ -5,7 +5,10 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const employeeRouter = require('./routes/employee_router');
+
 //to import routers
+
 // adala cmnt ekat ytin line eke router path dapan adala thana
 //menu
 
@@ -43,4 +46,3 @@ const server = app.listen(port,host,()=>{
     console.log('Node server is listenging to ',server.address().port);
 });
 
-//app.use('/api',router);

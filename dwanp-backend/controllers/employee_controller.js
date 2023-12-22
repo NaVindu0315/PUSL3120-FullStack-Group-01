@@ -1,14 +1,14 @@
 //navindu
-const { response } = require('./app');
+const { response } = require('../app');
 
-const Employees = require ('./models/employee_model');
+const Employees = require ('../models/employee_model');
 
 //create employee
 
 
 const addEmployee = (req,res,next)=>
 {
-    const user = new Employees(
+    const Employees = new Employees(
         {
             id :  req.body.id,
             name: req.body.name,
