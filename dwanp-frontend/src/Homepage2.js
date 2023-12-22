@@ -25,7 +25,7 @@ const Homepage = ({ props }) => {
                         <TableRow>
 
 
-                            <TableCell>Column 1</TableCell>
+                            <TableCell></TableCell>
 
 
                             <TableCell></TableCell>
