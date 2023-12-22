@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors  = require('cors');
 //for controllers
+const empcontroller = require('./controllers/employee_controller');
 
 
 
@@ -27,7 +28,17 @@ app.use(express.json());
 
 
 ///createemployee
+app.post('/createemp',(req,res)=>
+{
+    empcontroller.addEmp(req.body,(callback)=>
+        {
+            res.send();
 
+
+        }
+    );
+
+});
 
 
 ///updateemployee

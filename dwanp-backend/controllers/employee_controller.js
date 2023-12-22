@@ -27,3 +27,32 @@ const addEmployee = (req,res,next)=>
 exports.addEmployee = addEmployee;
 
 */
+
+const { response } = require('../app');
+const empSchema = require('../models/employee_model');
+
+///creating
+ const addEmp = (req,res,next)=>
+ {
+    const emp = new empSchema(
+        {
+            id:req.body.id,
+            name:req.body.name,
+        }
+    );
+    emp.save()
+        .then(
+            response=>
+            {
+                res.json({response})
+            }
+        )
+        .catch(
+            error=>
+            {
+                res.json({error})
+            }
+        );
+ }
+
+ exports.addEmp = addEmp;
