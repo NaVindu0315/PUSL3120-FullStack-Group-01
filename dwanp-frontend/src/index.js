@@ -19,7 +19,7 @@ import OrderForm from './Order-wish/Order_Form';
 //employee
 import Employee from './Employee-Navindu/Employee';
 import EmployeeTable from './Employee-Navindu/Employee_Table';
-
+import EmployeeForm from './Employee-Navindu/Employee_Form';
 
 
 
