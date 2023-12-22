@@ -38,10 +38,10 @@ root.render(
  <Route path ='/menu' element ={<Menu2/>}/>
  <Route path ='/menuform' element ={<MenuForm/>}/>
  <Route path ='/menutable' element ={<MenuTable/>}/>
- {/**/}
- <Route path ='/' element ={</>}/>
- <Route path ='/' element ={</>}/>
- <Route path ='/' element ={</>}/>
+ {/*inventory*/}
+ <Route path ='/inventory' element ={<Inventory/>}/>
+ <Route path ='/inventoryform' element ={<InventoryForm/>}/>
+ <Route path ='/inventorytable' element ={<InventoryTable/>}/>
  {/*menu */}
  <Route path ='/' element ={</>}/>
  <Route path ='/' element ={</>}/>
