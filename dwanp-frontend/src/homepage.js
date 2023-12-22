@@ -22,3 +22,5 @@ const Homepage  = ({props}) =>
     )
 
 }
+
+export default Homepage;
