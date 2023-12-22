@@ -9,7 +9,7 @@ import { Box } from "@mui/material";
 import Axios from "axios";
 import { useEffect ,useState } from "react";
 
-const Menu=()=>
+const Menu2=()=>
 {
     return (
         <Container maxWidth="xl">
@@ -27,4 +27,4 @@ const Menu=()=>
       
 }
 
-export default Menu;
+export default Menu2;
