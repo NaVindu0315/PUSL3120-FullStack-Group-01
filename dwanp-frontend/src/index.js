@@ -8,6 +8,12 @@ import reportWebVitals from './reportWebVitals';
 import Menu2 from './menu-aruni/Menu';
 import MenuForm from './menu-aruni/MenuForm';
 import MenuTable from './menu-aruni/MenuTable';
+//inventory
+import  Inventory from './Inventory-pasindu/Inventory';
+import InventoryForm from './Inventory-pasindu/Inventory_Form';
+import InventoryTable from './Inventory-pasindu/Inventory_Table';
+///
+
 
 
 
