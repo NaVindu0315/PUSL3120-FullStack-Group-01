@@ -1,8 +1,12 @@
 //this is the homepage
 
-import { Button, Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
+import {  Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Homepage = ({ props }) => {
+    const navigate = useNavigate();
     return (
         <Container maxWidth="xl">
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
@@ -21,13 +25,13 @@ const Homepage = ({ props }) => {
                         <TableRow>
 
 
-                            <TableCell>Column 1</TableCell>
+                            <TableCell></TableCell>
 
 
-                            <TableCell>Column 2</TableCell>
+                            <TableCell></TableCell>
 
 
-                            <TableCell>Column 3</TableCell>
+                            <TableCell></TableCell>
 
 
                         </TableRow>
@@ -39,21 +43,31 @@ const Homepage = ({ props }) => {
                     <TableBody>
                   {/*first row */}
                             <TableRow >
-                                <TableCell>1</TableCell>
-                                <TableCell>2</TableCell>
-                                <TableCell>3</TableCell>
+                                <TableCell></TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/menu')}>Menu</button>
+                                </TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/inventory')}>Inventory</button>
+                                </TableCell>
                             </TableRow>
                 {/*second row */}
                              <TableRow >
-                                <TableCell>1</TableCell>
-                                <TableCell>2</TableCell>
-                                <TableCell>3</TableCell>
+                                <TableCell></TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/order')}>Order</button>
+                                </TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/employee')}>Employee</button>
+                                </TableCell>
                             </TableRow>
                  {/*third row */}
                  <TableRow >
-                                <TableCell>1</TableCell>
-                                <TableCell>2</TableCell>
-                                <TableCell>3</TableCell>
+                                <TableCell></TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button>
+                                </TableCell>
+                                <TableCell></TableCell>
                             </TableRow>
                         
                     </TableBody>

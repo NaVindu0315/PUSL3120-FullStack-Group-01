@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 //for navigation
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import Homepage from './Homepage2';
 
 function App() {
