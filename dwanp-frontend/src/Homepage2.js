@@ -1,6 +1,9 @@
 //this is the homepage
 
 import { Button, Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Homepage = ({ props }) => {
     return (
@@ -39,7 +42,7 @@ const Homepage = ({ props }) => {
                     <TableBody>
                   {/*first row */}
                             <TableRow >
-                                <TableCell>1</TableCell>
+                                <TableCell></TableCell>
                                 <TableCell>2</TableCell>
                                 <TableCell>3</TableCell>
                             </TableRow>
