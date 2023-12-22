@@ -25,11 +25,14 @@ app.use(express.json());
 //creating the db connection string
 //meka chnge krnna epa
 const uri ="mongodb+srv://navindu0315:dwanp5@dwanp.2xoqrcy.mongodb.net/?retryWrites=true&w=majority"
-const connect = async()=>
+const connect = async()=>{
     try{
+        await mongoose.connect(uri);
+
 
     }
     catch(error)
     {
         console.log('mongodb error ',error);
     }
+}
