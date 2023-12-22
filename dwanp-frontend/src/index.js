@@ -24,7 +24,7 @@ import EmployeeForm from './Employee-Navindu/Employee_Form';
 import TableReserve from './Table-Dumindu/Table'; 
 import TableForm from './Table-Dumindu/Table_Form';
 import TableTable from './Table-Dumindu/Table_Table';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route,Routes } from 'react-router-dom';
 
 
 
@@ -32,6 +32,9 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <BrowserRouter>
+ <Routes>
+
+ </Routes>
  </BrowserRouter>
 );
 
