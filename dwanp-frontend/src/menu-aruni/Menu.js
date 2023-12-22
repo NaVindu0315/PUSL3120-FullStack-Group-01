@@ -19,7 +19,7 @@ const Menu=()=>
               Menu Page
             </Typography>
             <Typography variant="h5" sx={{ mt: 2 }}>
-              
+              Aruni
             </Typography>
           </Box>
           
