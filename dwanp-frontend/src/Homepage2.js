@@ -57,13 +57,17 @@ const Homepage = ({ props }) => {
                                 <TableCell>
                                 <button className="usr-btn" onClick={()=>navigate('/order')}>Order</button>
                                 </TableCell>
-                                <TableCell>3</TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/employee')}>Employee</button>
+                                </TableCell>
                             </TableRow>
                  {/*third row */}
                  <TableRow >
-                                <TableCell>1</TableCell>
-                                <TableCell>2</TableCell>
-                                <TableCell>3</TableCell>
+                                <TableCell></TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button>
+                                </TableCell>
+                                <TableCell></TableCell>
                             </TableRow>
                         
                     </TableBody>
