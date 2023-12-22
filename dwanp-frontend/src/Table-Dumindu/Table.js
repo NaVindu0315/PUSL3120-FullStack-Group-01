@@ -6,11 +6,12 @@
 import { Box , Container, Typography} from "@mui/material";
 
 //import for connecting backend and front end
-import Axios from "axios";
+//import Axios from "axios";
 import { useEffect ,useState } from "react";
 
 const TableReserve=()=>
 {
+  const navigate = useNavigate();
     return (
         <Container maxWidth="xl">
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
