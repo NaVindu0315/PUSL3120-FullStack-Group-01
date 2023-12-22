@@ -28,6 +28,7 @@ const uri ="mongodb+srv://navindu0315:dwanp5@dwanp.2xoqrcy.mongodb.net/?retryWri
 const connect = async()=>{
     try{
         await mongoose.connect(uri);
+        console.log('connected to mongodb');
 
 
     }
@@ -36,3 +37,5 @@ const connect = async()=>{
         console.log('mongodb error ',error);
     }
 }
+
+connect();
