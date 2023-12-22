@@ -34,6 +34,26 @@ root.render(
  <BrowserRouter>
  <Routes>
  <Route path='/' element ={<App/>}/>
+ {/*menu */}
+ <Route path ='/menu' element ={<Menu2/>}/>
+ <Route path ='/menuform' element ={<MenuForm/>}/>
+ <Route path ='/menutable' element ={<MenuTable/>}/>
+ {/**/}
+ <Route path ='/' element ={</>}/>
+ <Route path ='/' element ={</>}/>
+ <Route path ='/' element ={</>}/>
+ {/*menu */}
+ <Route path ='/' element ={</>}/>
+ <Route path ='/' element ={</>}/>
+ <Route path ='/' element ={</>}/>
+ {/*menu */}
+ <Route path ='/' element ={</>}/>
+ <Route path ='/' element ={</>}/>
+ <Route path ='/' element ={</>}/>
+ {/*menu */}
+ <Route path ='/' element ={</>}/>
+ <Route path ='/' element ={</>}/>
+ <Route path ='/' element ={</>}/>
 
  </Routes>
  </BrowserRouter>
