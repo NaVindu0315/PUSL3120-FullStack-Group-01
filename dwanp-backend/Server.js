@@ -17,3 +17,5 @@ const cors = require('cors');
 
 //table
 
+app.use(cors());
+app.use(express.json());
