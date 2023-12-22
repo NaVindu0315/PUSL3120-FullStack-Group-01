@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Homepage = ({ props }) => {
+    const navigate = useNavigate();
     return (
         <Container maxWidth="xl">
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
