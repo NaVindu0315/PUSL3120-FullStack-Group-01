@@ -19,3 +19,9 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
+//username for the db navindu0315
+//password dwanp5
+
+//creating the db connection string
+//meka chnge krnna epa
+const uri ="mongodb+srv://navindu0315:dwanp5@dwanp.2xoqrcy.mongodb.net/?retryWrites=true&w=majority"
