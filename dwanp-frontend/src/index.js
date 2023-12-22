@@ -20,6 +20,10 @@ import OrderForm from './Order-wish/Order_Form';
 import Employee from './Employee-Navindu/Employee';
 import EmployeeTable from './Employee-Navindu/Employee_Table';
 import EmployeeForm from './Employee-Navindu/Employee_Form';
+//table 
+import TableReserve from './Table-Dumindu/Table'; 
+import TableForm from './Table-Dumindu/Table_Form';
+import TableTable from './Table-Dumindu/Table_Table';
 
 
 

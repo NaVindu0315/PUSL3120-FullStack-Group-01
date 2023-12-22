@@ -3,13 +3,13 @@
 //Dumindu
 //////////////////////
 //importing
-import { Box } from "@mui/material";
+import { Box , Container, Typography} from "@mui/material";
 
 //import for connecting backend and front end
 import Axios from "axios";
 import { useEffect ,useState } from "react";
 
-const Table=()=>
+const TableReserve=()=>
 {
     return (
         <Container maxWidth="xl">
@@ -27,4 +27,4 @@ const Table=()=>
       
 }
 
-export default Table;
+export default TableReserve
