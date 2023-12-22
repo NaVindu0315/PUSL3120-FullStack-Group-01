@@ -53,8 +53,10 @@ const Homepage = ({ props }) => {
                             </TableRow>
                 {/*second row */}
                              <TableRow >
-                                <TableCell>1</TableCell>
-                                <TableCell>2</TableCell>
+                                <TableCell></TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/order')}>Order</button>
+                                </TableCell>
                                 <TableCell>3</TableCell>
                             </TableRow>
                  {/*third row */}
