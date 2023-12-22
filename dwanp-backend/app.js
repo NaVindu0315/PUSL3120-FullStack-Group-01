@@ -8,3 +8,10 @@ const cors  = require('cors');
 
 
 app.use(cors());
+
+///for cruds for each 
+
+
+
+///
+module.exports = app;
