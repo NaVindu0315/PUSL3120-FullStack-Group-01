@@ -9,3 +9,5 @@ const employeeSchema = new Schema(
         name : String,
     }
 );
+const Employee = mongoose.model('employees',employeeSchema);
+module.exports = Employee;
