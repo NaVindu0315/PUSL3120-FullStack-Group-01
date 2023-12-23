@@ -13,7 +13,7 @@ const Homepage = ({ props }) => {
         <Container maxWidth="xl">
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
                 <Typography variant="h2" component="h1">
-                    Homepage
+                 This is the testing   Homepage
                 </Typography>
                 <Typography variant="h5" sx={{ mt: 2 }}>
                     Welcome
@@ -69,9 +69,31 @@ const Homepage = ({ props }) => {
                                 <TableCell>
                                 <button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button>
                                 </TableCell>
-                                <TableCell></TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/emplog')}>Emp Login</button>
+                                </TableCell>
                             </TableRow>
-                        
+                            <TableRow >
+                                <TableCell></TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/userreg')}>User Register</button>
+                                </TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/userlog')}>User Log</button>
+                                </TableCell>
+                            </TableRow>
+
+
+                            {/**ffith row */}
+                            <TableRow >
+                                <TableCell></TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/userdashboard')}>User Dashboard</button>
+                                </TableCell>
+                                <TableCell>
+                                <button className="usr-btn" onClick={()=>navigate('/empdashboard')}>Employee Dashboard</button>
+                                </TableCell>
+                            </TableRow>
                     </TableBody>
                 </Table>
             </Grid>
