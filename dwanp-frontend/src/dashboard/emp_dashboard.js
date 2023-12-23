@@ -9,6 +9,10 @@ const EmpDashboard = ({ props }) => {
     const navigate = useNavigate();
     return (
         <Container maxWidth="xl">
+            <Typography variant="h5" component="h5"> 
+            <button className="usr-btn" onClick={()=>navigate('/')}>Back</button>
+            
+            </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
                 <Typography variant="h2" component="h1">
                     Dwanp Restaurants -Employee Dashboard
