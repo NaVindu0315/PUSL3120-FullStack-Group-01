@@ -73,13 +73,29 @@ app.post('/createemp',(req,res)=>
 //order wish
 
 //getoder
-
+app.get('/order', (req,res) => {
+    controller.getOrder((req, res, next) =>{
+        res.send();
+    });
+});
 //createorder
-
+app.post('/createorder', (req,res) => {
+    controller.addOrder(req.body, (callack) =>{
+        res.send();
+    });
+});
 //updateorder
-
+app.post('/updateorder', (req,res) => {
+    controller.updateOrder(req.body, (callack) =>{
+        res.send(callack);
+    });
+});
 //deleteorder
-
+app.post('/deleteorder', (req,res) => {
+    controller.deleteOrder(req.body, (callack) =>{
+        res.send(callack);
+    });
+});
 ////////////////////
 
 //table - dumindu
