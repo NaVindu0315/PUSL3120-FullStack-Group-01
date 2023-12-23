@@ -114,7 +114,7 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
                 setSelectedOrder(data);
                 setIsEdit(true);
         }}
-        deleteUser ={data => window.confirm('Are you sure?') && deleteOrder(data)}
+        deleteOrder ={data => window.confirm('Are you sure?') && deleteOrder(data)}
         />
       </Box>
     </>
