@@ -9,6 +9,7 @@ const emprouter = require('./routes/employee_router');
 
 
 //to import routers
+const emprouter = require('./routes/menu_router');
 
 // adala cmnt ekat ytin line eke router path dapan adala thana
 //menu
