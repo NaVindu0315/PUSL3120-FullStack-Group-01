@@ -1,6 +1,8 @@
 //wish
 const { response } = require('../app');
 const orderSchema = require('../models/order_model');
+const Order = require('../models/order_model');
+
 
 const getOrder = (req, res, next) => {
     orderSchema.find()
