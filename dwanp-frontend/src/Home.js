@@ -74,6 +74,7 @@ const Home = ({ props }) => {
                     </TableBody>
                 </Table>
             </Grid>
+            <button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button> 
         </Container>
 
     )
