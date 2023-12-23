@@ -26,6 +26,7 @@ import TableForm from './Table-Dumindu/Table_Form';
 import TableTable from './Table-Dumindu/Table_Table';
 import { BrowserRouter, Route,Routes } from 'react-router-dom';
 import Home from './Home';
+import UserRegistration from './authenication/user_reg';
 
 
 
@@ -36,6 +37,10 @@ root.render(
  <Routes>
  <Route path='/' element ={<App/>}/>
  <Route path ='/home' element ={<Home/>}/>
+
+{/*Authentication */}
+<Route path ='/userreg' element ={<UserRegistration/>}/>
+
 
  {/*menu */}
  <Route path ='/menu' element ={<Menu2/>}/>

@@ -74,9 +74,11 @@ const Home = ({ props }) => {
                     </TableBody>
                 </Table>
             </Grid>
-            <Grid><button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button></Grid> 
+            <Grid><button className="usr-btn" onClick={()=>navigate('/userreg')}>UserRegistration</button>
+            <button className="usr-btn" onClick={()=>navigate('/userreg')}>Login</button>
+            </Grid> 
             
-            <Grid> <button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button> </Grid>
+            <Grid> <button className="usr-btn" onClick={()=>navigate('/tableview')}>Employee Login</button> </Grid>
         </Container>
 
     )
