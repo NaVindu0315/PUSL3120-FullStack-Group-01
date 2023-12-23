@@ -110,7 +110,7 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
         />
         <OrderTable 
             rows={Order}
-            selectedUser={data => {
+            selectedOrder={data => {
                 setSelectedOrder(data);
                 setIsEdit(true);
         }}
