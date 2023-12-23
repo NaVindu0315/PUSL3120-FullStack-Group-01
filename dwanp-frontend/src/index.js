@@ -25,6 +25,7 @@ import TableReserve from './Table-Dumindu/Table';
 import TableForm from './Table-Dumindu/Table_Form';
 import TableTable from './Table-Dumindu/Table_Table';
 import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import Home from './Home';
 
 
 
@@ -34,6 +35,8 @@ root.render(
  <BrowserRouter>
  <Routes>
  <Route path='/' element ={<App/>}/>
+ <Route path ='/home' element ={<Home/>}/>
+
  {/*menu */}
  <Route path ='/menu' element ={<Menu2/>}/>
  <Route path ='/menuform' element ={<MenuForm/>}/>
