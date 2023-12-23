@@ -1,7 +1,6 @@
 ///////////////////////////
 //Pasindu
 //////////////////////
-///ratnathilake
 
 //import React, { useEffect, useState } from "react";
 //import { Button, Grid, Typography, Input } from "@mui/material";
