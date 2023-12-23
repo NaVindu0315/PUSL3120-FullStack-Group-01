@@ -1,8 +1,9 @@
 //wish
-const User = require('./order_model');
+const { response } = require('../app');
+const orderSchema = require('../models/order_model');
 
 const getOrder = (req, res, next) => {
-    Order.find()
+    orderSchema.find()
     .then(response => {
         res.json({response})
     })
@@ -12,7 +13,7 @@ const getOrder = (req, res, next) => {
 };
 
 const addOrder = (req, res, next) => {
-    const order = new Order({
+    const order = new orderSchema({
         id: req.body.id,
         name: req.body.name,
     });
