@@ -29,6 +29,7 @@ import Home from './Home';
 import UserRegistration from './authenication/user_reg';
 import UserLogin from './authenication/user_login';
 import EmpLogin from './authenication/emp_login';
+import UserDashboard from './dashboard/user_dashboard';
 
 
 
@@ -44,6 +45,10 @@ root.render(
 <Route path ='/userreg' element ={<UserRegistration/>}/>
 <Route path ='/userlog' element ={<UserLogin/>}/>
 <Route path ='/emplog' element ={<EmpLogin/>}/>
+
+{/*Dashboards */}
+<Route path ='/userdashboard' element ={<UserDashboard/>}/>
+
 
  {/*menu */}
  <Route path ='/menu' element ={<Menu2/>}/>

@@ -11,10 +11,14 @@ const UserDashboard = ({ props }) => {
         <Container maxWidth="xl">
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
                 <Typography variant="h2" component="h1">
-                    Dwanp Restaurants
+                    Dwanp Restaurants -User Dashboard
                 </Typography>
                 <Typography variant="h5" sx={{ mt: 2 }}>
                     Poster
+                </Typography>
+
+                <Typography variant="h2" sx={{ mt: 2 }}>
+                    Welcome Users
                 </Typography>
             </Box>
             <Grid container spacing={4}>
@@ -23,6 +27,7 @@ const UserDashboard = ({ props }) => {
 
 
                         <TableRow>
+                            ***welcome poster here 
 
 
                             <TableCell></TableCell>
@@ -34,6 +39,9 @@ const UserDashboard = ({ props }) => {
                             <TableCell></TableCell>
 
 
+                        </TableRow>
+                        <TableRow>
+                            ****Menu Display here
                         </TableRow>
 
 
@@ -74,11 +82,12 @@ const UserDashboard = ({ props }) => {
                     </TableBody>
                 </Table>
             </Grid>
-            <Grid><button className="usr-btn" onClick={()=>navigate('/userreg')}>UserRegistration</button>
-            <button className="usr-btn" onClick={()=>navigate('/userlog')}>Login</button>
+
+            <Grid><button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button>
+            <button className="usr-btn" onClick={()=>navigate('/order')}>Order</button>
             </Grid> 
             
-            <Grid> <button className="usr-btn" onClick={()=>navigate('/tableview')}>Employee Login</button> </Grid>
+            <Grid> <button className="usr-btn" onClick={()=>navigate('')}>Contact Employee</button> </Grid>
         </Container>
 
     )

@@ -73,7 +73,7 @@ const UserLogin = ({props}) =>
                             <TableCell>
                             <TableCell> <button className="usr-btn" onClick={()=>navigate('/userreg')}>Register</button></TableCell>
                             </TableCell>
-                            <TableCell> <button className="usr-btn" onClick={()=>navigate('/tableview')}>Login</button></TableCell>
+                            <TableCell> <button className="usr-btn" onClick={()=>navigate('/userdashboard')}>Login</button></TableCell>
                         </TableRow>
                     
                 </TableBody>
