@@ -1,5 +1,5 @@
 //wish
-
+const User = require('./order_model');
 
 const getOrder = (req, res, next) => {
     Order.find()

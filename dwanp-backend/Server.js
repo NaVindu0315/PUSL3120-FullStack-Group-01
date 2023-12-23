@@ -16,7 +16,7 @@ const emprouter = require('./routes/employee_router');
 //inventory
 
 //order
-
+const orderrouter = require('./routes/order_router');
 //employee
 
 //table
@@ -49,3 +49,4 @@ const server = app.listen(port,host,()=>{
 
 
 app.use('/api',emprouter);
+app.use('/api',orderrouter);
