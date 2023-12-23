@@ -73,7 +73,7 @@ const UserRegistration = ({props}) =>
                             <TableCell>
                            
                             </TableCell>
-                            <TableCell> <button className="usr-btn" onClick={()=>navigate('/tableview')}>Register</button></TableCell>
+                            <TableCell> <button className="usr-btn" onClick={()=>navigate('/userlog')}>Register</button></TableCell>
                         </TableRow>
                     
                 </TableBody>
