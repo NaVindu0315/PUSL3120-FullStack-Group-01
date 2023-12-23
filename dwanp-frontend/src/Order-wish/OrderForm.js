@@ -8,7 +8,8 @@ import { Button, Grid, Typography, Input } from "@mui/material";
 //import { useNavigate } from 'react-router-dom';
 
 
-const Order_Form = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
+const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
+
     const [id, setId] = useState(0);
       const [name, setName] = useState('');
       useEffect(() => {
@@ -122,4 +123,4 @@ const Order_Form = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
     );
     }
 
-    export default Order_Form;
+    export default OrderForm;
