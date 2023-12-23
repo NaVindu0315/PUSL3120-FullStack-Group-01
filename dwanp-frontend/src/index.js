@@ -30,6 +30,7 @@ import UserRegistration from './authenication/user_reg';
 import UserLogin from './authenication/user_login';
 import EmpLogin from './authenication/emp_login';
 import UserDashboard from './dashboard/user_dashboard';
+import EmpDashboard from './dashboard/emp_dashboard';
 
 
 
@@ -48,6 +49,7 @@ root.render(
 
 {/*Dashboards */}
 <Route path ='/userdashboard' element ={<UserDashboard/>}/>
+<Route path ='/empdashboard' element ={<EmpDashboard/>}/>
 
 
  {/*menu */}

@@ -74,7 +74,7 @@ const EmpLogin = ({props}) =>
                             <TableCell>
                           
                             </TableCell>
-                            <TableCell> <button className="usr-btn" onClick={()=>navigate('/tableview')}>Login</button></TableCell>
+                            <TableCell> <button className="usr-btn" onClick={()=>navigate('/empdashboard')}>Login</button></TableCell>
                         </TableRow>
                     
                 </TableBody>
