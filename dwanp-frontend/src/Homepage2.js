@@ -82,3 +82,9 @@ const Homepage = ({ props }) => {
 }
 
 export default Homepage;
+
+/*   <Typography variant="h5" component="h5"> 
+            <button className="usr-btn" onClick={()=>navigate('/')}>Back</button>
+            
+            </Typography>
+             */

@@ -79,7 +79,15 @@ const Home = ({ props }) => {
             </Grid> 
             
             <Grid> <button className="usr-btn" onClick={()=>navigate('/emplog')}>Employee Login</button> </Grid>
+
+            <Typography variant="h5" sx={{ mt: 2 }}>
+            <button className="usr-btn" onClick={()=>navigate('/testhome')}>Testing Home</button>
+                </Typography>
         </Container>
+
+        
+
+
 
     )
 

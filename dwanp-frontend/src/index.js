@@ -31,6 +31,7 @@ import UserLogin from './authenication/user_login';
 import EmpLogin from './authenication/emp_login';
 import UserDashboard from './dashboard/user_dashboard';
 import EmpDashboard from './dashboard/emp_dashboard';
+import Homepage from './Homepage2';
 
 
 
@@ -41,6 +42,7 @@ root.render(
  <Routes>
  <Route path='/' element ={<App/>}/>
  <Route path ='/home' element ={<Home/>}/>
+ <Route path ='/testhome' element ={<Homepage/>}/> 
 
 {/*Authentication */}
 <Route path ='/userreg' element ={<UserRegistration/>}/>
