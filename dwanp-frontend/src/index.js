@@ -28,6 +28,7 @@ import { BrowserRouter, Route,Routes } from 'react-router-dom';
 import Home from './Home';
 import UserRegistration from './authenication/user_reg';
 import UserLogin from './authenication/user_login';
+import EmpLogin from './authenication/emp_login';
 
 
 
@@ -42,7 +43,7 @@ root.render(
 {/*Authentication */}
 <Route path ='/userreg' element ={<UserRegistration/>}/>
 <Route path ='/userlog' element ={<UserLogin/>}/>
-
+<Route path ='/emplog' element ={<EmpLogin/>}/>
 
  {/*menu */}
  <Route path ='/menu' element ={<Menu2/>}/>

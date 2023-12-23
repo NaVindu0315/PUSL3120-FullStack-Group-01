@@ -78,7 +78,7 @@ const Home = ({ props }) => {
             <button className="usr-btn" onClick={()=>navigate('/userlog')}>Login</button>
             </Grid> 
             
-            <Grid> <button className="usr-btn" onClick={()=>navigate('/tableview')}>Employee Login</button> </Grid>
+            <Grid> <button className="usr-btn" onClick={()=>navigate('/emplog')}>Employee Login</button> </Grid>
         </Container>
 
     )
