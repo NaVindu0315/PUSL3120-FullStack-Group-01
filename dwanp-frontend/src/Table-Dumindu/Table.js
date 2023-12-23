@@ -2,6 +2,7 @@
 ///////////////////////////
 //Dumindu
 ///////////////////////
+//secod funcrtion
 //new function
 //importing
 import { Box , Container, Typography} from "@mui/material";
