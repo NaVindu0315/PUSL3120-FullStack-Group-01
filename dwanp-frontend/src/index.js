@@ -25,6 +25,13 @@ import TableReserve from './Table-Dumindu/Table';
 import TableForm from './Table-Dumindu/Table_Form';
 import TableTable from './Table-Dumindu/Table_Table';
 import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import Home from './Home';
+import UserRegistration from './authenication/user_reg';
+import UserLogin from './authenication/user_login';
+import EmpLogin from './authenication/emp_login';
+import UserDashboard from './dashboard/user_dashboard';
+import EmpDashboard from './dashboard/emp_dashboard';
+import Homepage from './Homepage2';
 
 
 
@@ -34,6 +41,19 @@ root.render(
  <BrowserRouter>
  <Routes>
  <Route path='/' element ={<App/>}/>
+ <Route path ='/home' element ={<Home/>}/>
+ <Route path ='/testhome' element ={<Homepage/>}/> 
+
+{/*Authentication */}
+<Route path ='/userreg' element ={<UserRegistration/>}/>
+<Route path ='/userlog' element ={<UserLogin/>}/>
+<Route path ='/emplog' element ={<EmpLogin/>}/>
+
+{/*Dashboards */}
+<Route path ='/userdashboard' element ={<UserDashboard/>}/>
+<Route path ='/empdashboard' element ={<EmpDashboard/>}/>
+
+
  {/*menu */}
  <Route path ='/menu' element ={<Menu2/>}/>
  <Route path ='/menuform' element ={<MenuForm/>}/>
