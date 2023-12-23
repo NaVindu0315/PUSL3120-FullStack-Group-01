@@ -9,10 +9,10 @@ const UserRegistration = ({props}) =>
         <Container maxWidth="xl">
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
             <Typography variant="h2" component="h1">
-                Homepage
+                User Registration
             </Typography>
             <Typography variant="h5" sx={{ mt: 2 }}>
-                Welcome
+                Register Here
             </Typography>
         </Box>
         <Grid container spacing={4}>
@@ -43,29 +43,37 @@ const UserRegistration = ({props}) =>
                         <TableRow >
                             <TableCell></TableCell>
                             <TableCell>
-                            <button className="usr-btn" onClick={()=>navigate('/menu')}>Menu</button>
+                           Nic
                             </TableCell>
                             <TableCell>
-                            <button className="usr-btn" onClick={()=>navigate('/inventory')}>Inventory</button>
+                            <input
+                        type="text"
+                        //value={textValue}
+                            //onChange={(event) => setTextValue(event.target.value)}
+    />
                             </TableCell>
                         </TableRow>
             {/*second row */}
                          <TableRow >
                             <TableCell></TableCell>
                             <TableCell>
-                            <button className="usr-btn" onClick={()=>navigate('/order')}>Order</button>
+                      Password
                             </TableCell>
                             <TableCell>
-                            <button className="usr-btn" onClick={()=>navigate('/employee')}>Employee</button>
+                            <input
+                        type="text"
+                        //value={textValue}
+                            //onChange={(event) => setTextValue(event.target.value)}
+    />
                             </TableCell>
                         </TableRow>
              {/*third row */}
              <TableRow >
                             <TableCell></TableCell>
                             <TableCell>
-                            <button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button>
+                           
                             </TableCell>
-                            <TableCell></TableCell>
+                            <TableCell> <button className="usr-btn" onClick={()=>navigate('/tableview')}>Register</button></TableCell>
                         </TableRow>
                     
                 </TableBody>
