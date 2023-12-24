@@ -58,11 +58,16 @@ app.post("/createinventory", (req, res) => {
 });
 
 //deleteinventory
+app.post("/deleteinventory", (req, res) => {
+  controller.deleteInventory(req.body, (callback) => {
+    res.send(callback);
+  });
+});
 
 //updateinventory
 app.post("/updateinventory", (req, res) => {
-  inventory_controller.updateInventory(req.body, (callack) => {
-    res.send(callack);
+  inventory_controller.updateInventory(req.body, (callback) => {
+    res.send(callback);
   });
 });
 
