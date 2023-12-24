@@ -16,6 +16,9 @@ import { useEffect ,useState } from "react";
 const Employee=()=>
 {
   const navigate = useNavigate();
+  
+        //creating a state variable inside the Users component
+        const [emps,setEmps] = useState([]);
       //when calling a function when the page runs 
       useEffect(()=>
       {
@@ -23,6 +26,22 @@ const Employee=()=>
       },[]);
 
       //calling api
+      //for getting employees
+      const getEmp =() =>
+      {
+          //the link given from the backend for getting users
+          Axios.get('http://localhost:3001/api/getemployees')
+              .then(response=> {
+                 // console.log(response.data.response);
+                 setEmps(response?.data?.response || [])
+              })
+              .catch(error => {
+                  console.error("Axios Error :" ,error);
+              })
+                          {
+  
+              }
+      }
 
 
 
@@ -45,7 +64,9 @@ const Employee=()=>
             {/**this for adding new data */}
             <EmployeeForm></EmployeeForm>
 
-            <EmployeeTable></EmployeeTable>
+            <EmployeeTable
+            rows ={emps}
+            ></EmployeeTable>
 
           </Box>
           
