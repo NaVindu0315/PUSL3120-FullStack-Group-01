@@ -16,7 +16,13 @@ import { useEffect ,useState } from "react";
 const Employee=()=>
 {
   const navigate = useNavigate();
-  
+      //when calling a function when the page runs 
+      useEffect(()=>
+      {
+          getEmp();
+      },[]);
+
+      //calling api
 
 
 
