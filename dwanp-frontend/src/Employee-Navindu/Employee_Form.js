@@ -171,7 +171,16 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
           <TableBody>
             <TableRow>
               <TableCell>Employee Code</TableCell>
-              <TableCell>field</TableCell>
+              <TableCell>
+              <Input
+          type="String"
+          id="emp_code"
+          name="emp_code"
+          sx={{ width: "400px" }}
+          value={emp_code}
+          onChange={e => setEmpcode(e.target.value)}
+        />
+              </TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Employee Name</TableCell>
@@ -193,7 +202,7 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
               <TableCell>Telephone Number</TableCell>
               <TableCell>field</TableCell>
             </TableRow>
-            <TableRow>
+            <TableRow >
               <TableCell>Married Status</TableCell>
               <TableCell>field</TableCell>
             </TableRow>
