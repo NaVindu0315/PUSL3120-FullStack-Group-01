@@ -125,6 +125,27 @@ const Employee=()=>
 
 
       ////update employee end
+      //delete employee
+      
+      const deleteEmp = (data)=>{
+
+        
+     
+        Axios.post('http://localhost:3001/api/deleteemp',data)
+        .then(response=> {
+            // console.log(response.data.response);
+           getEmp();
+           
+         })
+         .catch(error => {
+             console.error("Axios Error :" ,error);
+         });
+                    
+
+    }
+
+
+      //delete employee end
 
 
 
@@ -159,7 +180,13 @@ const Employee=()=>
             selectedEmp={data=>{
               setselectedEmp(data);
               setIsEdit(true);
+        
            }}
+           // calling the delete function
+         deleteEmp={data=>{
+          //adding a confirmation box 
+          window.confirm('aru u sure ?')&& deleteEmp(data);
+       }}
 
             ></EmployeeTable>
 
