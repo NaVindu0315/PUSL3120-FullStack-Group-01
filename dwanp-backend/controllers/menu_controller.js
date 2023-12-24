@@ -31,5 +31,19 @@ const addMenu = (req, res, next) => {
     };
     
 const updateMenu = (req, res, next) => {
+    const { id, name } = req.body;
+    menSchema
+      .updateOne({ id: id }, { $set: { name: name } })
+      .then((response) => {
+        res.json({ response });
+      })
+      .catch((error) => {
+        res.json({ error });
+      });
+  };
 
-    }
+  
+
+
+
+    
