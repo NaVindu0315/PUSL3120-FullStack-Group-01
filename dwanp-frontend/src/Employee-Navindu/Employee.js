@@ -134,6 +134,7 @@ const Employee=()=>
             <EmployeeForm
             addEmp={addEmp}
             submitted={submitted}
+            updareEmp= {updareEmp}
             
             ></EmployeeForm>
 
