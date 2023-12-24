@@ -50,4 +50,4 @@ const server = app.listen(port,host,()=>{
 
 
 app.use('/api',emprouter);
-app.use('/api', menrouter);
+app.use('/api',menrouter);
