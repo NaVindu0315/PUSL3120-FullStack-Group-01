@@ -44,7 +44,11 @@ app.post("/createemp", (req, res) => {
 //inventory - pasindu
 
 //getinventory
-app.get("/inventory", (req, res) => {});
+app.get("/inventory", (req, res) => {
+  controller.getInventory((req, res, next) => {
+    res.send();
+  });
+});
 
 //createinventory
 
