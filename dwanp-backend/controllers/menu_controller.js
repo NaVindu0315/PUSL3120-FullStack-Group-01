@@ -16,5 +16,17 @@ const getMenu = (req, res, next) => {
 };
 
 const addMenu = (req, res, next) => {
-
-}
+    const menu = new menSchema({
+        id: req.body.id,
+        name: req.body.name,
+      });
+      menu
+        .save()
+        .then((response) => {
+          res.json({ response });
+        })
+        .catch((error) => {
+          res.json({ error });
+        });
+    };
+    
