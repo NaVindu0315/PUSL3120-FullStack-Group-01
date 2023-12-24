@@ -72,7 +72,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
             <Grid item xs={12} sm={6} sx={{display:'flex'}}>
                 <Typography 
                 component={'h1'} 
-                sx={{color:'#000000', marginLeft: '15px'}}>Order Form
+                sx={{color:'#000000', marginLeft: '15px'}}>
                 </Typography>
             </Grid>
   

@@ -36,6 +36,7 @@ const addOrder = (data) => {
 
   const payload ={
       Orderid:  data.Orderid,
+      foodItemCode: data.foodItemCode,
       name: data.name,
   }
   Axios.post('http://localhost:3001/api/createOrder', payload)
@@ -54,6 +55,7 @@ setSubmitted(true);
 
 const payload ={
   Orderid:  data.Orderid,
+  foodItemCode: data.foodItemCode,
     name: data.name,
 }
 Axios.post('http://localhost:3001/api/updateOrder', payload)
