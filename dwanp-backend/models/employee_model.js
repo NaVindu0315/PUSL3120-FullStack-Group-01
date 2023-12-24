@@ -20,7 +20,7 @@ const empSchema = new Schema(
     {
        // id :Number,
         //name : String,
-        emp_code:String,
+        emp_code:Number,
         emp_name:String,
         bdate :String,
         nic : Number,
