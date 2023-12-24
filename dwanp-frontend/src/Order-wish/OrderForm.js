@@ -10,18 +10,18 @@ import { Button, Grid, Typography, Input } from "@mui/material";
 
 const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
 
-    const [id, setId] = useState(0);
+    const [Orderid, setOrderId] = useState(0);
       const [name, setName] = useState('');
       useEffect(() => {
         if (!submitted) {
-            setId(0);
+            setOrderId(0);
             setName('');
         }
     }, [submitted]);
   
     useEffect(() => {
-        if(data?.id !==0 && data.id !==0) {
-            setId(data.id);
+        if(data?.Orderid !==0 && data.Orderid !==0) {
+            setOrderId(data.Orderid);
             setName(data.name)
         }
     }, [data])
@@ -47,7 +47,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
             <Grid>
                 <Typography 
                 component={'label'} 
-                htmlFor="id"
+                htmlFor="Orderid"
                 sx={{
                     color:'#000000',
                     marginRight:'20px',
@@ -57,15 +57,15 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                     marginLeft: '30px'
             }}
                 >
-                    ID
+                    Order ID
                 </Typography>
                 <Input 
                 type="number"
-                id="id"
-                name="id"
+                Orderid="Orderid"
+                name="Orderid"
                 sx={{ width:'400px', marginLeft: '30px'}}
-                value={id}
-                onChange={e => setId(e.target.value)}
+                value={Orderid}
+                onChange={e => setOrderId(e.target.value)}
                 />
             </Grid>
   
@@ -79,7 +79,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
             <Grid>
                 <Typography 
                 component={'label'} 
-                htmlFor="id"
+                htmlFor="Orderid"
                 sx={{
                     color:'#000000',
                     marginRight:'20px',
@@ -93,7 +93,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                 </Typography>
                 <Input 
                 type="text"
-                id="name"
+                Orderid="name"
                 name="name"
                 sx={{ width:'400px',  marginLeft: '30px'}}
                 value={name}
@@ -113,7 +113,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                     backgroundColor: '#00c6e6'
                 }
             }}
-            onClick={() => isEdit ? updateOrder({ id, name }) : addOrder({ id, name })}
+            onClick={() => isEdit ? updateOrder({ Orderid, name }) : addOrder({ Orderid, name })}
             >
                 {
                     isEdit ? 'Update' : 'Add'
