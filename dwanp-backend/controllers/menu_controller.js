@@ -14,3 +14,7 @@ const getMenu = (req, res, next) => {
       res.json({ error });
     });
 };
+
+const addMenu = (req, res, next) => {
+
+}
