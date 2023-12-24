@@ -18,7 +18,7 @@ const addOrder = (req, res, next) => {
     const order = new orderSchema({
         Orderid: req.body.Orderid,
         foodItemCode: req.body.foodItemCode,
-        name: req.body.name,
+        noOfPotions: req.body.noOfPotions,
     });
     order.save()
     .then(response => {
@@ -30,8 +30,8 @@ const addOrder = (req, res, next) => {
 }
 
 const updateOrder = (req, res, next) => {
-    const {Orderid, foodItemCode, name} = req.body;
-    Order.updateOne({Orderid: Orderid}, {$set: {foodItemCode: foodItemCode} }, {$set: {name: name} })
+    const {Orderid, foodItemCode, noOfPotions} = req.body;
+    Order.updateOne({Orderid: Orderid}, {$set: {foodItemCode: foodItemCode} }, {$set: {noOfPotions: noOfPotions} })
     .then(response => {
         res.json({response})
     })
