@@ -19,4 +19,7 @@ router.post('/createemp',empcontroller.addEmp);
 ///for the get employeee function
 router.get('/getemployees',empcontroller.getEmp);
 
+//for delete function
+router.get('deleteemp',empcontroller.deleteEmp);
+
 module.exports = router;
