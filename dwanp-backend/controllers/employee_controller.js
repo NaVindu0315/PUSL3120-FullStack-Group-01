@@ -69,6 +69,23 @@ const empSchema = require('../models/employee_model');
     }
 
 
+    ///delete employee function
+
+    const deleteEmp = (req,res,next)=>
+    {
+        const id = req.body.id;
+        empSchema.deleteOne({id:id})
+        .then(response=>
+            {
+                res.json({response})
+            })
+            .catch(error=>{
+                res.json({error})
+            });
+    }
+
+
+
 
  exports.addEmp = addEmp;
  exports.getEmp = getEmp;
