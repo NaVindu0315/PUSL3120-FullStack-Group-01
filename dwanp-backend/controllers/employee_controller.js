@@ -81,7 +81,7 @@ const empSchema = require('../models/employee_model');
     const deleteEmp = (req,res,next)=>
     {
         const emp_code = req.body.emp_code;
-        empSchema.deleteOne({emp_id:emp_code})
+        empSchema.deleteOne({emp_code:emp_code})
         .then(response=>
             {
                 res.json({response})
