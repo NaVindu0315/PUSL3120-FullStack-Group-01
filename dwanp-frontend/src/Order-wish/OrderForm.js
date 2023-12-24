@@ -12,12 +12,12 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
 
     const [Orderid, setOrderId] = useState(0);
     const [foodItemCode, setFoodItemCode] = useState('');
-    const [name, setName] = useState('');
+    const [noOfPotions, setNoOfPotions] = useState('');
       useEffect(() => {
         if (!submitted) {
             setOrderId(0);
             setFoodItemCode('');
-            setName('');
+            setNoOfPotions('');
         }
     }, [submitted]);
   
@@ -25,7 +25,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
         if(data?.Orderid !==0 && data.Orderid !==0) {
             setOrderId(data.Orderid);
             setFoodItemCode(data.foodItemCode);
-            setName(data.name);
+            setNoOfPotions(data.noOfPotions);
         }
     }, [data])
   
@@ -117,15 +117,15 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                     marginLeft: '30px'
             }}
                 >
-                    Name
+                    No Of Potions
                 </Typography>
                 <Input 
                 type="text"
-                Orderid="name"
-                name="name"
+                Orderid="noOfPotions"
+                name="noOfPotions"
                 sx={{ width:'400px',  marginLeft: '30px'}}
-                value={name}
-                onChange={e => setName(e.target.value)}
+                value={noOfPotions}
+                onChange={e => setNoOfPotions(e.target.value)}
                 />
             </Grid>
             <Button
@@ -141,7 +141,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                     backgroundColor: '#00c6e6'
                 }
             }}
-            onClick={() => isEdit ? updateOrder({ Orderid,foodItemCode, name }) : addOrder({ Orderid, foodItemCode, name })}
+            onClick={() => isEdit ? updateOrder({ Orderid,foodItemCode, noOfPotions }) : addOrder({ Orderid, foodItemCode, noOfPotions })}
             >
                 {
                     isEdit ? 'Update' : 'Add'
