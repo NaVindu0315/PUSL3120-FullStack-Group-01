@@ -20,6 +20,13 @@ const empSchema = new Schema(
     {
        // id :Number,
         //name : String,
+        emp_code:String,
+        emp_name:String,
+        bdate :String,
+        nic : Number,
+        adrs : String,
+        tel : Number,
+
     }
 );
 
