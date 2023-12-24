@@ -236,11 +236,29 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
             </TableRow>
             <TableRow>
               <TableCell>Telephone Number</TableCell>
-              <TableCell>field</TableCell>
+              <TableCell>
+              <Input
+          type="number"
+          id="tel"
+          name="tel"
+          sx={{ width: "400px" }}
+          value={tel}
+          onChange={e => setTel(e.target.value)}
+        />
+              </TableCell>
             </TableRow>
             <TableRow >
               <TableCell>Married Status</TableCell>
-              <TableCell>field</TableCell>
+              <TableCell>
+              <Input
+          type="text"
+          id="civil"
+          name="civil"
+          sx={{ width: "400px" }}
+          value={civil}
+          onChange={e => setCivil(e.target.value)}
+        />
+              </TableCell>
             </TableRow>
             <TableRow>
               <TableCell></TableCell>
