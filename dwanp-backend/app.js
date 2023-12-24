@@ -60,6 +60,7 @@ app.post("/createinventory", (req, res) => {
 //deleteinventory
 
 //updateinventory
+app.post("/updateinventory", (req, res) => {});
 
 /////////////////////
 //order wish
