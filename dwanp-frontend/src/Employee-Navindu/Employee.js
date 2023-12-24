@@ -7,7 +7,8 @@
 import { Box } from "@mui/material";
 import {  Typography, Container} from "@mui/material";
 import { useNavigate } from 'react-router-dom';
-
+import EmployeeForm from "./Employee_Form";
+import EmployeeTable from "./Employee_Table";
 //import for connecting backend and front end
 //import Axios from "axios";
 //import { useEffect ,useState } from "react";
@@ -29,8 +30,18 @@ const Employee=()=>
               Navindu
             </Typography>
           </Box>
+
+          <Box>
+            {/**this for adding new data */}
+            <EmployeeForm></EmployeeForm>
+
+            <EmployeeTable></EmployeeTable>
+
+          </Box>
           
         </Container>
+
+       
       );
       
 }
