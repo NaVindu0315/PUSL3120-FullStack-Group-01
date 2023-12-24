@@ -114,7 +114,7 @@ const Employee=()=>
                  // console.log(response.data.response);
                 getEmp();
                 setSubmitted(false);
-                isedit(false);
+                setIsEdit(false);
               })
               .catch(error => {
                   console.error("Axios Error :" ,error);
