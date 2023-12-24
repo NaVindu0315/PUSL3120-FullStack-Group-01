@@ -10,12 +10,16 @@ import { useNavigate } from 'react-router-dom';
 import EmployeeForm from "./Employee_Form";
 import EmployeeTable from "./Employee_Table";
 //import for connecting backend and front end
-//import Axios from "axios";
-//import { useEffect ,useState } from "react";
+import Axios from "axios";
+import { useEffect ,useState } from "react";
 
 const Employee=()=>
 {
   const navigate = useNavigate();
+  
+
+
+
     return (
         <Container maxWidth="xl">
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
