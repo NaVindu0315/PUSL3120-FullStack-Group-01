@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 //for controllers
 const empcontroller = require("./controllers/employee_controller");
+const invcontroller = require("./controllers/inventory_controller");
 
 app.use(cors());
 app.use(
@@ -45,28 +46,28 @@ app.post("/createemp", (req, res) => {
 
 //getinventory
 app.get("/inventory", (req, res) => {
-  inventory_controller.getInventory((req, res, next) => {
+  invcontroller.getInventory((req, res, next) => {
     res.send();
   });
 });
 
 //createinventory
 app.post("/createinventory", (req, res) => {
-  inventory_controller.addInventory(req.body, (callback) => {
+  invcontroller.addInventory(req.body, (callback) => {
     res.send();
   });
 });
 
 //deleteinventory
 app.post("/deleteinventory", (req, res) => {
-  controller.deleteInventory(req.body, (callback) => {
+  invcontroller.deleteInventory(req.body, (callback) => {
     res.send(callback);
   });
 });
 
 //updateinventory
 app.post("/updateinventory", (req, res) => {
-  inventory_controller.updateInventory(req.body, (callback) => {
+  invcontroller.updateInventory(req.body, (callback) => {
     res.send(callback);
   });
 });
