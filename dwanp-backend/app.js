@@ -51,7 +51,7 @@ app.get("/inventory", (req, res) => {
 });
 
 //createinventory
-app.post("/createuser", (req, res) => {
+app.post("/createinventory", (req, res) => {
   inventory_controller.addInventory(req.body, (callback) => {
     res.send();
   });
