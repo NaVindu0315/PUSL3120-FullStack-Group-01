@@ -1,12 +1,11 @@
-//port 
+//port
 const port = 3001;
-const host = 'localhost';
-const mongoose = require('mongoose');
-const express = require('express');
+const host = "localhost";
+const mongoose = require("mongoose");
+const express = require("express");
 const app = express();
-const cors = require('cors');
-const emprouter = require('./routes/employee_router');
-
+const cors = require("cors");
+const emprouter = require("./routes/employee_router");
 
 //to import routers
 
@@ -14,6 +13,7 @@ const emprouter = require('./routes/employee_router');
 //menu
 
 //inventory
+const invrouter = require("./routes/inventory_router");
 
 //order
 
@@ -28,24 +28,21 @@ app.use(express.json());
 
 //creating the db connection string
 //meka chnge krnna epa
-const uri ="mongodb+srv://navindu0315:dwanp5@dwanp.2xoqrcy.mongodb.net/?retryWrites=true&w=majority"
-const connect = async()=>{
-    try{
-        await mongoose.connect(uri);
-        console.log('connected to mongodb');
-
-
-    }
-    catch(error)
-    {
-        console.log('mongodb error ',error);
-    }
-}
+const uri =
+  "mongodb+srv://navindu0315:dwanp5@dwanp.2xoqrcy.mongodb.net/?retryWrites=true&w=majority";
+const connect = async () => {
+  try {
+    await mongoose.connect(uri);
+    console.log("connected to mongodb");
+  } catch (error) {
+    console.log("mongodb error ", error);
+  }
+};
 
 connect();
-const server = app.listen(port,host,()=>{
-    console.log('Node server is listenging to ',server.address().port);
+const server = app.listen(port, host, () => {
+  console.log("Node server is listenging to ", server.address().port);
 });
 
-
-app.use('/api',emprouter);
+app.use("/api", emprouter);
+app.use("/api", invrouter);
