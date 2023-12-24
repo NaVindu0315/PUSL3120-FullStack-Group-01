@@ -26,6 +26,15 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp}) =>
                                 <TableCell>
                                     Actions
                                 </TableCell>
+                                <TableCell>
+                                    ID
+                                </TableCell>
+                                <TableCell>
+                                    Name
+                                </TableCell>
+                                <TableCell>
+                                    Actions
+                                </TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
