@@ -223,7 +223,16 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
             </TableRow>
             <TableRow>
               <TableCell>Address</TableCell>
-              <TableCell>field</TableCell>
+              <TableCell>
+              <Input
+          type="text"
+          id="adrs"
+          name="adrs"
+          sx={{ width: "400px" }}
+          value={adrs}
+          onChange={e => setAdrs(e.target.value)}
+        />
+              </TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Telephone Number</TableCell>
