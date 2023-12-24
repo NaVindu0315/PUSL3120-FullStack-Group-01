@@ -5,7 +5,7 @@
 
 
 import React, { useEffect, useState } from "react";
-import { Button, Grid, Typography, Input, TableContainer ,Paper} from "@mui/material";
+import { Button, Grid, Typography, Input, TableContainer ,Paper, TableHead, Table, TableRow,TableCell} from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
 const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
@@ -158,6 +158,15 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
         Home
       </Button>
       <TableContainer component={Paper}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell></TableCell>
+              <TableCell></TableCell>
+            </TableRow>
+
+          </TableHead>
+                  </Table>
 
 
         </TableContainer>
