@@ -11,6 +11,7 @@ const Schema  = mongoose.Schema;
 const orderSchema = new Schema(
     {
         Orderid:Number,
+        foodItemCode : String,
         name : String,
     }
 );
