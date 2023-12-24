@@ -157,8 +157,10 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
       >
         Home
       </Button>
-      <TableContainer component={Paper}>
-        <Table>
+      <TableContainer component={Paper} >
+        <Table
+        
+        >
           <TableHead>
             <TableRow>
               <TableCell></TableCell>
