@@ -99,6 +99,11 @@ const Employee=()=>
              {
                 // id: data.id,
                 // name: data.name,
+                //for new form
+                emp_code : data.emp_code,
+                adrs : data.adrs,
+                tel : data.adrs,
+                civil : data.civil,
      
              }
              Axios.post('http://localhost:3001/api/updateemp',payload)
