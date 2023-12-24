@@ -32,7 +32,14 @@ const addOrder = (req, res, next) => {
 
 const updateOrder = (req, res, next) => {
     const {Orderid, foodItemCode, noOfPotions, date} = req.body;
-    Order.updateOne({Orderid: Orderid}, {$set: {foodItemCode: foodItemCode} }, {$set: {noOfPotions: noOfPotions} }, {$set: {date: date} })
+    Order.updateOne({ Orderid: Orderid }, {
+        $set: {
+          foodItemCode: foodItemCode,
+          noOfPotions: noOfPotions,
+          date: date
+        }
+      })
+      
     .then(response => {
         res.json({response})
     })

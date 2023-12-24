@@ -7,7 +7,7 @@ import { Box } from "@mui/material";
 import OrderForm from "./OrderForm";
 import OrderTable from "./OrderTable";
 import { useNavigate } from 'react-router-dom';
-import Axios from "axios";
+import Axios from "axios";  
 import { useEffect, useState } from "react";
 import { Typography, Container } from "@mui/material";
 
@@ -38,13 +38,13 @@ const addOrder = (data) => {
       Orderid:  data.Orderid,
       foodItemCode: data.foodItemCode,
       noOfPotions: data.noOfPotions,
-      date: data.date
+      date: data.date,
   }
   Axios.post('http://localhost:3001/api/createOrder', payload)
   .then(() => {
       getOrder();
       setSubmitted(false);
-      isEdit(false);
+      setIsEdit(false);
   })
   .catch(error => {
       console.error("Axios Error : ", error);
@@ -58,13 +58,13 @@ const payload ={
   Orderid:  data.Orderid,
   foodItemCode: data.foodItemCode,
   noOfPotions: data.noOfPotions,
-  date: data.date
+  date: data.date,
 }
 Axios.post('http://localhost:3001/api/updateOrder', payload)
 .then(() => {
     getOrder();
     setSubmitted(false);
-    isEdit(false);
+    setIsEdit(false);
 })
 .catch(error => {
     console.error("Axios Error : ", error);
