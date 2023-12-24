@@ -56,7 +56,7 @@ app.get("/menu", (req, res) => {
 
 //createmenu
 app.post("/creatmenu", (req, res) => {
-    controller.addMenu(req.body, (callack) => {
+    mencontroller.addMenu(req.body, (callback) => {
      res.send();
     });
 });
@@ -64,14 +64,14 @@ app.post("/creatmenu", (req, res) => {
 
 //deletemenu
 app.post('/deletemenu', (req, res) => {
-    controller.deleteMenu(req.body, (callack) => {
+    controller.deleteMenu(req.body, (callback) => {
      res.send(callack);
     });
 });
 
 //updatemenu
 app.post('/updatemenu', (req, res) => {
-    controller.updateMenu(req.body, (callack) => {
+    controller.updateMenu(req.body, (callback) => {
      res.send(callack);
     });
 });
