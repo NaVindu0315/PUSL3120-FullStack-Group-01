@@ -4,7 +4,7 @@ const cors  = require('cors');
 //for controllers
 const empcontroller = require('./controllers/employee_controller');
 
-//menu_controller
+//menu controller
 const menu_controller = require('./controllers/menu_controller');
 
 
