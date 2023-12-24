@@ -52,7 +52,17 @@ app.post('/createemp',(req,res)=>
 
 
 ///updateemployee
+app.post('/updateemp',(req,res)=>
+{
+    empcontroller.updateEmp(req,res,(callback)=>
+    {
+        res.send(callback);
 
+
+    }
+
+    );
+});
 
 ///delete employee
 app.post('/deleteemp',(req,res)=>

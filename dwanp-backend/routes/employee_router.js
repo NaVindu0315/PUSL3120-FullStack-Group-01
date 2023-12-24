@@ -23,6 +23,6 @@ router.get('/getemployees',empcontroller.getEmp);
 router.post('/deleteemp',empcontroller.deleteEmp);
 
 //for the update function
-router.post('updateemp',empcontroller.updateEmp);
+router.post('/updateemp',empcontroller.updateEmp);
 
 module.exports = router;
