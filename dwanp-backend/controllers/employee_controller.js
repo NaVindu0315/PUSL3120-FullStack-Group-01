@@ -36,8 +36,8 @@ const empSchema = require('../models/employee_model');
  {
     const emp = new empSchema(
         {
-            id:req.body.id,
-            name:req.body.name,
+            //id:req.body.id,
+            //name:req.body.name,
         }
     );
     emp.save()
