@@ -17,3 +17,14 @@ const employeeSchema = new Schema(
 const Employee = mongoose.model('employees',employeeSchema);
 module.exports = Employee;
 */
+
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const invSchema = new Schema({
+  id: Number,
+  name: String,
+});
+
+const Inventory = mongoose.model("inventory", invSchema);
+module.exports = Inventory;
