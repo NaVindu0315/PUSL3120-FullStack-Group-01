@@ -19,6 +19,7 @@ const addOrder = (req, res, next) => {
         Orderid: req.body.Orderid,
         foodItemCode: req.body.foodItemCode,
         noOfPotions: req.body.noOfPotions,
+        date: req.body.date,
     });
     order.save()
     .then(response => {
@@ -30,8 +31,8 @@ const addOrder = (req, res, next) => {
 }
 
 const updateOrder = (req, res, next) => {
-    const {Orderid, foodItemCode, noOfPotions} = req.body;
-    Order.updateOne({Orderid: Orderid}, {$set: {foodItemCode: foodItemCode} }, {$set: {noOfPotions: noOfPotions} })
+    const {Orderid, foodItemCode, noOfPotions, date} = req.body;
+    Order.updateOne({Orderid: Orderid}, {$set: {foodItemCode: foodItemCode} }, {$set: {noOfPotions: noOfPotions} }, {$set: {date: date} })
     .then(response => {
         res.json({response})
     })
