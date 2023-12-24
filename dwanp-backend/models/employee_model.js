@@ -18,8 +18,8 @@ const Schema = mongoose.Schema;
 
 const empSchema = new Schema(
     {
-        id :Number,
-        name : String,
+       // id :Number,
+        //name : String,
     }
 );
 
