@@ -19,6 +19,7 @@ const OrderTable = ({rows, selectedOrder, deleteOrder}) => {
                     <TableCell>Order ID</TableCell>
                     <TableCell>Food Item Code</TableCell>
                     <TableCell>No Of Potions</TableCell>
+                    <TableCell>Date</TableCell>
                     <TableCell>Actions</TableCell>
                 </TableRow>
             </TableHead>
@@ -29,10 +30,11 @@ const OrderTable = ({rows, selectedOrder, deleteOrder}) => {
                     <TableCell component='th' scope='row'>{row.Orderid}</TableCell>
                     <TableCell component='th' scope='row'>{row.foodItemCode}</TableCell>
                     <TableCell component='th' scope='row'>{row.noOfPotions}</TableCell>
+                    <TableCell component='th' scope='row'>{row.date}</TableCell>
                     <TableCell>
                         <Button
                             sx={{ margin: '0px 10px' }}
-                            onClick={() => selectedOrder({ Orderid: row.Orderid, noOfPotions: row.noOfPotions, foodItemCode: row.foodItemCode})}
+                            onClick={() => selectedOrder({ Orderid: row.Orderid, noOfPotions: row.noOfPotions, foodItemCode: row.foodItemCode, date: row.date})}
                             >
                                 Update
                         </Button>
