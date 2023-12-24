@@ -9,7 +9,7 @@ import React, { useEffect, useState } from "react";
 //import { Button, Grid, Typography, Input } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
-const EmployeeTable = ({rows, selectedEmp}) =>
+const EmployeeTable = ({rows, selectedEmp, deleteEmp}) =>
 {
     return(
         <TableContainer 
@@ -53,10 +53,10 @@ const EmployeeTable = ({rows, selectedEmp}) =>
                                 <Button sx={{margin:'0px 10px'}}
                                 onClick={
                                     () =>
-                                    {/**  {
-                                        deleteUser({id:row.id})
+                                    {  {
+                                        deleteEmp({emp_code:row.emp_code})
 
-                                    } */}
+                                    } }
                                   
                                 }
                                 
