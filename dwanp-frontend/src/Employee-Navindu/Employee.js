@@ -82,6 +82,31 @@ const Employee=()=>
       ///new employee adding end
 
       ///update employee
+      const updareEmp=(data) =>
+      {
+          setSubmitted(true);
+             ///creating the payload
+             const payload=
+             {
+                 id: data.id,
+                 name: data.name,
+     
+             }
+             Axios.post('http://localhost:3001/api/updateemp',payload)
+             .then(response=> {
+                 // console.log(response.data.response);
+                getEmp();
+                setSubmitted(false);
+                isedit(false);
+              })
+              .catch(error => {
+                  console.error("Axios Error :" ,error);
+              })
+                          {
+     
+              }
+  
+      }
 
 
 
