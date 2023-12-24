@@ -19,6 +19,12 @@ const Employee=()=>
   
         //creating a state variable inside the Users component
         const [emps,setEmps] = useState([]);
+         //to clear the fields once the data is submitted
+         const [submitted,setSubmitted] = useState(false);
+         //when updating 
+         const [isedit,setIsEdit] = useState(false);
+
+
       //when calling a function when the page runs 
       useEffect(()=>
       {
@@ -42,6 +48,34 @@ const Employee=()=>
   
               }
       }
+      //new employee adding 
+      const addEmp = (data)=>
+      {
+          setSubmitted(true);
+          ///creating the payload
+          const payload=
+          {
+              id: data.id,
+              name: data.name,
+  
+          }
+          Axios.post('http://localhost:3001/api/createemp',payload)
+          .then(response=> {
+              // console.log(response.data.response);
+             getEmp();
+             setSubmitted(false);
+             isedit(false);
+           })
+           .catch(error => {
+               console.error("Axios Error :" ,error);
+           })
+                       {
+  
+           }
+  
+      }
+
+      ///new employee adding end
 
 
 
@@ -62,7 +96,11 @@ const Employee=()=>
 
           <Box>
             {/**this for adding new data */}
-            <EmployeeForm></EmployeeForm>
+            <EmployeeForm
+            addEmp={addEmp}
+            submitted={submitted}
+            
+            ></EmployeeForm>
 
             <EmployeeTable
             rows ={emps}
