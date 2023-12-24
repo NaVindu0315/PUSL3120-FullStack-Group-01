@@ -114,28 +114,7 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
 
       
      
-      <Button
-        sx={{
-          margin: "auto",
-          marginBottom: "20px",
-          backgroundColor: "#00c6e6",
-          color: "#000000",
-          marginLeft: "15px",
-          marginTop: "20px",
-          "&:hover": {
-            opacity: 0.7,
-            backgroundColor: "#00c6e6",
-          },
-        }}
-        onClick={()=>isedit ? updateEmp({id,name}) :
-        addEmp({id,name})
-        }
-      >
-        {
-          isedit? 'update' : 'add'
-        }
-       
-      </Button>
+
 
       <Button
         sx={{
@@ -262,7 +241,31 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
             </TableRow>
             <TableRow>
               <TableCell></TableCell>
-              <TableCell>field</TableCell>
+              <TableCell>
+
+              <Button
+        sx={{
+          margin: "auto",
+          marginBottom: "20px",
+          backgroundColor: "#00c6e6",
+          color: "#000000",
+          marginLeft: "15px",
+          marginTop: "20px",
+          "&:hover": {
+            opacity: 0.7,
+            backgroundColor: "#00c6e6",
+          },
+        }}
+        onClick={()=>isedit ? updateEmp({emp_code,adrs,tel,civil}) :
+        addEmp({emp_code,emp_name,bdate,nic,adrs,tel,civil})
+        }
+      >
+        {
+          isedit? 'update' : 'add'
+        }
+       
+      </Button>
+              </TableCell>
             </TableRow>
 
           </TableBody>
