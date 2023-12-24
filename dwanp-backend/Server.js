@@ -9,10 +9,10 @@ const emprouter = require('./routes/employee_router');
 
 
 //to import routers
-const emprouter = require('./routes/menu_router');
 
 // adala cmnt ekat ytin line eke router path dapan adala thana
 //menu
+const menrouter = require('./routes/menu_router');
 
 //inventory
 
@@ -50,3 +50,4 @@ const server = app.listen(port,host,()=>{
 
 
 app.use('/api',emprouter);
+app.use('/api', menrouter);
