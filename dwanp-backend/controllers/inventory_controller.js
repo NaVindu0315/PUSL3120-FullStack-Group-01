@@ -27,7 +27,7 @@ const addInventory = (req, res, next) => {
 
 const updateInventory = (req, res, next) => {
   const { id, name } = req.body;
-  User.updateOne({ id: id }, { $set: { name: name } })
+  Inventory.updateOne({ id: id }, { $set: { name: name } })
     .then((response) => {
       res.json({ response });
     })
