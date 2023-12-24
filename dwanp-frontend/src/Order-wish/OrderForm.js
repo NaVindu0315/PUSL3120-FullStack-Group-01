@@ -144,7 +144,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                     marginLeft: '30px'
             }}
                 >
-                    Food Item Code
+                    Date
                 </Typography>
                 <Input 
                 type="text"
