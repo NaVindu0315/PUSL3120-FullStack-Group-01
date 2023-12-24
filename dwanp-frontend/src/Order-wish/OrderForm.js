@@ -12,11 +12,11 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
 
     const [Orderid, setOrderId] = useState(0);
     const [foodItemCode, setFoodItemCode] = useState('');
-      const [name, setName] = useState('');
+    const [name, setName] = useState('');
       useEffect(() => {
         if (!submitted) {
             setOrderId(0);
-            setFoodItemCode();
+            setFoodItemCode('');
             setName('');
         }
     }, [submitted]);
@@ -141,7 +141,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                     backgroundColor: '#00c6e6'
                 }
             }}
-            onClick={() => isEdit ? updateOrder({ Orderid, name }) : addOrder({ Orderid, name })}
+            onClick={() => isEdit ? updateOrder({ Orderid,foodItemCode, name }) : addOrder({ Orderid, foodItemCode, name })}
             >
                 {
                     isEdit ? 'Update' : 'Add'
