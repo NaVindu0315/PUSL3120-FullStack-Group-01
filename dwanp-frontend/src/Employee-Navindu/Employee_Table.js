@@ -4,12 +4,12 @@
 //////////////////////
 
 
-import { Paper, TableCell, TableContainer, TableHead, TableRow , TableBody, Table} from "@mui/material";
+import { Paper, TableCell, TableContainer, TableHead, TableRow , TableBody, Table,Button} from "@mui/material";
 import React, { useEffect, useState } from "react";
 //import { Button, Grid, Typography, Input } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
-const EmployeeTable = ({props}) =>
+const EmployeeTable = ({rows}) =>
 {
     return(
         <TableContainer 
@@ -28,7 +28,58 @@ const EmployeeTable = ({props}) =>
                                 </TableCell>
                             </TableRow>
                         </TableHead>
-                        
+                        <TableBody>
+                    {
+                        rows.length > 0 ?  rows.map((row) => 
+                            (
+                            <TableRow key={row.id} sx ={{'&:last-child td,&:last-child th':{border:0}}}>
+                            <TableCell component='th' scope="row">{row.id}</TableCell>
+                            <TableCell component='th' scope="row">{row.name}</TableCell>
+                             <TableCell>
+                                <Button sx={{margin:'0px 10px'}}
+                                onClick={
+                                () => {/*
+                            selectedUser({
+                                        id: row.id,
+                                        name : row.name
+                                    })
+                            */}
+                                    
+                                }
+                                
+                                >
+                                Update
+                                </Button>
+                                <Button sx={{margin:'0px 10px'}}
+                                onClick={
+                                    () =>
+                                    {/**  {
+                                        deleteUser({id:row.id})
+
+                                    } */}
+                                  
+                                }
+                                
+                                >
+                                delete
+                                </Button>
+                             </TableCell>
+                            </TableRow>
+                               
+                            )
+                            ):
+                            (
+                                <TableRow sx ={{'&:last-child td,&:last-child th':{border:0}}}>
+
+                            <TableCell component='th' scope="row">No Data</TableCell> 
+                                </TableRow>
+
+                            )
+
+                    }
+
+
+                </TableBody>
                      
                     </Table>
         
