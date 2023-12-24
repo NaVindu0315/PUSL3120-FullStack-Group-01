@@ -44,6 +44,7 @@ const empSchema = require('../models/employee_model');
             nic : req.body.nic,
             adrs: req.body.adrs,
             tel : req.body.tel,
+            civil :req.body.civil,
 
         }
     );
@@ -95,7 +96,7 @@ const empSchema = require('../models/employee_model');
     const updateEmp= (req,res,next)=>
     {
         //object destructing 
-        const {id,name}=req.body;
+        //const {id,name}=req.body;
         //in this the {id:id}first id should from db and scnd from the parsing data //need to be checked
         empSchema.updateOne({id:id},{$set : {name:name}})
         .then(response=>
