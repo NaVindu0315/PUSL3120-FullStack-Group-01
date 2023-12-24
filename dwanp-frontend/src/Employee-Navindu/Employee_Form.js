@@ -173,7 +173,7 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
               <TableCell>Employee Code</TableCell>
               <TableCell>
               <Input
-          type="String"
+          type="number"
           id="emp_code"
           name="emp_code"
           sx={{ width: "400px" }}
@@ -184,15 +184,42 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
             </TableRow>
             <TableRow>
               <TableCell>Employee Name</TableCell>
-              <TableCell>field</TableCell>
+              <TableCell>
+              <Input
+          type="text"
+          id="emp_name"
+          name="emp_name"
+          sx={{ width: "400px" }}
+          value={emp_name}
+          onChange={e => setEmpName(e.target.value)}
+        />
+              </TableCell>
             </TableRow>
             <TableRow>
               <TableCell>BirthDay</TableCell>
-              <TableCell>field</TableCell>
+              <TableCell>
+              <Input
+          type="text"
+          id="bdate"
+          name="bdate"
+          sx={{ width: "400px" }}
+          value={bdate}
+          onChange={e => setBdate(e.target.value)}
+        />
+              </TableCell>
             </TableRow>
             <TableRow>
               <TableCell>NIC</TableCell>
-              <TableCell>field</TableCell>
+              <TableCell>
+              <Input
+          type="number"
+          id="nic"
+          name="nic"
+          sx={{ width: "400px" }}
+          value={nic}
+          onChange={e => setNic(e.target.value)}
+        />
+              </TableCell>
             </TableRow>
             <TableRow>
               <TableCell>Address</TableCell>
