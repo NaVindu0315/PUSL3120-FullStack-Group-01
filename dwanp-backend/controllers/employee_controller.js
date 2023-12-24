@@ -84,6 +84,24 @@ const empSchema = require('../models/employee_model');
             });
     }
 
+    //updating employee
+    const updateEmp= (req,res,next)=>
+    {
+        //object destructing 
+        const {id,name}=req.body;
+        //in this the {id:id}first id should from db and scnd from the parsing data //need to be checked
+        empSchema.updateOne({id:id},{$set : {name:name}})
+        .then(response=>
+            {
+                res.json({response})
+            })
+            .catch(error=>{
+                res.json({error})
+            });
+    
+
+    }
+
 
 
 
