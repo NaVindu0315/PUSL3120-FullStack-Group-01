@@ -10,7 +10,7 @@ const Schema  = mongoose.Schema;
 ///defining employee schema
 const orderSchema = new Schema(
     {
-        id:Number,
+        Orderid:Number,
         name : String,
     }
 );
