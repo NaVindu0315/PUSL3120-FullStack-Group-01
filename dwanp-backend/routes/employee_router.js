@@ -20,6 +20,6 @@ router.post('/createemp',empcontroller.addEmp);
 router.get('/getemployees',empcontroller.getEmp);
 
 //for delete function
-router.get('deleteemp',empcontroller.deleteEmp);
+router.post('/deleteemp',empcontroller.deleteEmp);
 
 module.exports = router;
