@@ -5,7 +5,7 @@ const cors  = require('cors');
 const empcontroller = require('./controllers/employee_controller');
 
 //menu controller
-const menu_controller = require('./controllers/menu_controller');
+const mencontroller = require('./controllers/menu_controller');
 
 
 app.use(cors());
@@ -55,7 +55,7 @@ app.get("/menu", (req, res) => {
 });
 
 //createmenu
-app.post("/creatmenu", (req, res) => {
+app.post("/createmenu", (req, res) => {
     mencontroller.addMenu(req.body, (callback) => {
      res.send();
     });
