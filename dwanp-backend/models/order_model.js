@@ -12,7 +12,7 @@ const orderSchema = new Schema(
     {
         Orderid:Number,
         foodItemCode : String,
-        name : String,
+        noOfPotions : Number,
     }
 );
 const Order = mongoose.model('Order',orderSchema);
