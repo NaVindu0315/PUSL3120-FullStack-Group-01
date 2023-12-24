@@ -55,7 +55,19 @@ app.post('/createemp',(req,res)=>
 
 
 ///delete employee
+app.post('/deleteemp',(req,res)=>
+{
+    empcontroller.deleteEmp(req.body,(callback)=>
+        {
+            res.send(callback);
 
+
+        }
+    );
+}
+
+
+);
 
 ///////////////////////////////
 //menu - aruni
