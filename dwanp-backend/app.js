@@ -44,6 +44,7 @@ app.post("/createemp", (req, res) => {
 //inventory - pasindu
 
 //getinventory
+app.get("/inventory", (req, res) => {});
 
 //createinventory
 
