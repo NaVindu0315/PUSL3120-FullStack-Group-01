@@ -64,15 +64,15 @@ app.post("/creatmenu", (req, res) => {
 
 //deletemenu
 app.post('/deletemenu', (req, res) => {
-    controller.deleteMenu(req.body, (callback) => {
-     res.send(callack);
+    mencontroller.deleteMenu(req.body, (callback) => {
+     res.send(callback);
     });
 });
 
 //updatemenu
 app.post('/updatemenu', (req, res) => {
     controller.updateMenu(req.body, (callback) => {
-     res.send(callack);
+     res.send(callback);
     });
 });
 
