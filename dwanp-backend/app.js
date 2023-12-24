@@ -49,7 +49,7 @@ app.post('/createemp',(req,res)=>
 
 //getmenu
 app.get("/menu", (req, res) => {
-    controller.getMenu((req, res, next) => {
+    mencontroller.getMenu((req, res, next) => {
      res.send();
     });
 });
