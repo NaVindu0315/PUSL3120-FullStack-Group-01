@@ -97,8 +97,8 @@ const Employee=()=>
              ///creating the payload
              const payload=
              {
-                 id: data.id,
-                 name: data.name,
+                // id: data.id,
+                // name: data.name,
      
              }
              Axios.post('http://localhost:3001/api/updateemp',payload)
