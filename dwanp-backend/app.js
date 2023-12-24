@@ -51,6 +51,7 @@ app.get("/inventory", (req, res) => {
 });
 
 //createinventory
+app.post("/createuser", (req, res) => {});
 
 //deleteinventory
 
