@@ -17,6 +17,7 @@ const getOrder = (req, res, next) => {
 const addOrder = (req, res, next) => {
     const order = new orderSchema({
         Orderid: req.body.Orderid,
+        foodItemCode: req.body.foodItemCode,
         name: req.body.name,
     });
     order.save()
@@ -29,8 +30,8 @@ const addOrder = (req, res, next) => {
 }
 
 const updateOrder = (req, res, next) => {
-    const {Orderid, name} = req.body;
-    Order.updateOne({Orderid: Orderid}, {$set: {name: name} })
+    const {Orderid, foodItemCode, name} = req.body;
+    Order.updateOne({Orderid: Orderid}, {$set: {foodItemCode: foodItemCode} }, {$set: {name: name} })
     .then(response => {
         res.json({response})
     })
