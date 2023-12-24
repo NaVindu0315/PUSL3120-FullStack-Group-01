@@ -13,6 +13,7 @@ const orderSchema = new Schema(
         Orderid:Number,
         foodItemCode : String,
         noOfPotions : Number,
+        date: Date,
     }
 );
 const Order = mongoose.model('Order',orderSchema);
