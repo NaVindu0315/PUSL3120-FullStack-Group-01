@@ -38,7 +38,7 @@ const updateInventory = (req, res, next) => {
 
 const deleteInventory = (req, res, next) => {
   const id = req.body.id;
-  User.deleteOne({ id: id })
+  Inventory.deleteOne({ id: id })
     .then((response) => {
       res.json({ response });
     })
@@ -46,3 +46,8 @@ const deleteInventory = (req, res, next) => {
       res.json({ error });
     });
 };
+
+exports.getInventory = getInventory;
+exports.addInventory = addInventory;
+exports.updateInventory = updateInventory;
+exports.deleteInventory = deleteInventory;
