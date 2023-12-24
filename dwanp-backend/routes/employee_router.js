@@ -16,4 +16,7 @@ const empcontroller  = require('../controllers/employee_controller');
 
 router.post('/createemp',empcontroller.addEmp);
 
+///for the get employeee function
+router.get('/getemployees',empcontroller.getEmp);
+
 module.exports = router;
