@@ -16,7 +16,14 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
    const [id,setid] = useState(0);
    const [name,setname] = useState('');
    //creating new  for new form
-   
+   const[emp_code,setEmpcode] =useState(0);
+   const[emp_name,setEmpName] =useState('');
+   const [bdate,setBdate] = useState('');
+   const[nic,setNic] = useState(0);
+   const[adrs,setAdrs] = useState('');
+   const[tel,setTel] = useState(0);
+   const[civil,setCivil] = useState('');
+
 
      //use effect
   useEffect(()=>{
