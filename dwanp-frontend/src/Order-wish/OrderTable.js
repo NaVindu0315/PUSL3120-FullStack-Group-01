@@ -16,7 +16,7 @@ const OrderTable = ({rows, selectedOrder, deleteOrder}) => {
         <Table>
             <TableHead>
                 <TableRow>
-                    <TableCell>ID</TableCell>
+                    <TableCell>Order ID</TableCell>
                     <TableCell>Name</TableCell>
                     <TableCell>Actions</TableCell>
                 </TableRow>
@@ -24,19 +24,19 @@ const OrderTable = ({rows, selectedOrder, deleteOrder}) => {
             <TableBody>
                 {
                rows.length > 0? rows.map(row => (
-                    <TableRow key={row.id} sx={{'&:last-child td, &:last-child th': { boarder:0}}}>
-                    <TableCell component='th' scope='row'>{row.id}</TableCell>
+                    <TableRow key={row.Orderid} sx={{'&:last-child td, &:last-child th': { boarder:0}}}>
+                    <TableCell component='th' scope='row'>{row.Orderid}</TableCell>
                     <TableCell component='th' scope='row'>{row.name}</TableCell>
                     <TableCell>
                         <Button
                             sx={{ margin: '0px 10px' }}
-                            onClick={() => selectedOrder({ id: row.id, name: row.name})}
+                            onClick={() => selectedOrder({ Orderid: row.Orderid, name: row.name})}
                             >
                                 Update
                         </Button>
                         <Button
                             sx={{ margin: '0px 10px' }}
-                            onClick={() => deleteOrder({ id: row.id })}
+                            onClick={() => deleteOrder({ Orderid: row.Orderid })}
                             >
                                 Delete
                         </Button>
