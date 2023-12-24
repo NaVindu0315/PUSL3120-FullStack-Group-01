@@ -18,19 +18,25 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp}) =>
                         <TableHead>
                             <TableRow>
                                 <TableCell>
-                                    ID
+                                    Employee code
                                 </TableCell>
                                 <TableCell>
                                     Name
                                 </TableCell>
                                 <TableCell>
-                                    Actions
+                                    Birthday 
                                 </TableCell>
                                 <TableCell>
-                                    ID
+                                    Nic
                                 </TableCell>
                                 <TableCell>
-                                    Name
+                                    Address
+                                </TableCell>
+                                <TableCell>
+                                    Telephone
+                                </TableCell>
+                                <TableCell>
+                                    Civil
                                 </TableCell>
                                 <TableCell>
                                     Actions
@@ -42,15 +48,21 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp}) =>
                         rows.length > 0 ?  rows.map((row) => 
                             (
                             <TableRow key={row.id} sx ={{'&:last-child td,&:last-child th':{border:0}}}>
-                            <TableCell component='th' scope="row">{row.id}</TableCell>
-                            <TableCell component='th' scope="row">{row.name}</TableCell>
+                            <TableCell component='th' scope="row">{row.emp_code}</TableCell>
+                            <TableCell component='th' scope="row">{row.emp_name}</TableCell>
+                            <TableCell component='th' scope="row">{row.bdate}</TableCell>
+                            <TableCell component='th' scope="row">{row.nic}</TableCell>
+                            <TableCell component='th' scope="row">{row.adrs}</TableCell>
+                            <TableCell component='th' scope="row">{row.tel}</TableCell>
+                            <TableCell component='th' scope="row">{row.civil}</TableCell>
+                            
                              <TableCell>
                                 <Button sx={{margin:'0px 10px'}}
                                 onClick={
                                 () => {
                             selectedEmp({
-                                        id: row.id,
-                                        name : row.name
+                                        emp_code: row.emp_code,
+                                        name : row.emp_name
                                     })
                             }
                                     
