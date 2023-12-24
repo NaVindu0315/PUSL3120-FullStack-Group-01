@@ -55,4 +55,19 @@ const empSchema = require('../models/employee_model');
         );
  }
 
+ //to get the employees from the db
+    const getEmp = (req,res,next) =>
+    {
+        empSchema.find()
+        .then(response=>
+            {
+                res.json({response})
+            })
+            .catch(error=>{
+                res.json({error})
+            });
+    }
+
+
+
  exports.addEmp = addEmp;
