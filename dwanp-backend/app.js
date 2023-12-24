@@ -60,7 +60,11 @@ app.post("/createinventory", (req, res) => {
 //deleteinventory
 
 //updateinventory
-app.post("/updateinventory", (req, res) => {});
+app.post("/updateinventory", (req, res) => {
+  inventory_controller.updateInventory(req.body, (callack) => {
+    res.send(callack);
+  });
+});
 
 /////////////////////
 //order wish
