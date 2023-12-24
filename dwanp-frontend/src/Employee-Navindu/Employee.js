@@ -82,7 +82,7 @@ const Employee=()=>
       ///new employee adding end
 
       ///update employee
-      const updareEmp=(data) =>
+      const updateEmp=(data) =>
       {
           setSubmitted(true);
              ///creating the payload
@@ -134,7 +134,7 @@ const Employee=()=>
             <EmployeeForm
             addEmp={addEmp}
             submitted={submitted}
-            updareEmp= {updareEmp}
+            updateEmp= {updateEmp}
             data ={selectedEmp}
           isedit={isedit}
             
