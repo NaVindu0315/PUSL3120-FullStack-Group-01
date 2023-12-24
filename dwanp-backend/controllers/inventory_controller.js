@@ -1,4 +1,5 @@
-const Inventory = require("./inventory_model");
+const { response } = require("../app");
+const invSchema = require("../models/inventory_model");
 
 const getInventory = (req, res, next) => {
   Inventory.find()
@@ -11,7 +12,7 @@ const getInventory = (req, res, next) => {
 };
 
 const addInventory = (req, res, next) => {
-  const inventory = new Inventory({
+  const inventory = new invSchema({
     id: req.body.id,
     name: req.body.name,
   });
