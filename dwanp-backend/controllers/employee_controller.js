@@ -96,10 +96,10 @@ const empSchema = require('../models/employee_model');
     const updateEmp= (req,res,next)=>
     {
         //object destructing 
-        const {emp_code,adrs,tel,civil}=req.body;
+        const {emp_code,emp_name,bdate,nic,adrs,tel,civil}=req.body;
         //in this the {id:id}first id should from db and scnd from the parsing data //need to be checked
       
-        empSchema.updateOne({emp_code:emp_code},{$set:{adrs:adrs,tel:tel,civil:civil}})
+        empSchema.updateOne({emp_code:emp_code},{$set:{emp_name:emp_name,bdate:bdate,nic:nic,adrs:adrs,tel:tel,civil:civil}})
         .then(response=>
             {
                 res.json({response})
