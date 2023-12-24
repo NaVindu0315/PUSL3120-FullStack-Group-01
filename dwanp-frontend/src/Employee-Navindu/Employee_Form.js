@@ -5,7 +5,7 @@
 
 
 import React, { useEffect, useState } from "react";
-import { Button, Grid, Typography, Input, TableContainer ,Paper, TableHead, Table, TableRow,TableCell} from "@mui/material";
+import { Button, Grid, Typography, Input, TableContainer ,Paper, TableHead, Table, TableRow,TableCell, TableBody} from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
 const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
@@ -166,6 +166,41 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
             </TableRow>
 
           </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>Employee Code</TableCell>
+              <TableCell>field</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Employee Name</TableCell>
+              <TableCell>field</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>BirthDay</TableCell>
+              <TableCell>field</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>NIC</TableCell>
+              <TableCell>field</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Address</TableCell>
+              <TableCell>field</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Telephone Number</TableCell>
+              <TableCell>field</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Married Status</TableCell>
+              <TableCell>field</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell></TableCell>
+              <TableCell>field</TableCell>
+            </TableRow>
+
+          </TableBody>
                   </Table>
 
 
