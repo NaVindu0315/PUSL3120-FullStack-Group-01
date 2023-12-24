@@ -1,8 +1,7 @@
-const inventory = require("./inventory_model");
+const Inventory = require("./inventory_model");
 
 const getInventory = (req, res, next) => {
-  inventory
-    .find()
+  Inventory.find()
     .then((response) => {
       res.json({ response });
     })
@@ -12,11 +11,11 @@ const getInventory = (req, res, next) => {
 };
 
 const addInventory = (req, res, next) => {
-  const user = new User({
+  const inventory = new Inventory({
     id: req.body.id,
     name: req.body.name,
   });
-  user
+  inventory
     .save()
     .then((response) => {
       res.json({ response });
