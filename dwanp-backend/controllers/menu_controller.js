@@ -54,7 +54,10 @@ const deleteMenu = (req, res, next) => {
     });
 };
 
-
+exports.getMenu = getMenu;
+exports.addMenu = addMenu;
+exports.updateMenu = updateMenu;
+exports.deleteMenu = deleteMenu;
 
 
 
