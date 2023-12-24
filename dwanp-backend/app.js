@@ -25,7 +25,17 @@ app.use(express.json());
  
 //employee - navindu
 ///getemployee
+app.get('/getemployees',(req,res)=>
+{
+    var resobj = [];
+    empcontroller.getEmp(req,res,next =>
+        {
+            res.send();
+        });
+}
 
+
+);
 
 ///createemployee
 app.post('/createemp',(req,res)=>
