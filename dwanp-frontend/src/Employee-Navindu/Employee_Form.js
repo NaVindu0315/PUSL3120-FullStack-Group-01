@@ -8,9 +8,26 @@ import React, { useEffect, useState } from "react";
 import { Button, Grid, Typography, Input } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
-const EmployeeForm = ({props}) =>
+const EmployeeForm = ({addEmp,submitted,data,isedit}) =>
 {
     const navigate = useNavigate();
+
+      //declaring stat
+   const [id,setid] = useState(0);
+   const [name,setname] = useState('');
+
+     //use effect
+  useEffect(()=>{
+    if(!submitted){
+      setid(0);
+      setname('');
+    }},
+    [submitted]
+  );
+
+
+
+
     return(
         <Grid
         container
@@ -40,8 +57,8 @@ const EmployeeForm = ({props}) =>
           id="id"
           name="id"
           sx={{ width: "400px" }}
-          //value={id}
-          //onChange={e => setid(e.target.value)}
+          value={id}
+          onChange={e => setid(e.target.value)}
         />
       </Grid>
       <Grid item xs={12} sm={6} sx={{ display: "flex" }}>
@@ -63,8 +80,8 @@ const EmployeeForm = ({props}) =>
           id="name"
           name="name"
           sx={{ width: "400px" }}
-        //  value={name}
-          //onChange={e=>setname(e.target.value)}
+         value={name}
+        onChange={e=>setname(e.target.value)}
         />
       </Grid>
      
@@ -81,14 +98,16 @@ const EmployeeForm = ({props}) =>
             backgroundColor: "#00c6e6",
           },
         }}
-        onClick={()=> {}
+        onClick={()=> {
+            addEmp({id,name})
+        }
         }
       >
        Add
         {/**for 
          * the button update and add chaning paste this code inside the onClick 
          *   onClick={()=> isedit ? updateUser({id,name}) :
-          addUser({id,name})
+          
         }
       >
       this one is for button
