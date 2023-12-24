@@ -45,13 +45,17 @@ app.post("/createemp", (req, res) => {
 
 //getinventory
 app.get("/inventory", (req, res) => {
-  controller.getInventory((req, res, next) => {
+  inventory_controller.getInventory((req, res, next) => {
     res.send();
   });
 });
 
 //createinventory
-app.post("/createuser", (req, res) => {});
+app.post("/createuser", (req, res) => {
+  inventory_controller.addInventory(req.body, (callback) => {
+    res.send();
+  });
+});
 
 //deleteinventory
 
