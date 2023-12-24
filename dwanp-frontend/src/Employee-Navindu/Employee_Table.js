@@ -9,7 +9,7 @@ import React, { useEffect, useState } from "react";
 //import { Button, Grid, Typography, Input } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
-const EmployeeTable = ({rows}) =>
+const EmployeeTable = ({rows, selectedemp}) =>
 {
     return(
         <TableContainer 
@@ -38,12 +38,12 @@ const EmployeeTable = ({rows}) =>
                              <TableCell>
                                 <Button sx={{margin:'0px 10px'}}
                                 onClick={
-                                () => {/*
-                            selectedUser({
+                                () => {
+                            selectedemp({
                                         id: row.id,
                                         name : row.name
                                     })
-                            */}
+                            }
                                     
                                 }
                                 
