@@ -71,7 +71,7 @@ app.post('/deletemenu', (req, res) => {
 
 //updatemenu
 app.post('/updatemenu', (req, res) => {
-    controller.updateMenu(req.body, (callback) => {
+    mencontroller.updateMenu(req.body, (callback) => {
      res.send(callback);
     });
 });
