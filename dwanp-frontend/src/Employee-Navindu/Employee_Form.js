@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Grid, Typography, Input } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
-const EmployeeForm = ({addEmp,submitted,data,isedit}) =>
+const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
 {
     const navigate = useNavigate();
 
@@ -24,6 +24,14 @@ const EmployeeForm = ({addEmp,submitted,data,isedit}) =>
     }},
     [submitted]
   );
+
+    ///for updating 
+    useEffect(()=>{
+        if (  data?.id  &&data.id!==0 ){
+        setid(data.id);
+      setname(data.name);
+      }
+    },[data]);
 
 
 
@@ -98,23 +106,13 @@ const EmployeeForm = ({addEmp,submitted,data,isedit}) =>
             backgroundColor: "#00c6e6",
           },
         }}
-        onClick={()=> {
-            addEmp({id,name})
-        }
-        }
-      >
-       Add
-        {/**for 
-         * the button update and add chaning paste this code inside the onClick 
-         *   onClick={()=> isedit ? updateUser({id,name}) :
-          
+        onClick={()=>isedit ? updateEmp({id,name}) :
+        addEmp({id,name})
         }
       >
-      this one is for button
         {
           isedit? 'update' : 'add'
         }
-         */}
        
       </Button>
 
