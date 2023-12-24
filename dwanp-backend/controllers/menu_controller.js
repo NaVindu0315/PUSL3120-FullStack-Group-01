@@ -42,7 +42,19 @@ const updateMenu = (req, res, next) => {
       });
   };
 
-  
+const deleteMenu = (req, res, next) => {
+    const id = req.body.id;
+    menSchema
+    .deleteOne({ id: id })
+    .then((response) => {
+      res.json({ response });
+    })
+    .catch((error) => {
+      res.json({ error });
+    });
+};
+
+
 
 
 
