@@ -61,6 +61,15 @@ const Employee=()=>
           {
               //id: data.id,
               //name: data.name,
+              //for new form
+              emp_code: data.emp_code,
+              emp_name :data.emp_name,
+              bdate : data.bdate,
+              nic : data.nic,
+              adrs :data.adrs,
+              tel : data.tel,
+              civil : data.tel,
+
   
           }
           Axios.post('http://localhost:3001/api/createemp',payload)
