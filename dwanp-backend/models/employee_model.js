@@ -26,6 +26,7 @@ const empSchema = new Schema(
         nic : Number,
         adrs : String,
         tel : Number,
+        civil:String,
 
     }
 );
