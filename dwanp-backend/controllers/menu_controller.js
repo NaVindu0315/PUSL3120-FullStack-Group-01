@@ -30,3 +30,6 @@ const addMenu = (req, res, next) => {
         });
     };
     
+const updateMenu = (req, res, next) => {
+
+    }
