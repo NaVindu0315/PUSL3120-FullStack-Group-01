@@ -19,7 +19,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
             setOrderId(0);
             setFoodItemCode('');
             setNoOfPotions('');
-            setDate();
+            setDate('');
         }
     }, [submitted]);
   
