@@ -28,17 +28,27 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
      //use effect
   useEffect(()=>{
     if(!submitted){
-      setid(0);
-      setname('');
+      //setid(0);
+      //setname('');
+      setEmpcode(0);
+      setEmpName('');
+      setBdate('');
+      setNic(0);
+      setAdrs('');
+      setTel(0);
+      setCivil('');
+    
     }},
     [submitted]
   );
 
     ///for updating 
     useEffect(()=>{
-        if (  data?.id  &&data.id!==0 ){
-        setid(data.id);
-      setname(data.name);
+        if (  data?.emp_code  &&data.emp_code!==0 ){
+        setEmpcode(data.emp_code);
+      setAdrs(data.adrs);
+      setTel(data.tel);
+      setCivil(data.civil);
       }
     },[data]);
 
@@ -101,6 +111,8 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
         onChange={e=>setname(e.target.value)}
         />
       </Grid>
+
+      
      
       <Button
         sx={{
