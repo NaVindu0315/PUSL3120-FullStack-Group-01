@@ -16,7 +16,7 @@ const getOrder = (req, res, next) => {
 
 const addOrder = (req, res, next) => {
     const order = new orderSchema({
-        id: req.body.id,
+        Orderid: req.body.Orderid,
         name: req.body.name,
     });
     order.save()
@@ -29,8 +29,8 @@ const addOrder = (req, res, next) => {
 }
 
 const updateOrder = (req, res, next) => {
-    const {id, name} = req.body;
-    Order.updateOne({id: id}, {$set: {name: name} })
+    const {Orderid, name} = req.body;
+    Order.updateOne({Orderid: Orderid}, {$set: {name: name} })
     .then(response => {
         res.json({response})
     })
@@ -40,8 +40,8 @@ const updateOrder = (req, res, next) => {
 }   
     
 const deleteOrder =  (req, res, next) => {
-    const id = req.body.id;
-    Order.deleteOne({ id:id })
+    const Orderid = req.body.Orderid;
+    Order.deleteOne({ Orderid:Orderid })
     .then(response => {
         res.json({response})
     })
