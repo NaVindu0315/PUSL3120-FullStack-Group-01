@@ -4,6 +4,13 @@
 const { response } = require('../app');
 const menSchema = require('../models/menu_model');
 
-const getInventory = (req, res, next) => {
-    
-}
+const getMenu = (req, res, next) => {
+    menSchema
+    .find()
+    .then((response) => {
+      res.json({ response });
+    })
+    .catch((error) => {
+      res.json({ error });
+    });
+};
