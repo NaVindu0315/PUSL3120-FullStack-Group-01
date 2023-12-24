@@ -46,6 +46,9 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
     useEffect(()=>{
         if (  data?.emp_code  &&data.emp_code!==0 ){
         setEmpcode(data.emp_code);
+        setEmpName(data.emp_name);
+        setBdate(data.bdate);
+        setNic(data.nic);
       setAdrs(data.adrs);
       setTel(data.tel);
       setCivil(data.civil);
@@ -256,7 +259,7 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
             backgroundColor: "#00c6e6",
           },
         }}
-        onClick={()=>isedit ? updateEmp({emp_code,adrs,tel,civil}) :
+        onClick={()=>isedit ? updateEmp({emp_code,emp_name,bdate,nic,adrs,tel,civil}) :
         addEmp({emp_code,emp_name,bdate,nic,adrs,tel,civil})
         }
       >
