@@ -2,7 +2,8 @@ const { response } = require("../app");
 const invSchema = require("../models/inventory_model");
 
 const getInventory = (req, res, next) => {
-  Inventory.find()
+  invSchema
+    .find()
     .then((response) => {
       res.json({ response });
     })
@@ -28,7 +29,8 @@ const addInventory = (req, res, next) => {
 
 const updateInventory = (req, res, next) => {
   const { id, name } = req.body;
-  Inventory.updateOne({ id: id }, { $set: { name: name } })
+  invSchema
+    .updateOne({ id: id }, { $set: { name: name } })
     .then((response) => {
       res.json({ response });
     })
@@ -39,7 +41,8 @@ const updateInventory = (req, res, next) => {
 
 const deleteInventory = (req, res, next) => {
   const id = req.body.id;
-  Inventory.deleteOne({ id: id })
+  invSchema
+    .deleteOne({ id: id })
     .then((response) => {
       res.json({ response });
     })
