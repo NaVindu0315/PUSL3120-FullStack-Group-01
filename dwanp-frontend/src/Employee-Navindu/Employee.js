@@ -24,6 +24,10 @@ const Employee=()=>
          //when updating 
          const [isedit,setIsEdit] = useState(false);
 
+         
+        //also in updating to fech the data
+        const [selectedEmp,setselectedEmp]= useState({});
+
 
       //when calling a function when the page runs 
       useEffect(()=>
@@ -76,6 +80,12 @@ const Employee=()=>
       }
 
       ///new employee adding end
+
+      ///update employee
+
+
+
+      ////update employee end
 
 
 
