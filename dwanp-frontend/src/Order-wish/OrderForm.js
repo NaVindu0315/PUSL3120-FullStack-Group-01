@@ -11,10 +11,12 @@ import { Button, Grid, Typography, Input } from "@mui/material";
 const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
 
     const [Orderid, setOrderId] = useState(0);
+    const [foodItemCode, setFoodItemCode] = useState('');
       const [name, setName] = useState('');
       useEffect(() => {
         if (!submitted) {
             setOrderId(0);
+            setFoodItemCode();
             setName('');
         }
     }, [submitted]);
@@ -22,7 +24,8 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
     useEffect(() => {
         if(data?.Orderid !==0 && data.Orderid !==0) {
             setOrderId(data.Orderid);
-            setName(data.name)
+            setFoodItemCode(data.foodItemCode);
+            setName(data.name);
         }
     }, [data])
   
@@ -75,7 +78,32 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                 sx={{color:'#000000', marginLeft: '15px'}}>
                 </Typography>
             </Grid>
-  
+
+            <Grid>
+                <Typography 
+                component={'label'} 
+                htmlFor="Orderid"
+                sx={{
+                    color:'#000000',
+                    marginRight:'20px',
+                    fontSize:'16px',
+                    width:'100px',
+                    display:'block',
+                    marginLeft: '30px'
+            }}
+                >
+                    Food Item Code
+                </Typography>
+                <Input 
+                type="text"
+                Orderid="foodItemCode"
+                name="foodItemCode"
+                sx={{ width:'400px',  marginLeft: '30px'}}
+                value={foodItemCode}
+                onChange={e => setFoodItemCode(e.target.value)}
+                />
+            </Grid>
+
             <Grid>
                 <Typography 
                 component={'label'} 
