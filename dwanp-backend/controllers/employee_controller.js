@@ -71,3 +71,4 @@ const empSchema = require('../models/employee_model');
 
 
  exports.addEmp = addEmp;
+ exports.getEmp = getEmp;
