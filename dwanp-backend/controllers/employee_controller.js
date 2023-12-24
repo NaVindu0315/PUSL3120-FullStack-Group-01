@@ -38,6 +38,13 @@ const empSchema = require('../models/employee_model');
         {
             //id:req.body.id,
             //name:req.body.name,
+            emp_code:req.body.emp_code,
+            emp_name :req.body.emp_name,
+            bdate: req.body.bdate,
+            nic : req.body.nic,
+            adrs: req.body.adrs,
+            tel : req.body.tel,
+
         }
     );
     emp.save()
