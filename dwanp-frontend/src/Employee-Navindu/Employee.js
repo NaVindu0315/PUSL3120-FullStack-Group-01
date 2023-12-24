@@ -135,11 +135,18 @@ const Employee=()=>
             addEmp={addEmp}
             submitted={submitted}
             updareEmp= {updareEmp}
+            data ={selectedEmp}
+          isedit={isedit}
             
             ></EmployeeForm>
 
             <EmployeeTable
             rows ={emps}
+            selectedEmp={data=>{
+              setselectedEmp(data);
+              setIsEdit(true);
+           }}
+
             ></EmployeeTable>
 
           </Box>
