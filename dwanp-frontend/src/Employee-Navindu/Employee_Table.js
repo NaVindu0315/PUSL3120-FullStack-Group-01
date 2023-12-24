@@ -62,7 +62,12 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp}) =>
                                 () => {
                             selectedEmp({
                                         emp_code: row.emp_code,
-                                        name : row.emp_name
+                                        emp_name : row.emp_name,
+                                        bdate : row.bdate,
+                                        nic : row.nic,
+                                        adrs :row.adrs,
+                                        tel :row.tel,
+                                        civil :row.civil,
                                     })
                             }
                                     
