@@ -11,6 +11,7 @@ const emprouter = require("./routes/employee_router");
 
 // adala cmnt ekat ytin line eke router path dapan adala thana
 //menu
+const menrouter = require('./routes/menu_router');
 
 //inventory
 const invrouter = require("./routes/inventory_router");
@@ -44,5 +45,8 @@ const server = app.listen(port, host, () => {
   console.log("Node server is listenging to ", server.address().port);
 });
 
+
 app.use("/api", emprouter);
 app.use("/api", invrouter);
+app.use('/api',menrouter);
+
