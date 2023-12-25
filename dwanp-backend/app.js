@@ -4,20 +4,17 @@ const cors  = require('cors');
 //for controllers
 const empcontroller = require('./controllers/employee_controller');
 
-
-
-
+//menu controller
+const mencontroller = require('./controllers/menu_controller');
 
 
 app.use(cors());
 app.use(
     express.urlencoded({
         extended:true,
-    })
-    
-
-    
+    })    
 );
+
 app.use(express.json());
 
 ///for cruds for each 
@@ -51,12 +48,34 @@ app.post('/createemp',(req,res)=>
 //menu - aruni
 
 //getmenu
+app.get("/menu", (req, res) => {
+    mencontroller.getMenu((req, res, next) => {
+     res.send();
+    });
+});
 
 //createmenu
+app.post("/createmenu", (req, res) => {
+    mencontroller.addMenu(req.body, (callback) => {
+     res.send();
+    });
+});
+
 
 //deletemenu
+app.post('/deletemenu', (req, res) => {
+    mencontroller.deleteMenu(req.body, (callback) => {
+     res.send(callback);
+    });
+});
 
 //updatemenu
+app.post('/updatemenu', (req, res) => {
+    mencontroller.updateMenu(req.body, (callback) => {
+     res.send(callback);
+    });
+});
+
 
 /////////////////////
 //inventory - pasindu

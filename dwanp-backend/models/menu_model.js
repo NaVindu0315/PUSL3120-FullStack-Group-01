@@ -17,3 +17,15 @@ const employeeSchema = new Schema(
 const Employee = mongoose.model('employees',employeeSchema);
 module.exports = Employee;
 */
+
+
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const menSchema = new Schema({
+  id: Number,
+  name: String,
+});
+
+const Menu = mongoose.model("menu", menSchema);
+module.exports = Menu;
