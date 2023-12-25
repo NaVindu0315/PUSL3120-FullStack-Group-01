@@ -11,6 +11,27 @@ import Axios from "axios";
 import { useEffect, useState } from "react";
 
 const Inventory = () => {
+  const [users, setInv] = useState([]);
+  const [submitted, setSubmitted] = useState(false);
+  const [selectedUser, setSelectedUser] = useState({});
+  const [isEdit, setIsEdit] = useState(false);
+
+  //create get users
+
+  useEffect(() => {
+    getInventory();
+  }, []);
+
+  const getInventory = () => {
+    Axios.get("http://127.0.0.1:3001/api/users")
+      .then((response) => {
+        setInv(response.data?.response || []);
+      })
+      .catch((error) => {
+        console.error("Axios Error :", error);
+      });
+  };
+
   const navigate = useNavigate();
   return (
     <Container maxWidth="xl">
