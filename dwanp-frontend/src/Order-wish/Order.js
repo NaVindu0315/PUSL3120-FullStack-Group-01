@@ -9,7 +9,7 @@ import OrderTable from "./OrderTable";
 import { useNavigate } from 'react-router-dom';
 import Axios from "axios";  
 import { useEffect, useState } from "react";
-import { Typography, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import posterImage from './Poster (2).png'; 
 
 const Order = () => {
@@ -87,32 +87,41 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
   return (
     <> {/* Wrap multiple elements in a fragment */}
       <Container maxWidth="xl">
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
-          <img src={posterImage} alt="Poster" style={{ width: '100rem', height: '35rem' }} /> 
-          <button className="usr-btn" onClick={() => navigate('/')} variant="contained"  
-          style={
-            { position: 'absolute', 
-            top: 70, 
-            left: 100, 
-            width: 120,
-            height: 50, 
-            color: 'white',
-            backgroundColor: '#e6c235',
-            borderRadius: '30px',
-            cursor: 'pointer',
-            '&:hover': {
-              opacity:'0.9',
-              backgroundColor: '#ffffff'
-            }
-           }}
-            >
-            Back
-          </button>
-          <Typography variant="h2" component="h1">
-            Order Page
-          </Typography>
-        </Box>
-      </Container>
+  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
+    <div style={{ position: 'relative' }}>
+      <img src={posterImage} alt="Poster" style={{ width: '100rem', height: '35rem' }} />
+      <h1 style={{
+        position: 'absolute',
+        top: '22rem',  
+        left: '80%',
+        transform: 'translateX(-50%)',  
+        color: '#e6c235',  
+        fontWeight: 'bold',  
+        fontSize: '60px',
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
+      }}>Order Page</h1>
+    </div>
+    <button className="usr-btn" onClick={() => navigate('/')} variant="contained"
+            style={{
+              position: 'absolute',
+              top: 70,
+              left: 100,
+              width: 120,
+              height: 50,
+              color: 'black',
+              backgroundColor: '#e6c235',
+              borderRadius: '30px',
+              cursor: 'pointer',
+              '&:hover': {
+                opacity: '0.9',
+                backgroundColor: '#ffffff'
+              }
+            }}>
+      Back
+    </button>
+  </Box>
+</Container>
+
       <Box
         sx={{
           width: 'calc(100%-100px)',
