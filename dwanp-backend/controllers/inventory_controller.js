@@ -14,8 +14,11 @@ const getInventory = (req, res, next) => {
 
 const addInventory = (req, res, next) => {
   const inventory = new invSchema({
-    id: req.body.id,
-    name: req.body.name,
+    invnt_item: req.body.invnt_item,
+    invnt_code: req.body.invnt_code,
+    qnty: req.body.qnty,
+    price: req.body.price,
+    date: req.body.date,
   });
   inventory
     .save()
