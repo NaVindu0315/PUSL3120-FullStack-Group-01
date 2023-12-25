@@ -1,5 +1,4 @@
-/* Import the MUI theme to ensure consistency with Material UI components */
-@import "@mui/material/styles/theme";
+
 
 /* Set the background color to light black */
 body {
