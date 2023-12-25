@@ -12,7 +12,8 @@ import EmployeeTable from "./Employee_Table";
 //import for connecting backend and front end
 import Axios from "axios";
 import { useEffect ,useState } from "react";
-//import './empstyle.css';
+import './empstyle.css';
+
 
 const Employee=()=>
 {
@@ -155,7 +156,7 @@ const Employee=()=>
 
 
     return (
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" >
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
             <Typography variant="h5" component="h5"> 
             <button className="usr-btn" onClick={()=>navigate('/')}>Back</button>

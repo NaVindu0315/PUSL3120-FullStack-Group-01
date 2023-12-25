@@ -2,7 +2,7 @@
 
 /* Set the background color to light black */
 body {
-  background-color: #222; /* Adjust as needed for a lighter black */
+  background-color: #5ba6d1; /* Adjust as needed for a lighter black */
   color: #fff; /* Ensure text is readable on dark background */
 }
 
@@ -18,10 +18,14 @@ h1, h2, h5 {
 }
 
 .MuiContainer-root {
-  background-color: #333; /* Slightly darker background for the container */
+  background-color: #ec86db; /* Slightly darker background for the container */
 }
 
 /* Ensure table elements have sufficient contrast */
 .MuiTableCell-root, .MuiTableRow-root:hover {
   background-color: #353535;
+}
+
+.Container{
+    background-color: #222; 
 }
