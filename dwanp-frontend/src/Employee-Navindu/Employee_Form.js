@@ -63,9 +63,10 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
         spacing={2}
         sx={{ backgroundColor: "#ffffff", marginBottom: "30px" }}>
             <Grid item xs={12}>
-        <Typography component="h1" sx={{ color: "#000000" }}>
-          User Information
-        </Typography>
+            <Typography component="h1" sx={{ color: "#000000", fontWeight: "bold", fontFamily: "Roboto, sans-serif" ,fontSize:"40px"}}>
+  Employee Information
+</Typography>
+
       </Grid>
   
     
@@ -178,13 +179,13 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
         sx={{
           margin: "auto",
           marginBottom: "20px",
-          backgroundColor: "#00c6e6",
-          color: "#000000",
+          backgroundColor: "black",  /* Set background color to black */
+          color: "white",            /* Set text color to white */
           marginLeft: "15px",
           marginTop: "20px",
           "&:hover": {
             opacity: 0.7,
-            backgroundColor: "#00c6e6",
+            backgroundColor: "black",  /* Maintain black background on hover */
           },
         }}
         onClick={()=>{
