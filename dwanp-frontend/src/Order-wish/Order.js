@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import Axios from "axios";  
 import { useEffect, useState } from "react";
 import { Typography, Container } from "@mui/material";
+import posterImage from './path/to/your/poster.png'; 
 
 const Order = () => {
   const [Order, setOrder] = useState([]);
