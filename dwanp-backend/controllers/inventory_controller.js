@@ -48,10 +48,11 @@ const updateInventory = (req, res, next) => {
     });
 };
 
+//delete inventory
 const deleteInventory = (req, res, next) => {
-  const id = req.body.id;
+  const invnt_code = req.body.invnt_code;
   invSchema
-    .deleteOne({ id: id })
+    .deleteOne({ invnt_code: invnt_code })
     .then((response) => {
       res.json({ response });
     })
