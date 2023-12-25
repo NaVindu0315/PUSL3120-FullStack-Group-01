@@ -89,9 +89,25 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
       <Container maxWidth="xl">
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
           <img src={posterImage} alt="Poster" style={{ width: '100rem', height: '35rem' }} /> 
-          <Typography variant="h5" component="h5">
-            <button className="usr-btn" onClick={() => navigate('/')}>Back</button>
-          </Typography>
+          <button className="usr-btn" onClick={() => navigate('/')} variant="contained"  
+          style={
+            { position: 'absolute', 
+            top: 70, 
+            left: 100, 
+            width: 120,
+            height: 50, 
+            color: 'white',
+            backgroundColor: '#e6c235',
+            borderRadius: '30px',
+            cursor: 'pointer',
+            '&:hover': {
+              opacity:'0.9',
+              backgroundColor: '#ffffff'
+            }
+           }}
+            >
+            Back
+          </button>
           <Typography variant="h2" component="h1">
             Order Page
           </Typography>
