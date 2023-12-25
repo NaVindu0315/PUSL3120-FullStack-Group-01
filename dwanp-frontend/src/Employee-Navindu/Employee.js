@@ -77,7 +77,7 @@ const Employee=()=>
               // console.log(response.data.response);
              getEmp();
              setSubmitted(false);
-             isedit(false);
+             setIsEdit(false);
            })
            .catch(error => {
                console.error("Axios Error :" ,error);
@@ -105,7 +105,7 @@ const Employee=()=>
                 bdate : data.bdate,
                 nic: data.nic,
                 adrs : data.adrs,
-                tel : data.adrs,
+                tel : data.tel,
                 civil : data.civil,
      
              }
@@ -114,7 +114,7 @@ const Employee=()=>
                  // console.log(response.data.response);
                 getEmp();
                 setSubmitted(false);
-                isedit(false);
+                setIsEdit(false);
               })
               .catch(error => {
                   console.error("Axios Error :" ,error);

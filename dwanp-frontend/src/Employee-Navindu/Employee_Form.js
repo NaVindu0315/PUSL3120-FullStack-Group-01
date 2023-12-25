@@ -210,10 +210,10 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
             backgroundColor: "#00c6e6",
           },
         }}
-        onClick={()=>{ if(isedit==true)
+        onClick={()=>
         {
           updateEmp({emp_code,emp_name,bdate,nic,adrs,tel,civil})
-        } }
+        }
        
         }
       >
