@@ -19,13 +19,32 @@ const Inventory = () => {
   //create get users
 
   useEffect(() => {
-    getInventory();
+    getInv();
   }, []);
 
-  const getInventory = () => {
+  const getInv = () => {
     Axios.get("http://127.0.0.1:3001/api/users")
       .then((response) => {
         setInv(response.data?.response || []);
+      })
+      .catch((error) => {
+        console.error("Axios Error :", error);
+      });
+  };
+
+  //create add users
+  const addInv = (data) => {
+    setSubmitted(true);
+
+    const payload = {
+      id: data.id,
+      name: data.name,
+    };
+    Axios.post("http://127.0.0.1:3001/api/createuser", payload)
+      .then(() => {
+        getInv();
+        setSubmitted(false);
+        isEdit(false);
       })
       .catch((error) => {
         console.error("Axios Error :", error);
