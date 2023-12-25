@@ -2,7 +2,7 @@
 //pasindu
 //////////////////////
 //importing
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { Typography, Container } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import InventoryForm from "./Inventory_Form";
@@ -37,8 +37,11 @@ const Inventory = () => {
     setSubmitted(true);
 
     const payload = {
-      id: data.id,
-      name: data.name,
+      invnt_item: data.invnt_item,
+      invnt_code: data.invnt_code,
+      qnty: data.qnty,
+      price: data.price,
+      date: data.date,
     };
     Axios.post("http://localhost:3001/api/createinventory", payload)
       .then(() => {
@@ -57,8 +60,11 @@ const Inventory = () => {
     setSubmitted(true);
 
     const payload = {
-      id: data.id,
-      name: data.name,
+      invnt_item: data.invnt_item,
+      invnt_code: data.invnt_code,
+      qnty: data.qnty,
+      price: data.price,
+      date: data.date,
     };
 
     Axios.post("http://localhost:3001/api/updateinventory", payload)
@@ -102,18 +108,18 @@ const Inventory = () => {
         <Typography variant="h2" component="h1">
           Inventory page
         </Typography>
-        <Typography variant="h5" sx={{ mt: 2 }}>
-          Pasindu
-        </Typography>
+        <Typography></Typography>
+      </Box>
 
+      <Box>
+        <Grid></Grid>
         <InventoryForm
           addInv={addInv}
           updateInv={updateInv}
           submitted={submitted}
           data={selectInv}
           isEdit={isEdit}
-        />
-
+        ></InventoryForm>
         <InventoryTable
           rows={inv}
           selectInv={(data) => {
@@ -123,7 +129,7 @@ const Inventory = () => {
           deleteInv={(data) =>
             window.confirm("Are you sure?") && deleteInv(data)
           }
-        />
+        ></InventoryTable>
       </Box>
     </Container>
   );
