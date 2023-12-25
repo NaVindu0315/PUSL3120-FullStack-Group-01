@@ -120,7 +120,7 @@ const Inventory = () => {
             setSelectedInv(data);
             setIsEdit(true);
           }}
-          deleteUser={(data) =>
+          deleteInv={(data) =>
             window.confirm("Are you sure?") && deleteInv(data)
           }
         />
