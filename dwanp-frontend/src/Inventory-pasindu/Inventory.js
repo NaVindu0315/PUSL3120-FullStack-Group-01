@@ -94,6 +94,18 @@ const Inventory = () => {
           mt: 4,
         }}
       >
+        <Typography variant="h5" component="h5">
+          <button className="usr-btn" onClick={() => navigate("/")}>
+            Back
+          </button>
+        </Typography>
+        <Typography variant="h2" component="h1">
+          Inventory page
+        </Typography>
+        <Typography variant="h5" sx={{ mt: 2 }}>
+          Pasindu
+        </Typography>
+
         <InventoryForm
           addInv={addInv}
           updateInv={updateInv}
@@ -112,18 +124,6 @@ const Inventory = () => {
             window.confirm("Are you sure?") && deleteInv(data)
           }
         />
-
-        <Typography variant="h5" component="h5">
-          <button className="usr-btn" onClick={() => navigate("/")}>
-            Back
-          </button>
-        </Typography>
-        <Typography variant="h2" component="h1">
-          Inventory page
-        </Typography>
-        <Typography variant="h5" sx={{ mt: 2 }}>
-          Pasindu
-        </Typography>
       </Box>
     </Container>
   );
