@@ -12,7 +12,7 @@ import EmployeeTable from "./Employee_Table";
 //import for connecting backend and front end
 import Axios from "axios";
 import { useEffect ,useState } from "react";
-import './empstyle.css';
+//import './empstyle.css';
 
 const Employee=()=>
 {

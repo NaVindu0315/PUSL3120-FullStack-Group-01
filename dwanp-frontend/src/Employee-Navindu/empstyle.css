@@ -1,0 +1,28 @@
+/* Import the MUI theme to ensure consistency with Material UI components */
+@import "@mui/material/styles/theme";
+
+/* Set the background color to light black */
+body {
+  background-color: #222; /* Adjust as needed for a lighter black */
+  color: #fff; /* Ensure text is readable on dark background */
+}
+
+/* Apply yellow color to specific elements */
+.usr-btn {
+  background-color: #ffff00;
+  color: #222; /* Ensure text is readable on yellow background */
+}
+
+/* Additional styling for a light black background */
+h1, h2, h5 {
+  color: #fff;
+}
+
+.MuiContainer-root {
+  background-color: #333; /* Slightly darker background for the container */
+}
+
+/* Ensure table elements have sufficient contrast */
+.MuiTableCell-root, .MuiTableRow-root:hover {
+  background-color: #353535;
+}
