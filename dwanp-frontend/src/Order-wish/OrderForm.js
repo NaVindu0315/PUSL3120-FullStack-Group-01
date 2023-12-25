@@ -128,6 +128,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                     display:'block',
                     marginLeft: '42%',
                     
+                    
             }}
                 >
                     No Of Potions
@@ -136,7 +137,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                 type="text"
                 Orderid="noOfPotions"
                 name="noOfPotions"
-                sx={{ width:'400px',  marginLeft: '42%', marginBottom: '20px'}}
+                sx={{ width:'400px',  marginLeft: '42%', marginBottom: '20px',}}
                 value={noOfPotions}
                 onChange={e => setNoOfPotions(e.target.value)}
                 />
