@@ -1,22 +1,28 @@
 //this is the homepage
 
-//this is the page with all the buttons
-
 import {  Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
 
 
-const Homepage = ({ props }) => {
+const UserDashboard = ({ props }) => {
     const navigate = useNavigate();
     return (
         <Container maxWidth="xl">
+            <Typography variant="h5" component="h5"> 
+            <button className="usr-btn" onClick={()=>navigate('/')}>Back</button>
+            
+            </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
                 <Typography variant="h2" component="h1">
-                 This is the testing   Homepage
+                    Dwanp Restaurants -User Dashboard
                 </Typography>
                 <Typography variant="h5" sx={{ mt: 2 }}>
-                    Welcome
+                    Poster
+                </Typography>
+
+                <Typography variant="h2" sx={{ mt: 2 }}>
+                    Welcome Users
                 </Typography>
             </Box>
             <Grid container spacing={4}>
@@ -25,6 +31,7 @@ const Homepage = ({ props }) => {
 
 
                         <TableRow>
+                            ***welcome poster here 
 
 
                             <TableCell></TableCell>
@@ -37,6 +44,9 @@ const Homepage = ({ props }) => {
 
 
                         </TableRow>
+                        <TableRow>
+                            ****Menu Display here
+                        </TableRow>
 
 
                     </TableHead>
@@ -45,68 +55,47 @@ const Homepage = ({ props }) => {
                     <TableBody>
                   {/*first row */}
                             <TableRow >
-                                <TableCell></TableCell>
+                         {  /*     <TableCell></TableCell>
                                 <TableCell>
                                 <button className="usr-btn" onClick={()=>navigate('/menu')}>Menu</button>
                                 </TableCell>
                                 <TableCell>
                                 <button className="usr-btn" onClick={()=>navigate('/inventory')}>Inventory</button>
-                                </TableCell>
+    </TableCell>*/}
                             </TableRow>
                 {/*second row */}
                              <TableRow >
-                                <TableCell></TableCell>
+                        {/*        <TableCell></TableCell>
                                 <TableCell>
                                 <button className="usr-btn" onClick={()=>navigate('/order')}>Order</button>
                                 </TableCell>
                                 <TableCell>
                                 <button className="usr-btn" onClick={()=>navigate('/employee')}>Employee</button>
-                                </TableCell>
+                                </TableCell>*/}
                             </TableRow>
                  {/*third row */}
                  <TableRow >
                                 <TableCell></TableCell>
                                 <TableCell>
-                                <button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button>
+                                    {/**<button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button> */}
+                                
                                 </TableCell>
-                                <TableCell>
-                                <button className="usr-btn" onClick={()=>navigate('/emplog')}>Emp Login</button>
-                                </TableCell>
-                            </TableRow>
-                            <TableRow >
                                 <TableCell></TableCell>
-                                <TableCell>
-                                <button className="usr-btn" onClick={()=>navigate('/userreg')}>User Register</button>
-                                </TableCell>
-                                <TableCell>
-                                <button className="usr-btn" onClick={()=>navigate('/userlog')}>User Log</button>
-                                </TableCell>
                             </TableRow>
-
-
-                            {/**ffith row */}
-                            <TableRow >
-                                <TableCell></TableCell>
-                                <TableCell>
-                                <button className="usr-btn" onClick={()=>navigate('/userdashboard')}>User Dashboard</button>
-                                </TableCell>
-                                <TableCell>
-                                <button className="usr-btn" onClick={()=>navigate('/empdashboard')}>Employee Dashboard</button>
-                                </TableCell>
-                            </TableRow>
+                        
                     </TableBody>
                 </Table>
             </Grid>
+
+            <Grid><button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button>
+            <button className="usr-btn" onClick={()=>navigate('/order')}>Order</button>
+            </Grid> 
+            
+            <Grid> <button className="usr-btn" onClick={()=>navigate('')}>Contact Employee</button> </Grid>
         </Container>
 
     )
 
 }
 
-export default Homepage;
-
-/*   <Typography variant="h5" component="h5"> 
-            <button className="usr-btn" onClick={()=>navigate('/')}>Back</button>
-            
-            </Typography>
-             */
+export default UserDashboard;
