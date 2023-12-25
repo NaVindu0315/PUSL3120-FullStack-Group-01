@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@mui/material";
 
-const UsersTable = ({ rows, selectInv, deleteInv }) => {
+const InventoryTable = ({ rows, selectInv, deleteInv }) => {
   return (
     <TableContainer component={Paper}>
       <Table>
@@ -64,4 +64,4 @@ const UsersTable = ({ rows, selectInv, deleteInv }) => {
   );
 };
 
-export default UsersTable;
+export default InventoryTable;

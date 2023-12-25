@@ -11,9 +11,9 @@ import Axios from "axios";
 import { useEffect, useState } from "react";
 
 const Inventory = () => {
-  const [users, setInv] = useState([]);
+  const [inv, setInv] = useState([]);
   const [submitted, setSubmitted] = useState(false);
-  const [selectedUser, setSelectedUser] = useState({});
+  const [selectInv, setSelectedInv] = useState({});
   const [isEdit, setIsEdit] = useState(false);
 
   //create get users
@@ -23,7 +23,7 @@ const Inventory = () => {
   }, []);
 
   const getInv = () => {
-    Axios.get("http://127.0.0.1:3001/api/users")
+    Axios.get("http://localhost:3001/api/inventory")
       .then((response) => {
         setInv(response.data?.response || []);
       })
@@ -40,7 +40,7 @@ const Inventory = () => {
       id: data.id,
       name: data.name,
     };
-    Axios.post("http://127.0.0.1:3001/api/createuser", payload)
+    Axios.post("http://localhost:3001/api/createinventory", payload)
       .then(() => {
         getInv();
         setSubmitted(false);
@@ -61,7 +61,7 @@ const Inventory = () => {
       name: data.name,
     };
 
-    Axios.post("http://127.0.0.1:3001/api/updateuser", payload)
+    Axios.post("http://localhost:3001/api/updateinventory", payload)
       .then(() => {
         getInv();
         setSubmitted(false);
@@ -72,7 +72,16 @@ const Inventory = () => {
       });
   };
 
-  //create update users
+  //create delete users
+  const deleteInv = (id) => {
+    Axios.post("http://localhost:3001/api/deleteinventory", id)
+      .then(() => {
+        getInv();
+      })
+      .catch((error) => {
+        console.error("Axios Error :", error);
+      });
+  };
 
   const navigate = useNavigate();
   return (
@@ -85,6 +94,25 @@ const Inventory = () => {
           mt: 4,
         }}
       >
+        <InventoryForm
+          addInv={addInv}
+          updateInv={updateInv}
+          submitted={submitted}
+          data={selectInv}
+          isEdit={isEdit}
+        />
+
+        <InventoryTable
+          rows={inv}
+          selectInv={(data) => {
+            setSelectedInv(data);
+            setIsEdit(true);
+          }}
+          deleteUser={(data) =>
+            window.confirm("Are you sure?") && deleteInv(data)
+          }
+        />
+
         <Typography variant="h5" component="h5">
           <button className="usr-btn" onClick={() => navigate("/")}>
             Back
