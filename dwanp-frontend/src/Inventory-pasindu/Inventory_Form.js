@@ -70,15 +70,15 @@ const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Employee Name</TableCell>
+              <TableCell>Inventory Code</TableCell>
               <TableCell>
                 <Input
                   type="text"
-                  id="emp_name"
-                  name="emp_name"
+                  id="invnt_code"
+                  name="invnt_code"
                   sx={{ width: "400px" }}
-                  value={emp_name}
-                  onChange={(e) => setEmpName(e.target.value)}
+                  value={invnt_code}
+                  onChange={(e) => setCode(e.target.value)}
                 />
               </TableCell>
             </TableRow>
