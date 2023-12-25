@@ -51,6 +51,29 @@ const Inventory = () => {
       });
   };
 
+  //create update users
+
+  const updateInv = (data) => {
+    setSubmitted(true);
+
+    const payload = {
+      id: data.id,
+      name: data.name,
+    };
+
+    Axios.post("http://127.0.0.1:3001/api/updateuser", payload)
+      .then(() => {
+        getInv();
+        setSubmitted(false);
+        isEdit(false);
+      })
+      .catch((error) => {
+        console.error("Axios Error :", error);
+      });
+  };
+
+  //create update users
+
   const navigate = useNavigate();
   return (
     <Container maxWidth="xl">
