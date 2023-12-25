@@ -63,7 +63,8 @@ const InventoryTable = ({ rows, selectInv, deleteInv }) => {
 
                   <Button
                     sx={{ margin: "0px 10px" }}
-                    onClick={() => deleteInv({ id: row.id })}
+                    className="action-btn"
+                    onClick={() => deleteInv({ invnt_code: row.invnt_code })}
                   >
                     Delete
                   </Button>
