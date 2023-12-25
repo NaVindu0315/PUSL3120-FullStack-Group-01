@@ -94,9 +94,7 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
           <Typography variant="h2" component="h1">
             Order Page
           </Typography>
-          <Typography variant="h5" sx={{ mt: 2 }}>
-            Wish
-          </Typography>
+          <img src={posterImage} alt="Poster" style={{ width: '400px', height: '300px' }} /> 
         </Box>
       </Container>
       <Box
