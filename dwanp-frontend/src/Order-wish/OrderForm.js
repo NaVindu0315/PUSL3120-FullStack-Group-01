@@ -35,22 +35,29 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
     return(
         <Grid
         container
-        spacing={2}
+        spacing={1}
         sx={{
             backgroundColor: '#ffffff',
             marginBottom: '30px',
-            display:'block',
-            marginLeft: '30px'
+            display:'flex',
+            justifyContent: 'center', 
+            alignItems: 'center',
+            minHeight: '50vh'
         }}
         >
-            <Grid item xs={12} sm={6} sx={{display:'flex'}}>
+            <Grid item xs={12} sm={0} sx={{display:'flex', justifyContent: 'center', mt: '-100px'}}>
                 <Typography 
                 component={'h1'} 
-                sx={{color:'#000000', marginLeft: '15px'}}>Order Form
+                sx={{
+                color:'#000000', 
+                fontSize: '3rem',
+                fontWeight: 'bold',
+
+                }}>Order Form
                 </Typography>
             </Grid>
   
-            <Grid>
+            <Grid item xs={6} sx={{ display: 'flex', alignContent:'right', flexDirection: 'column' }}>
                 <Typography 
                 component={'label'} 
                 htmlFor="Orderid"
@@ -82,7 +89,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                 </Typography>
             </Grid>
 
-            <Grid>
+            <Grid item xs={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                 <Typography 
                 component={'label'} 
                 htmlFor="Orderid"
@@ -101,7 +108,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                 type="text"
                 Orderid="foodItemCode"
                 name="foodItemCode"
-                sx={{ width:'400px',  marginLeft: '30px'}}
+                sx={{ width:'400px',  marginRight: '0'}}
                 value={foodItemCode}
                 onChange={e => setFoodItemCode(e.target.value)}
                 />
@@ -131,7 +138,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                 onChange={e => setNoOfPotions(e.target.value)}
                 />
             </Grid>
-            <Grid>
+            <Grid >
                 <Typography 
                 component={'label'} 
                 htmlFor="Orderid"
@@ -150,7 +157,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                 type="text"
                 Orderid="date"
                 name="date"
-                sx={{ width:'400px',  marginLeft: '30px'}}
+                sx={{ width:'400px',  marginRight: '0'}}
                 value={date}
                 onChange={e => setDate(e.target.value)}
                 />
