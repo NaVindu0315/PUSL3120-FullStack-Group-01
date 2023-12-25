@@ -91,7 +91,19 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp,}) =>
                                 >
                                 Update
                                 </Button>
-                                <Button sx={{margin:'0px 10px'}}
+                                <Button 
+                                  sx={{
+                                    margin: "auto",
+                                    marginBottom: "20px",
+                                    backgroundColor: "black",  /* Set background color to black */
+                                    color: "white",            /* Set text color to white */
+                                    marginLeft: "15px",
+                                    marginTop: "20px",
+                                    "&:hover": {
+                                      opacity: 0.7,
+                                      backgroundColor: "black",  /* Maintain black background on hover */
+                                    },
+                                  }}
                                 className="action-btn"
                                 onClick={
                                     () =>
