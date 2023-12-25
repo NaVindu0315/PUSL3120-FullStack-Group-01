@@ -45,29 +45,32 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
             minHeight: '50vh'
         }}
         >
-            <Grid item xs={12} sm={0} sx={{display:'flex', justifyContent: 'center', mt: '-100px'}}>
+            <Grid item xs={12} sm={0} sx={{display:'flex', justifyContent: 'center', mt: '-200px'}}>
                 <Typography 
                 component={'h1'} 
                 sx={{
                 color:'#000000', 
                 fontSize: '3rem',
                 fontWeight: 'bold',
-
+                backgroundColor:'#e6c235',
+                width: '100%',
+               
+                textAlign:"center",
+                
                 }}>Order Form
                 </Typography>
             </Grid>
   
-            <Grid item xs={6} sx={{ display: 'flex', alignContent:'right', flexDirection: 'column' }}>
+            <Grid>
                 <Typography 
                 component={'label'} 
                 htmlFor="Orderid"
                 sx={{
                     color:'#000000',
-                    marginRight:'20px',
                     fontSize:'16px',
                     width:'100px',
                     display:'block',
-                    marginLeft: '30px'
+                    marginLeft: '-3%'
             }}
                 >
                     Order ID
@@ -76,30 +79,30 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                 type="number"
                 Orderid="Orderid"
                 name="Orderid"
-                sx={{ width:'400px', marginLeft: '30px'}}
+                sx={{ width:'400px', marginLeft: '-3%'}}
                 value={Orderid}
                 onChange={e => setOrderId(e.target.value)}
                 />
             </Grid>
   
-            <Grid item xs={12} sm={6} sx={{display:'flex'}}>
+            <Grid>
                 <Typography 
                 component={'h1'} 
                 sx={{color:'#000000', marginLeft: '15px'}}>
                 </Typography>
             </Grid>
 
-            <Grid item xs={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+            <Grid>
                 <Typography 
                 component={'label'} 
                 htmlFor="Orderid"
                 sx={{
                     color:'#000000',
-                    marginRight:'20px',
                     fontSize:'16px',
-                    width:'100px',
+                    width:'150px',
                     display:'block',
-                    marginLeft: '30px'
+                    marginLeft: '10%',
+                    marginBottom: '10px'
             }}
                 >
                     Food Item Code
@@ -108,12 +111,36 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                 type="text"
                 Orderid="foodItemCode"
                 name="foodItemCode"
-                sx={{ width:'400px',  marginRight: '0'}}
+                sx={{ width:'400px',  marginLeft: '10%', marginBottom: '10px'}}
                 value={foodItemCode}
                 onChange={e => setFoodItemCode(e.target.value)}
                 />
             </Grid>
 
+            <Grid item xs={6} sx={{ display: 'flex', alignContent:'left', flexDirection: 'column' }}>
+                <Typography 
+                component={'label'} 
+                htmlFor="Orderid"
+                sx={{
+                    color:'#000000',
+                    fontSize:'16px',
+                    width:'120px',
+                    display:'block',
+                    marginLeft: '42%',
+                    
+            }}
+                >
+                    No Of Potions
+                </Typography>
+                <Input 
+                type="text"
+                Orderid="noOfPotions"
+                name="noOfPotions"
+                sx={{ width:'400px',  marginLeft: '42%', marginBottom: '20px'}}
+                value={noOfPotions}
+                onChange={e => setNoOfPotions(e.target.value)}
+                />
+            </Grid>
             <Grid>
                 <Typography 
                 component={'label'} 
@@ -124,31 +151,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                     fontSize:'16px',
                     width:'100px',
                     display:'block',
-                    marginLeft: '30px'
-            }}
-                >
-                    No Of Potions
-                </Typography>
-                <Input 
-                type="text"
-                Orderid="noOfPotions"
-                name="noOfPotions"
-                sx={{ width:'400px',  marginLeft: '30px'}}
-                value={noOfPotions}
-                onChange={e => setNoOfPotions(e.target.value)}
-                />
-            </Grid>
-            <Grid >
-                <Typography 
-                component={'label'} 
-                htmlFor="Orderid"
-                sx={{
-                    color:'#000000',
-                    marginRight:'20px',
-                    fontSize:'16px',
-                    width:'100px',
-                    display:'block',
-                    marginLeft: '30px'
+                    marginLeft: '10%'
             }}
                 >
                     Date
@@ -157,7 +160,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                 type="text"
                 Orderid="date"
                 name="date"
-                sx={{ width:'400px',  marginRight: '0'}}
+                sx={{ width:'400px',  marginLeft: '10%', marginBottom: '13px'}}
                 value={date}
                 onChange={e => setDate(e.target.value)}
                 />
@@ -165,15 +168,20 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
 
             <Button
             sx={{
+                
                 margin:'auto',
-                marginBottom: '20px',
-                backgroundColor: '#00c6e6',
+                marginBottom: '-9%',
+                backgroundColor: '#e6c235',
                 color: '#000000',
-                marginLeft: '30px',
+                marginLeft: '50px',
                 marginTop:'20px',
+                width: '10%',
+                hight: '20%',
+                borderRadius:'30px',
                 '&:hover': {
                     opacity:'0.7',
-                    backgroundColor: '#00c6e6'
+                    color:'#ffffff',
+                    backgroundColor: '#000000'
                 }
             }}
             onClick={() => isEdit ? updateOrder({ Orderid, foodItemCode, noOfPotions, date }) : addOrder({ Orderid, foodItemCode, noOfPotions, date })}

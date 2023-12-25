@@ -89,11 +89,11 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
       <Container maxWidth="xl">
   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
     <div style={{ position: 'relative' }}>
-      <img src={posterImage} alt="Poster" style={{ width: '100rem', height: '35rem' }} />
+      <img src={posterImage} alt="Poster" style={{ width: '92rem', height: '35rem' }} />
       <h1 style={{
         position: 'absolute',
         top: '22rem',  
-        left: '80%',
+        left: '75%',
         transform: 'translateX(-50%)',  
         color: '#e6c235',  
         fontWeight: 'bold',  
