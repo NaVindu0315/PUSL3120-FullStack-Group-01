@@ -161,7 +161,7 @@ const Employee=()=>
              <Container maxWidth="xl">
   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
     <div style={{ position: 'relative' }}>
-      <img src={posterImage} alt="Poster" style={{ width: '100rem', height: '35rem' }} />
+      <img src={posterImage} alt="Poster" style={{ width: "100%", height: '35rem' }} />
       <h1 style={{
         position: 'absolute',
         top: '22rem',  
