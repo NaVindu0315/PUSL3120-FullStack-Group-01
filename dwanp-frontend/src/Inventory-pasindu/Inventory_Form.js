@@ -3,7 +3,19 @@
 //////////////////////
 
 import { useEffect, useState } from "react";
-import { Button, Grid, Typography, Input, TableContainer } from "@mui/material";
+import {
+  Button,
+  Grid,
+  Typography,
+  Input,
+  TableContainer,
+  Paper,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
@@ -109,44 +121,19 @@ const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Address</TableCell>
+              <TableCell>Date</TableCell>
               <TableCell>
                 <Input
                   type="text"
-                  id="adrs"
-                  name="adrs"
+                  id="date"
+                  name="date"
                   sx={{ width: "400px" }}
-                  value={adrs}
-                  onChange={(e) => setAdrs(e.target.value)}
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
                 />
               </TableCell>
             </TableRow>
-            <TableRow>
-              <TableCell>Telephone Number</TableCell>
-              <TableCell>
-                <Input
-                  type="number"
-                  id="tel"
-                  name="tel"
-                  sx={{ width: "400px" }}
-                  value={tel}
-                  onChange={(e) => setTel(e.target.value)}
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Married Status</TableCell>
-              <TableCell>
-                <Input
-                  type="text"
-                  id="civil"
-                  name="civil"
-                  sx={{ width: "400px" }}
-                  value={civil}
-                  onChange={(e) => setCivil(e.target.value)}
-                />
-              </TableCell>
-            </TableRow>
+
             <TableRow>
               <TableCell>
                 <Button
@@ -163,14 +150,12 @@ const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
                     },
                   }}
                   onClick={() => {
-                    addEmp({
-                      emp_code,
-                      emp_name,
-                      bdate,
-                      nic,
-                      adrs,
-                      tel,
-                      civil,
+                    addInv({
+                      invnt_item,
+                      invnt_code,
+                      qnty,
+                      price,
+                      date,
                     });
                   }}
                 >
@@ -192,14 +177,12 @@ const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
                     },
                   }}
                   onClick={() => {
-                    updateEmp({
-                      emp_code,
-                      emp_name,
-                      bdate,
-                      nic,
-                      adrs,
-                      tel,
-                      civil,
+                    updateInv({
+                      invnt_item,
+                      invnt_code,
+                      qnty,
+                      price,
+                      date,
                     });
                   }}
                 >
@@ -209,7 +192,7 @@ const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
             </TableRow>
           </TableBody>
         </Table>
-      </Tab>
+      </TableContainer>
     </Grid>
   );
 };
