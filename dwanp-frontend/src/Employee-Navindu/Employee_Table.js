@@ -8,6 +8,7 @@ import { Paper, TableCell, TableContainer, TableHead, TableRow , TableBody, Tabl
 import React, { useEffect, useState } from "react";
 //import { Button, Grid, Typography, Input } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
+//import './empstyle.css';
 
 const EmployeeTable = ({rows, selectedEmp, deleteEmp,}) =>
 {
@@ -58,6 +59,7 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp,}) =>
                             
                              <TableCell>
                                 <Button sx={{margin:'0px 10px'}}
+                                className="action-btn"
                                 onClick={
                                 () => {
                             selectedEmp({
@@ -77,6 +79,7 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp,}) =>
                                 Update
                                 </Button>
                                 <Button sx={{margin:'0px 10px'}}
+                                className="action-btn"
                                 onClick={
                                     () =>
                                     {  {

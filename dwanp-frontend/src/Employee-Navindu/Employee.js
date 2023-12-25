@@ -5,14 +5,14 @@
 ///newfunction
 //importing
 import { Box } from "@mui/material";
-import {  Typography, Container} from "@mui/material";
+import {  Typography, Container,Grid} from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import EmployeeForm from "./Employee_Form";
 import EmployeeTable from "./Employee_Table";
 //import for connecting backend and front end
 import Axios from "axios";
 import { useEffect ,useState } from "react";
-import './empstyle.css';
+//import './empstyle.css';
 
 
 const Employee=()=>
@@ -162,16 +162,19 @@ const Employee=()=>
             <button className="usr-btn" onClick={()=>navigate('/')}>Back</button>
             
             </Typography>
-            <Typography variant="h2" component="h1">
+            
+            <Typography variant="h2" component="h2">
               Employee Page
             </Typography>
-            <Typography variant="h5" sx={{ mt: 2 }}>
-              Navindu
+            <Typography>
+                
             </Typography>
+          
           </Box>
 
           <Box>
             {/**this for adding new data */}
+            <Grid></Grid>
             <EmployeeForm
             addEmp={addEmp}
             submitted={submitted}
