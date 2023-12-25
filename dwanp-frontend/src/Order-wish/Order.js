@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import Axios from "axios";  
 import { useEffect, useState } from "react";
 import { Typography, Container } from "@mui/material";
-import posterImage from './poster.png'; 
+import posterImage from './Poster (2).png'; 
 
 const Order = () => {
   const [Order, setOrder] = useState([]);
@@ -87,8 +87,8 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
   return (
     <> {/* Wrap multiple elements in a fragment */}
       <Container maxWidth="xl">
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
-          <img src={posterImage} alt="Poster" style={{ width: '100rem', height: '40rem' }} /> 
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
+          <img src={posterImage} alt="Poster" style={{ width: '10rem', height: '35rem' }} /> 
           <Typography variant="h5" component="h5">
             <button className="usr-btn" onClick={() => navigate('/')}>Back</button>
           </Typography>
