@@ -96,15 +96,15 @@ const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>NIC</TableCell>
+              <TableCell>Price</TableCell>
               <TableCell>
                 <Input
-                  type="number"
-                  id="nic"
-                  name="nic"
+                  type="text"
+                  id="price"
+                  name="price"
                   sx={{ width: "400px" }}
-                  value={nic}
-                  onChange={(e) => setNic(e.target.value)}
+                  value={price}
+                  onChange={(e) => setPrc(e.target.value)}
                 />
               </TableCell>
             </TableRow>
