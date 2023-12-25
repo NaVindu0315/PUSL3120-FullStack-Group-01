@@ -161,7 +161,8 @@ const Employee=()=>
              <Container maxWidth="xl">
   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
     <div style={{ position: 'relative' }}>
-      <img src={posterImage} alt="Poster" style={{ width: "100%", height: '35rem' }} />
+    
+      <img src={posterImage} alt="Poster" style={{ width: "1496px", height: '35rem' }} />
       <h1 style={{
         position: 'absolute',
         top: '22rem',  
@@ -171,7 +172,7 @@ const Employee=()=>
         fontWeight: 'bold',  
         fontSize: '60px',
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
-      }}>Order Page</h1>
+      }}>Employees</h1>
     </div>
     <button className="usr-btn" onClick={() => navigate('/')} variant="contained"
             style={{
