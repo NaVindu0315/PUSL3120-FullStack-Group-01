@@ -4,16 +4,24 @@
 
 import { useEffect, useState } from "react";
 import { Button, Grid, Typography, Input } from "@mui/material";
-//import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
-  const [id, setId] = useState(0);
-  const [name, setName] = useState("");
+  const navigate = useNavigate();
+
+  const [invnt_item, setItem] = useState(0);
+  const [invnt_code, setCode] = useState(0);
+  const [qnty, setQnt] = useState(0);
+  const [price, setPrc] = useState("");
+  const [date, setDate] = useState("");
 
   useEffect(() => {
     if (!submitted) {
-      setId(0);
-      setName("");
+      setItem(0);
+      setCode(0);
+      setQnt(0);
+      setPrc("");
+      setDate("");
     }
   }, [submitted]);
 
