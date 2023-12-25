@@ -18,30 +18,31 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp,}) =>
                     <Table>
                         <TableHead>
                             <TableRow>
-                                <TableCell>
-                                    Employee code
-                                </TableCell>
-                                <TableCell>
-                                    Name
-                                </TableCell>
-                                <TableCell>
-                                    Birthday 
-                                </TableCell>
-                                <TableCell>
-                                    Nic
-                                </TableCell>
-                                <TableCell>
-                                    Address
-                                </TableCell>
-                                <TableCell>
-                                    Telephone
-                                </TableCell>
-                                <TableCell>
-                                    Civil
-                                </TableCell>
-                                <TableCell>
-                                    Actions
-                                </TableCell>
+                            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Employee code
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Name
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Birthday
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Nic
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Address
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Telephone
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Civil
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Actions
+</TableCell>
+
                             </TableRow>
                         </TableHead>
                         <TableBody>
