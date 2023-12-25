@@ -199,18 +199,18 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
               <TableCell>
 
               <Button
-        sx={{
-          margin: "auto",
-          marginBottom: "20px",
-          backgroundColor: "#00c6e6",
-          color: "#000000",
-          marginLeft: "15px",
-          marginTop: "20px",
-          "&:hover": {
-            opacity: 0.7,
-            backgroundColor: "#00c6e6",
-          },
-        }}
+       sx={{
+        margin: "auto",
+        marginBottom: "20px",
+        backgroundColor: "black",  /* Set background color to black */
+        color: "white",            /* Set text color to white */
+        marginLeft: "15px",
+        marginTop: "20px",
+        "&:hover": {
+          opacity: 0.7,
+          backgroundColor: "black",  /* Maintain black background on hover */
+        },
+      }}
         onClick={()=>
         {
           updateEmp({emp_code,emp_name,bdate,nic,adrs,tel,civil})
