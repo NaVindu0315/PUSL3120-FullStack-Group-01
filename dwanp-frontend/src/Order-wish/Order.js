@@ -88,13 +88,13 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
     <> {/* Wrap multiple elements in a fragment */}
       <Container maxWidth="xl">
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
+          <img src={posterImage} alt="Poster" style={{ width: '100rem', height: '40rem' }} /> 
           <Typography variant="h5" component="h5">
             <button className="usr-btn" onClick={() => navigate('/')}>Back</button>
           </Typography>
           <Typography variant="h2" component="h1">
             Order Page
           </Typography>
-          <img src={posterImage} alt="Poster" style={{ width: '400px', height: '300px' }} /> 
         </Box>
       </Container>
       <Box
