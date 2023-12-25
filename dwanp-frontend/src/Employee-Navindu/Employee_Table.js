@@ -58,10 +58,23 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp,}) =>
                             <TableCell component='th' scope="row">{row.civil}</TableCell>
                             
                              <TableCell>
-                                <Button sx={{margin:'0px 10px'}}
+                                <Button 
+                                  sx={{
+                                    margin: "auto",
+                                    marginBottom: "20px",
+                                    backgroundColor: "black",  /* Set background color to black */
+                                    color: "white",            /* Set text color to white */
+                                    marginLeft: "15px",
+                                    marginTop: "20px",
+                                    "&:hover": {
+                                      opacity: 0.7,
+                                      backgroundColor: "black",  /* Maintain black background on hover */
+                                    },
+                                  }}
                                 className="action-btn"
                                 onClick={
                                 () => {
+
                             selectedEmp({
                                         emp_code: row.emp_code,
                                         emp_name : row.emp_name,
