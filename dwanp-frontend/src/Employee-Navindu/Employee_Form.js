@@ -64,7 +64,7 @@ const EmployeeForm = ({addEmp,submitted,data,isedit ,updateEmp}) =>
         sx={{ backgroundColor: "#ffffff", marginBottom: "30px" }}>
             <Grid item xs={12}>
             <Typography component="h1" sx={{ color: "#000000", fontWeight: "bold", fontFamily: "Roboto, sans-serif" ,fontSize:"40px"}}>
-  Employee Information
+  Employee Enroll
 </Typography>
 
       </Grid>

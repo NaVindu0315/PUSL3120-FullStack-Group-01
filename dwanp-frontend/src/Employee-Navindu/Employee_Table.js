@@ -4,7 +4,7 @@
 //////////////////////
 
 
-import { Paper, TableCell, TableContainer, TableHead, TableRow , TableBody, Table,Button} from "@mui/material";
+import { Paper, TableCell, TableContainer, TableHead, TableRow , TableBody, Table,Button,Typography} from "@mui/material";
 import React, { useEffect, useState } from "react";
 //import { Button, Grid, Typography, Input } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
@@ -15,6 +15,9 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp,}) =>
     return(
         <TableContainer 
                 component={Paper}>
+                         <Typography component="h1" sx={{ color: "#000000", fontWeight: "bold", fontFamily: "Roboto, sans-serif" ,fontSize:"40px"}}>
+  Employee Details
+</Typography>
                     <Table>
                         <TableHead>
                             <TableRow>
