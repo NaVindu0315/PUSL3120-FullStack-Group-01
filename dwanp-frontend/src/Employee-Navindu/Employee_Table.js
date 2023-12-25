@@ -9,7 +9,7 @@ import React, { useEffect, useState } from "react";
 //import { Button, Grid, Typography, Input } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
-const EmployeeTable = ({rows, selectedEmp, deleteEmp}) =>
+const EmployeeTable = ({rows, selectedEmp, deleteEmp,}) =>
 {
     return(
         <TableContainer 
