@@ -60,5 +60,5 @@ app.use("/api", invrouter);
 app.use('/api',menrouter);
 
 //for the authentication here um gonna use  my own but in the tutorial it says ('./api/user',auth_user_router)
-app.use('/api',auth_user_router);
+app.use('/api/user',auth_user_router);
 
