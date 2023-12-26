@@ -1,22 +1,86 @@
 //this is the homepage
-
-import {  Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
-import { useNavigate } from 'react-router-dom';
-
-
+import {  Container, Box, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
+import { useLocation, useNavigate } from 'react-router-dom';
+import MyComponent from './navbar'; 
+import posterImage from './Poster (2).png'; 
+import { IconButton } from '@mui/material';
+import PersonAddAltRoundedIcon from '@mui/icons-material/PersonAddAltRounded';
+import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 
 const Home = ({ props }) => {
+    const location = useLocation();
     const navigate = useNavigate();
     return (
         <Container maxWidth="xl">
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
-                <Typography variant="h2" component="h1">
-                    Dwanp Restaurants
-                </Typography>
-                <Typography variant="h5" sx={{ mt: 2 }}>
-                    Poster
-                </Typography>
-            </Box>
+            <navbar>
+            <MyComponent activePage={location.pathname} />
+            </navbar> 
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
+    <div style={{ position: 'relative' }}>
+      <img src={posterImage} alt="Poster" style={{ width: '93rem', height: '42rem' }} />
+      <IconButton
+            className="usr-btn" 
+            onClick={()=>navigate('/userreg')}
+            style={{
+                borderRadius: '10px',
+                backgroundColor: 'black',
+                color: '#e6c235',
+                position: 'absolute', 
+                fontSize: '13px',
+                width: '140px',
+                height: '40px',
+                bottom: '90%',
+                left: '66%',
+                transform: 'translate(90%)' ,
+                boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
+              }}
+            >
+            <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+            Register
+       </IconButton>
+       <IconButton
+            className="usr-btn" 
+            onClick={()=>navigate('/userlog')}
+            style={{
+                borderRadius: '10px',
+                backgroundColor: 'black',
+                color: '#e6c235',
+                position: 'absolute', 
+                fontSize: '13px',
+                width: '140px',
+                height: '40px',
+                bottom: '90%',
+                left: '77%',
+                transform: 'translate(90%)' ,
+                boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
+              }}
+            >
+            <PersonRoundedIcon style={{ marginRight: '7px' }} /> 
+           Login
+       </IconButton>
+        <button
+        className="usr-btn"
+        onClick={() => navigate('/emplog')}
+        style={{
+          borderRadius: '10px',
+          width: '20%',
+          height: '10%',
+          backgroundColor: '#e6c235',
+          color: 'black',
+          position: 'absolute', 
+          top: '70%',
+          left: '50%',
+          transform: 'translate(90%)' ,
+          '&:hover': {
+            backgroundColor: 'black',
+            color: 'white'
+          }
+        }}
+      >
+        <b>Employee Login</b>
+      </button>
+    </div>
+  </Box>
             <Grid container spacing={4}>
                 <Table sx={{ mt: 4 }}>
                     <TableHead>
@@ -74,21 +138,12 @@ const Home = ({ props }) => {
                     </TableBody>
                 </Table>
             </Grid>
-            <Grid><button className="usr-btn" onClick={()=>navigate('/userreg')}>UserRegistration</button>
-            <button className="usr-btn" onClick={()=>navigate('/userlog')}>Login</button>
+            <Grid>
+            <button className="usr-btn" onClick={() => navigate('/testhome')}>Testing Home</button>
             </Grid> 
             
-            <Grid> <button className="usr-btn" onClick={()=>navigate('/emplog')}>Employee Login</button> </Grid>
 
-            <Typography variant="h5" sx={{ mt: 2 }}>
-            <button className="usr-btn" onClick={()=>navigate('/testhome')}>Testing Home</button>
-                </Typography>
         </Container>
-
-        
-
-
-
     )
 
 }
