@@ -12,7 +12,21 @@ const createToke = (_id) =>
 //login user
 const authloginUser = async (req,res) =>
 {
-    res.json({msg : 'login user'})
+    const {email,password} = req.body
+    try{
+        const usersignup = await authusers.login(email,password)
+        //create a token
+        const token = createToke(usersignup._id)
+
+        res.status(200).json({email,token})
+    } 
+    catch(error)
+    {
+        res.status(400).json({error :  error.message})
+
+    }
+
+    
 }
 
 
