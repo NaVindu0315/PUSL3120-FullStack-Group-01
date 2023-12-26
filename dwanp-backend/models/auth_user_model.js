@@ -63,6 +63,13 @@ authusersSchema.statics.login = async function(email,passowrd)
      {
          throw Error('All fields must be filled')
      }
+     const usersignup = await this.findOne({email})
+     //checking whether the user is already has account
+     if (!usersignup) {
+         throw Error('incorrect email')
+     }
+     
+
 
 }
 
