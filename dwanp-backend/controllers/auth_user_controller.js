@@ -1,5 +1,13 @@
 
 const authusers = require('../models/auth_user_model')
+//importing webtoken package
+const jwt = require('jsonwebtoken')
+
+const createToke = (_id) => 
+{ 
+    //in this the second prmtr is the secret key in tutorial 6 , he uses the sec key in his .env file 
+  return  jwt.sign({_id:_id},'kariponnayaumeshumeshkariponnayahirunimagemnhirunige',{expiresIn:'3d'})
+} 
 
 //login user
 const authloginUser = async (req,res) =>
