@@ -2,19 +2,17 @@ const express = require('express');
 
 const router = express.Router();
 
-//login route
-router.post('/userlogin',()=>
-{
+//controller function
 
-}
+const{ authloginUser, authsignupUser } = require('../controllers/auth_user_controller')
+
+//login route
+router.post('/userlogin',authloginUser
 )
 
 
 ///sign router
-router.post('/usersignup',()=>
-{
-
-}
+router.post('/usersignup',authsignupUser
 )
 
 
