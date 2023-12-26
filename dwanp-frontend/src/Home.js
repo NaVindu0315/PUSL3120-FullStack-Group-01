@@ -1,10 +1,10 @@
 //this is the homepage
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import {  Container, Box, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
 import { useLocation, useNavigate } from 'react-router-dom';
 import MyComponent from './navbar'; 
 import posterImage from './Poster (2).png'; 
+import { IconButton } from '@mui/material';
+import PersonAddAltRoundedIcon from '@mui/icons-material/PersonAddAltRounded';
 
 const Home = ({ props }) => {
     const location = useLocation();
@@ -16,8 +16,8 @@ const Home = ({ props }) => {
             </navbar> 
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
     <div style={{ position: 'relative' }}>
-      <img src={posterImage} alt="Poster" style={{ width: '93rem', height: '35rem' }} />
-        <button 
+      <img src={posterImage} alt="Poster" style={{ width: '93rem', height: '42rem' }} />
+      <IconButton
             className="usr-btn" 
             onClick={()=>navigate('/userreg')}
             style={{
@@ -25,20 +25,18 @@ const Home = ({ props }) => {
                 backgroundColor: 'black',
                 color: '#e6c235',
                 position: 'absolute', 
-                width: '130px',
+                fontSize: '13px',
+                width: '140px',
                 height: '40px',
                 bottom: '90%',
                 left: '70%',
                 transform: 'translate(90%)' ,
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
-               /* '&:hover': {
-                  backgroundColor: 'black',
-                  color: 'white'
-                }*/
               }}
             >
+            <PersonAddAltRoundedIcon style={{ marginRight: '5px' }} /> 
             UserRegistration
-        </button>
+       </IconButton>
         <button className="usr-btn" onClick={()=>navigate('/userlog')}>Login</button>
         <button
         className="usr-btn"
