@@ -21,7 +21,7 @@ const authusersSchema  = new Schema (
 
 //creating a static sign upmethod 
 
-authusersSchema.statics.signup = async(email,password) =>
+authusersSchema.statics.signup = async function(email,password) 
 {   
     const exists = await this.findOne({email})
     //checking whether the user is already has account
