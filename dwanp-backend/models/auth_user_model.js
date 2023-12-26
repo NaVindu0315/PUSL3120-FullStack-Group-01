@@ -1,6 +1,7 @@
 const mongoose = require ('mongoose')
 
 const Schema  = mongoose.Schema
+const bcrypt =  require('bcrpyt')
 
 const authusersSchema  = new Schema (
     {
@@ -27,6 +28,12 @@ authusersSchema.statics.signup = async(email,password) =>
     if (exists) {
         throw Error('Email Alreday in use')
     }
+    //hashing the password
+    const salt = await bcrypt.genSalt(10)
+    const hash = await bcrypt.hash(password,salt)
+
+    
+
 
 
 
