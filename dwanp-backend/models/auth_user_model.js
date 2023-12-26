@@ -56,7 +56,7 @@ authusersSchema.statics.signup = async function(email,password)
 }
 
 //static login method
-authusersSchema.statics.login = async function(email,passowrd)
+authusersSchema.statics.login = async function(email,password)
 {
      //validation
      if(!email || !password)
@@ -68,9 +68,15 @@ authusersSchema.statics.login = async function(email,passowrd)
      if (!usersignup) {
          throw Error('incorrect email')
      }
-     
+    
+     //pwd
+     const match = await bcrypt.compare(password,usersignup.password)
+     if(!match)
+     {
+        throw Error('Incorrect password')
+     }
 
-
+     return usersignup;
 }
 
 
