@@ -23,8 +23,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const menSchema = new Schema({
-  id: Number,
-  name: String,
+  menu_item_no: Number,
+  menu_item_name: String,
+  menu_item_price : String,
+  potion : Number,
 });
 
 const Menu = mongoose.model("menu", menSchema);
