@@ -5,7 +5,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import MyComponent from './navbar'; 
 import posterImage from './Poster (2).png'; 
 
-
 const Home = ({ props }) => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -14,12 +13,12 @@ const Home = ({ props }) => {
             <navbar>
             <MyComponent activePage={location.pathname} />
             </navbar> 
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0}}>
     <div style={{ position: 'relative' }}>
       <img src={posterImage} alt="Poster" style={{ width: '92rem', height: '35rem' }} />
       
     </div>
-  </Box>
+  </Box >
             <Grid container spacing={4}>
                 <Table sx={{ mt: 4 }}>
                     <TableHead>
@@ -88,11 +87,13 @@ const Home = ({ props }) => {
                 className="usr-btn"
                 onClick={() => navigate('/emplog')}
                 style={{
-                    borderRadius: '5px',
-                    width: '150px',
-                    height: '40px',
-                    backgroundColor: '#4CAF50',
-                    color: 'white',
+                    borderRadius: '20px',
+                    width: '50%',
+                    height: '50%',
+                    backgroundColor: '#e6c235',
+                    transform: 'translateX(60%)',
+                    color: 'black',
+                    marginBottom: '20%'
                 }}
                 >
                 Employee Login
@@ -104,11 +105,12 @@ const Home = ({ props }) => {
                 className="usr-btn"
                 onClick={() => navigate('/testhome')}
                 style={{
-                    borderRadius: '5px',
-                    width: '150px',
-                    height: '40px',
-                    backgroundColor: '#007bff',
-                    color: 'white',
+                    borderRadius: '20px',
+                    width: '50%',
+                    height: '50%',
+                    backgroundColor: '#e6c235',
+                    transform: 'translateX(50%)',
+                    color: 'black',
                 }}
                 >
                 Testing Home
@@ -117,11 +119,6 @@ const Home = ({ props }) => {
             </Grid>
 
         </Container>
-
-        
-
-
-
     )
 
 }
