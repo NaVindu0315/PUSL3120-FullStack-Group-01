@@ -31,8 +31,11 @@ authusersSchema.statics.signup = async(email,password) =>
     //hashing the password
     const salt = await bcrypt.genSalt(10)
     const hash = await bcrypt.hash(password,salt)
+    //here instead of usersignup yt tutrial used user
+    const usersignup = await this.create({email,password :hash})
 
-    
+    return usersignup
+
 
 
 
