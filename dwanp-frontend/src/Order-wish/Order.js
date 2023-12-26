@@ -11,6 +11,7 @@ import Axios from "axios";
 import { useEffect, useState } from "react";
 import { Container } from "@mui/material";
 import posterImage from './Poster (2).png'; 
+import navbar from '../navbar'; // Adjust the path accordingly
 
 
 const Order = () => {
