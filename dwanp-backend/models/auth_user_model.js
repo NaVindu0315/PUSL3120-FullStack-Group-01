@@ -17,6 +17,17 @@ const authusersSchema  = new Schema (
         }
     }
 )
+
+//creating a static sign upmethod 
+
+authusersSchema.statics.signup = async(email,password) =>
+{   
+    const exists = await this.findOne({email})
+
+
+}
+
+
 const authusers = mongoose.model('authusers',authusersSchema);
 module.exports = authusers;
 
