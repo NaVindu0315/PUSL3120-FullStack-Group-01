@@ -1,6 +1,6 @@
 //this is the homepage
 
-import {  Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
+import {  Container, Box, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
 import { useLocation, useNavigate } from 'react-router-dom';
 import MyComponent from './navbar'; 
 import posterImage from './Poster (2).png'; 
@@ -81,11 +81,41 @@ const Home = ({ props }) => {
             <button className="usr-btn" onClick={()=>navigate('/userlog')}>Login</button>
             </Grid> 
             
-            <Grid> <button className="usr-btn" onClick={()=>navigate('/emplog')}>Employee Login</button> </Grid>
+        
+            <Grid container spacing={2}> 
+            <Grid item xs={6}>
+                <button
+                className="usr-btn"
+                onClick={() => navigate('/emplog')}
+                style={{
+                    borderRadius: '5px',
+                    width: '150px',
+                    height: '40px',
+                    backgroundColor: '#4CAF50',
+                    color: 'white',
+                }}
+                >
+                Employee Login
+                </button>
+            </Grid>
 
-            <Typography variant="h5" sx={{ mt: 2 }}>
-            <button className="usr-btn" onClick={()=>navigate('/testhome')}>Testing Home</button>
-                </Typography>
+            <Grid item xs={6}> 
+                <button
+                className="usr-btn"
+                onClick={() => navigate('/testhome')}
+                style={{
+                    borderRadius: '5px',
+                    width: '150px',
+                    height: '40px',
+                    backgroundColor: '#007bff',
+                    color: 'white',
+                }}
+                >
+                Testing Home
+                </button>
+            </Grid>
+            </Grid>
+
         </Container>
 
         
