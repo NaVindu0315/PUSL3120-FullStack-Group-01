@@ -21,6 +21,9 @@ const orderrouter = require('./routes/order_router');
 //employee
 
 //table
+//authentication  
+//importing auth router
+const auth_user_router = require('./routes/auth_user_router')
 
 app.use(cors());
 app.use(express.json());
@@ -51,9 +54,10 @@ const server = app.listen(port, host, () => {
 
 //wish
 app.use('/api',orderrouter);
-
 app.use("/api", emprouter);
 app.use("/api", invrouter);
 app.use('/api',menrouter);
 
+//for the authentication here um gonna use  my own but in the tutorial it says ('./api/user',auth_user_router)
+app.use('/api/user',auth_user_router);
 

@@ -1,11 +1,11 @@
 //aruni_menu
 const express = require('express');
 const router = express.Router();
-const mencontroller = require('../controllers/menu_controller');
+const menucontroller = require('../controllers/menu_controller');
 
-router.get("/menu", mencontroller.getMenu);
-router.post("/createmenu", mencontroller.addMenu);
-router.post('/updatemenu', mencontroller.updateMenu);
-router.post('/deletemenu', mencontroller.deleteMenu);
+router.get("/menu", menucontroller.getMenu);
+router.post("/createmenu", menucontroller.addMenu);
+router.post('/updatemenu', menucontroller.updateMenu);
+router.post('/deletemenu', menucontroller.deleteMenu);
 
 module.exports = router;
