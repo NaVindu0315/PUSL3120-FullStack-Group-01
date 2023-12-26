@@ -1,16 +1,18 @@
 //this is the homepage
 
 import {  Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import MyComponent from './navbar'; 
 import posterImage from './Poster (2).png'; 
 
+
 const Home = ({ props }) => {
+    const location = useLocation();
     const navigate = useNavigate();
     return (
         <Container maxWidth="xl">
             <navbar>
-               <MyComponent />
+            <MyComponent activePage={location.pathname} />
             </navbar> 
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
     <div style={{ position: 'relative' }}>

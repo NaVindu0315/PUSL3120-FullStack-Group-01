@@ -11,7 +11,7 @@ import Axios from "axios";
 import { useEffect, useState } from "react";
 import { Container } from "@mui/material";
 import posterImage from '../Poster (2).png'; 
-import MyComponent from '../navbar'; 
+import MyComponent from './navbar'; 
 
 const Order = () => {
   const [Order, setOrder] = useState([]);

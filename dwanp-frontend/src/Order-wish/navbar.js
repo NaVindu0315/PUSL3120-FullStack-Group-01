@@ -5,7 +5,6 @@ import Button from '@mui/material/Button';
 import { Container } from "@mui/material";
 
 
-
 function MyComponent() {
 return (
 <Container maxWidth="xl">
@@ -22,7 +21,7 @@ return (
         }}>
         <b>Wish</b>
   </Typography>
-  <Button color="inherit" href="/"
+  <Button
       sx={{
       color: 'black', 
       marginRight: '1rem',
@@ -33,7 +32,7 @@ return (
       >
       <b>Home</b>
   </Button>
-  <Button color="inherit"
+  <Button
   href='/'
       sx={{
       color: 'black', 
@@ -45,7 +44,7 @@ return (
       >
       <b>Employee</b>
   </Button>
-  <Button color="inherit"
+  <Button
       sx={{
       color: 'black', 
       marginRight: '1rem',
@@ -56,7 +55,7 @@ return (
       >
       <b>Inventory</b>
   </Button>
-  <Button color="inherit"
+  <Button
       sx={{
       color: 'black',
       marginRight: '1rem',
@@ -67,18 +66,15 @@ return (
       >
       <b>Menu</b>
   </Button>
-  <Button color="inherit"
+  <Button
   sx={{
-      color: 'black', 
-      marginRight: '1rem',
-      '&:hover': {
-        backgroundColor: 'black',
-        color: 'white',
-      }}}
+      backgroundColor: 'black',
+      color: 'white',
+      }}
       >
       <b>Order</b>
   </Button>
-  <Button color="inherit"
+  <Button
       sx={{
       color: 'black',
       marginRight: '1rem',
