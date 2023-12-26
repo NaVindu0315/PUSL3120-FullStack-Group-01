@@ -1,7 +1,7 @@
 const mongoose = require ('mongoose')
 
 const Schema  = mongoose.Schema
-const bcrypt =  require('bcrpyt')
+const bcrypt =  require('bcrypt')
 
 const authusersSchema  = new Schema (
     {
