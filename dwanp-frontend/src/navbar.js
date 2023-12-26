@@ -5,7 +5,6 @@ import Button from '@mui/material/Button';
 import { Container } from "@mui/material";
 
 
-
 function MyComponent() {
 return (
 <Container maxWidth="xl">
@@ -22,14 +21,11 @@ return (
         }}>
         <b>Wish</b>
   </Typography>
-  <Button color="inherit" href="/"
+  <Button color="inherit" href=""
       sx={{
-      color: 'black', 
-      marginRight: '1rem',
-      '&:hover': {
         backgroundColor: 'black',
         color: 'white',
-      }}}
+      }}
       >
       <b>Home</b>
   </Button>
