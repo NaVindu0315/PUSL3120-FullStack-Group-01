@@ -7,7 +7,12 @@ import { Container } from "@mui/material";
 function MyComponent() {
 return (
 <Container maxWidth="xl">
-<AppBar position="static"> 
+<AppBar position="static" sx={{
+   backgroundColor: '#e6c235',
+   color: '#000000', 
+   width: '110%',
+   
+   }}> 
 <Toolbar>
   <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
     Wish
