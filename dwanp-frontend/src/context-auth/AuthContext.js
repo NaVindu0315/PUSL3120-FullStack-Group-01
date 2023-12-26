@@ -22,4 +22,12 @@ export const AuthContextProvider   = ({children}) =>
         //might be signupuser as i used signupuser in the backend 
         user:null
     })
+
+    console.log('authcontext state : ',state)
+
+    return (
+        <AuthContext.Provider  value= {{...state,dispatch}}>
+            {children}
+        </AuthContext.Provider>
+    )
 }
