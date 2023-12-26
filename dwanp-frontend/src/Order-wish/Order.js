@@ -13,7 +13,6 @@ import { Container } from "@mui/material";
 import posterImage from './Poster (2).png'; 
 import navbar from '../navbar'; // Adjust the path accordingly
 
-
 const Order = () => {
   const [Order, setOrder] = useState([]);
   const [submitted, setSubmitted] = useState(false);
@@ -88,7 +87,8 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
 
   return (
     <> {/* Wrap multiple elements in a fragment */}
-      <Container maxWidth="xl">
+  <Container maxWidth="xl">
+  <navbar />
   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
     <div style={{ position: 'relative' }}>
       <img src={posterImage} alt="Poster" style={{ width: '92rem', height: '35rem' }} />
