@@ -14,7 +14,19 @@ const authloginUser = async (req,res) =>
 ///signup user
 const authsignupUser = async (req,res) =>
 {
-    res.json({msg : 'sign user'})
+    const {email,password} = req.body
+
+    try{
+        const usersignup = await authusers.signup(email,password)
+        res.status(200).json({email,usersignup})
+    } 
+    catch(error)
+    {
+        res.status(400).json({error :  error.message})
+
+    }
+
+    //res.json({msg : 'sign user'})
 }
 
 
