@@ -5,6 +5,7 @@ import MyComponent from './navbar';
 import posterImage from './Poster (2).png'; 
 import { IconButton } from '@mui/material';
 import PersonAddAltRoundedIcon from '@mui/icons-material/PersonAddAltRounded';
+import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 
 const Home = ({ props }) => {
     const location = useLocation();
@@ -29,15 +30,34 @@ const Home = ({ props }) => {
                 width: '140px',
                 height: '40px',
                 bottom: '90%',
-                left: '70%',
+                left: '66%',
                 transform: 'translate(90%)' ,
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
               }}
             >
-            <PersonAddAltRoundedIcon style={{ marginRight: '5px' }} /> 
-            UserRegistration
+            <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+            Register
        </IconButton>
-        <button className="usr-btn" onClick={()=>navigate('/userlog')}>Login</button>
+       <IconButton
+            className="usr-btn" 
+            onClick={()=>navigate('/userlog')}
+            style={{
+                borderRadius: '10px',
+                backgroundColor: 'black',
+                color: '#e6c235',
+                position: 'absolute', 
+                fontSize: '13px',
+                width: '140px',
+                height: '40px',
+                bottom: '90%',
+                left: '77%',
+                transform: 'translate(90%)' ,
+                boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
+              }}
+            >
+            <PersonRoundedIcon style={{ marginRight: '7px' }} /> 
+           Login
+       </IconButton>
         <button
         className="usr-btn"
         onClick={() => navigate('/emplog')}
