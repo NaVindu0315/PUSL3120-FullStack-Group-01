@@ -11,7 +11,11 @@ router.post('/userlogin',()=>
 
 
 ///sign router
+router.post('/usersignup',()=>
+{
 
+}
+)
 
 
 module.exports = auth_user_router
