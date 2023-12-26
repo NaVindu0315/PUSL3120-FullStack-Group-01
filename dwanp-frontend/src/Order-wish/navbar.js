@@ -15,70 +15,76 @@ return (
    }}> 
 <Toolbar>
   <Typography variant="h6" component="div" 
-  sx={{ 
-    flexGrow: 1, 
-    }}>
-    <b>Wish</b>
+      sx={{ 
+        flexGrow: 1, 
+        }}>
+        <b>Wish</b>
   </Typography>
   <Button color="inherit" href="/"
-  sx={{
-  color: 'black', 
-  marginRight: '1rem',
-  '&:hover': {
-    backgroundColor: 'black',
-    color: 'white',
-  }}}>
-    <b>Home</b>
+      sx={{
+      color: 'black', 
+      marginRight: '1rem',
+      '&:hover': {
+        backgroundColor: 'black',
+        color: 'white',
+      }}}
+      >
+      <b>Home</b>
+  </Button>
+  <Button color="inherit"
+      sx={{
+      color: 'black', 
+      marginRight: '1rem',
+      '&:hover': {
+        backgroundColor: 'black',
+        color: 'white',
+      }}}
+      >
+      <b>Employee</b>
+  </Button>
+  <Button color="inherit"
+      sx={{
+      color: 'black', 
+      marginRight: '1rem',
+      '&:hover': {
+        backgroundColor: 'black',
+        color: 'white',
+      }}}
+      >
+      <b>Inventory</b>
+  </Button>
+  <Button color="inherit"
+      sx={{
+      color: 'black',
+      marginRight: '1rem',
+      '&:hover': {
+        backgroundColor: 'black',
+        color: 'white',
+      } }}
+      >
+      <b>Menu</b>
   </Button>
   <Button color="inherit"
   sx={{
-  color: 'black', 
-  marginRight: '1rem',
-  '&:hover': {
-    backgroundColor: 'black',
-    color: 'white',
-  }}}>
-    <b>Employee</b>
+      color: 'black', 
+      marginRight: '1rem',
+      '&:hover': {
+        backgroundColor: 'black',
+        color: 'white',
+      }}}
+      >
+      <b>Order</b>
   </Button>
   <Button color="inherit"
-  sx={{
-  color: 'black', 
-  marginRight: '1rem',
-  '&:hover': {
-    backgroundColor: 'black',
-    color: 'white',
-  }}}>
-    <b>Inventory</b>
-  </Button>
-  <Button color="inherit"
-  sx={{
-  color: 'black',
-  marginRight: '1rem',
-  '&:hover': {
-    backgroundColor: 'black',
-    color: 'white',
-  } }}>
-    <b>Menu</b>
-  </Button>
-  <Button color="inherit"
-  sx={{
-  color: 'black', 
-  marginRight: '1rem',
-  '&:hover': {
-    backgroundColor: 'black',
-    color: 'white',
-  }}}>
-    <b>Order</b>
-  </Button>
-  <Button color="inherit"
-  sx={{
-  color: 'black',
-  marginRight: '1rem',
-  '&:hover': {
-    backgroundColor: 'black',
-    color: 'white',
-  } }}>
-    <b>Table</b>
+      sx={{
+      color: 'black',
+      marginRight: '1rem',
+      '&:hover': {
+        backgroundColor: 'black',
+        color: 'white',
+      } }}
+      >
+      <b>Table</b>
   </Button>
 </Toolbar>
 </AppBar>
