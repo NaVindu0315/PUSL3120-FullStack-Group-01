@@ -17,3 +17,6 @@ const authusersSchema  = new Schema (
         }
     }
 )
+const authusers = mongoose.model('authusers',authusersSchema);
+module.exports = authusers;
+
