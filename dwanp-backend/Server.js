@@ -17,7 +17,7 @@ const menrouter = require('./routes/menu_router');
 const invrouter = require("./routes/inventory_router");
 
 //order
-
+const orderrouter = require('./routes/order_router');
 //employee
 
 //table
@@ -46,7 +46,14 @@ const server = app.listen(port, host, () => {
 });
 
 
+
+
+
+//wish
+app.use('/api',orderrouter);
+
 app.use("/api", emprouter);
 app.use("/api", invrouter);
 app.use('/api',menrouter);
+
 
