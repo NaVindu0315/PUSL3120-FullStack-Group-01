@@ -18,7 +18,13 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
+const InventoryForm = ({
+  addInventory,
+  updateInventory,
+  submitted,
+  data,
+  isedit,
+}) => {
   const navigate = useNavigate();
 
   const [invnt_item, setItem] = useState(0);
@@ -38,7 +44,7 @@ const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
   }, [submitted]);
 
   useEffect(() => {
-    if (data?.id && data.id !== 0) {
+    if (data?.invnt_code && data.invnt_code !== 0) {
       setItem(data.invnt_item);
       setCode(data.invnt_code);
       setQnt(data.qnty);
@@ -85,7 +91,7 @@ const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
               <TableCell>Inventory Code</TableCell>
               <TableCell>
                 <Input
-                  type="text"
+                  type="number"
                   id="invnt_code"
                   name="invnt_code"
                   sx={{ width: "400px" }}
@@ -150,7 +156,7 @@ const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
                     },
                   }}
                   onClick={() => {
-                    addInv({
+                    addInventory({
                       invnt_item,
                       invnt_code,
                       qnty,
@@ -177,7 +183,7 @@ const InventoryForm = ({ addInv, updateInv, submitted, data, isEdit }) => {
                     },
                   }}
                   onClick={() => {
-                    updateInv({
+                    updateInventory({
                       invnt_item,
                       invnt_code,
                       qnty,

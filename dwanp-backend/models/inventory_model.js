@@ -23,7 +23,7 @@ const Schema = mongoose.Schema;
 
 const invSchema = new Schema({
   invnt_item: String,
-  invnt_code: String,
+  invnt_code: Number,
   qnty: Number,
   price: String,
   date: String,

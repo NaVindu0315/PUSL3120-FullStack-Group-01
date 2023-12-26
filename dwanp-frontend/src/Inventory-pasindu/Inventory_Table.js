@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@mui/material";
 
-const InventoryTable = ({ rows, selectInv, deleteInv }) => {
+const InventoryTable = ({ rows, selectInv, deleteInventory }) => {
   return (
     <TableContainer component={Paper}>
       <Table>
@@ -64,7 +64,9 @@ const InventoryTable = ({ rows, selectInv, deleteInv }) => {
                   <Button
                     sx={{ margin: "0px 10px" }}
                     className="action-btn"
-                    onClick={() => deleteInv({ invnt_code: row.invnt_code })}
+                    onClick={() =>
+                      deleteInventory({ invnt_code: row.invnt_code })
+                    }
                   >
                     Delete
                   </Button>

@@ -11,18 +11,20 @@ import Axios from "axios";
 import { useEffect, useState } from "react";
 
 const Inventory = () => {
+  const navigate = useNavigate();
+
   const [inv, setInv] = useState([]);
   const [submitted, setSubmitted] = useState(false);
   const [selectInv, setSelectedInv] = useState({});
-  const [isEdit, setIsEdit] = useState(false);
+  const [isedit, setIsEdit] = useState(false);
 
   //create get users
 
   useEffect(() => {
-    getInv();
+    getInventory();
   }, []);
 
-  const getInv = () => {
+  const getInventory = () => {
     Axios.get("http://localhost:3001/api/inventory")
       .then((response) => {
         setInv(response.data?.response || []);
@@ -33,7 +35,7 @@ const Inventory = () => {
   };
 
   //create add users
-  const addInv = (data) => {
+  const addInventory = (data) => {
     setSubmitted(true);
 
     const payload = {
@@ -45,9 +47,9 @@ const Inventory = () => {
     };
     Axios.post("http://localhost:3001/api/createinventory", payload)
       .then(() => {
-        getInv();
+        getInventory();
         setSubmitted(false);
-        isEdit(false);
+        setIsEdit(false);
       })
       .catch((error) => {
         console.error("Axios Error :", error);
@@ -56,7 +58,7 @@ const Inventory = () => {
 
   //create update users
 
-  const updateInv = (data) => {
+  const updateInventory = (data) => {
     setSubmitted(true);
 
     const payload = {
@@ -69,9 +71,9 @@ const Inventory = () => {
 
     Axios.post("http://localhost:3001/api/updateinventory", payload)
       .then(() => {
-        getInv();
+        getInventory();
         setSubmitted(false);
-        isEdit(false);
+        setIsEdit(false);
       })
       .catch((error) => {
         console.error("Axios Error :", error);
@@ -79,17 +81,16 @@ const Inventory = () => {
   };
 
   //create delete users
-  const deleteInv = (id) => {
+  const deleteInventory = (id) => {
     Axios.post("http://localhost:3001/api/deleteinventory", id)
       .then(() => {
-        getInv();
+        getInventory();
       })
       .catch((error) => {
         console.error("Axios Error :", error);
       });
   };
 
-  const navigate = useNavigate();
   return (
     <Container maxWidth="xl">
       <Box
@@ -114,11 +115,11 @@ const Inventory = () => {
       <Box>
         <Grid></Grid>
         <InventoryForm
-          addInv={addInv}
-          updateInv={updateInv}
+          addInventory={addInventory}
+          updateInventory={updateInventory}
           submitted={submitted}
           data={selectInv}
-          isEdit={isEdit}
+          isedit={isedit}
         ></InventoryForm>
         <InventoryTable
           rows={inv}
@@ -126,8 +127,8 @@ const Inventory = () => {
             setSelectedInv(data);
             setIsEdit(true);
           }}
-          deleteInv={(data) =>
-            window.confirm("Are you sure?") && deleteInv(data)
+          deleteInventory={(data) =>
+            window.confirm("Are you sure?") && deleteInventory(data)
           }
         ></InventoryTable>
       </Box>
