@@ -1,3 +1,6 @@
+
+const authusers = require('../models/auth_user_model')
+
 //login user
 const authloginUser = async (req,res) =>
 {
