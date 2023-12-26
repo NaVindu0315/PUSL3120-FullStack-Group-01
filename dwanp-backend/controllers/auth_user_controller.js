@@ -9,3 +9,10 @@ const authloginUser = async (req,res) =>
 
 
 ///signup user
+const authsignupUser = async (req,res) =>
+{
+    res.json({msg : 'sign user'})
+}
+
+
+module.exports  = {authloginUser, authsignupUser}
