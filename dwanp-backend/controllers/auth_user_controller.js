@@ -26,7 +26,10 @@ const authsignupUser = async (req,res) =>
 
     try{
         const usersignup = await authusers.signup(email,password)
-        res.status(200).json({email,usersignup})
+        //create a token
+        const token = createToke(usersignup._id)
+
+        res.status(200).json({email,token})
     } 
     catch(error)
     {
