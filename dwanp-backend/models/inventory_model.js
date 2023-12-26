@@ -22,8 +22,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const invSchema = new Schema({
-  id: Number,
-  name: String,
+  invnt_item: String,
+  invnt_code: Number,
+  qnty: Number,
+  price: String,
+  date: String,
 });
 
 const Inventory = mongoose.model("inventory", invSchema);

@@ -1,6 +1,7 @@
 const { response } = require("../app");
 const invSchema = require("../models/inventory_model");
 
+//get inventory
 const getInventory = (req, res, next) => {
   invSchema
     .find()
@@ -12,10 +13,14 @@ const getInventory = (req, res, next) => {
     });
 };
 
+//create inventory
 const addInventory = (req, res, next) => {
   const inventory = new invSchema({
-    id: req.body.id,
-    name: req.body.name,
+    invnt_item: req.body.invnt_item,
+    invnt_code: req.body.invnt_code,
+    qnty: req.body.qnty,
+    price: req.body.price,
+    date: req.body.date,
   });
   inventory
     .save()
@@ -27,10 +32,14 @@ const addInventory = (req, res, next) => {
     });
 };
 
+//update inventory
 const updateInventory = (req, res, next) => {
-  const { id, name } = req.body;
+  const { invnt_item, invnt_code, qnty, price, date } = req.body;
   invSchema
-    .updateOne({ id: id }, { $set: { name: name } })
+    .updateOne(
+      { invnt_code: invnt_code },
+      { $set: { invnt_item: invnt_item, qnty: qnty, price: price, date: date } }
+    )
     .then((response) => {
       res.json({ response });
     })
@@ -39,10 +48,11 @@ const updateInventory = (req, res, next) => {
     });
 };
 
+//delete inventory
 const deleteInventory = (req, res, next) => {
-  const id = req.body.id;
+  const invnt_code = req.body.invnt_code;
   invSchema
-    .deleteOne({ id: id })
+    .deleteOne({ invnt_code: invnt_code })
     .then((response) => {
       res.json({ response });
     })

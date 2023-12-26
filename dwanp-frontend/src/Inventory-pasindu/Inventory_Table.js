@@ -9,15 +9,17 @@ import {
   TableRow,
 } from "@mui/material";
 
-const InventoryTable = ({ rows, selectInv, deleteInv }) => {
+const InventoryTable = ({ rows, selectInv, deleteInventory }) => {
   return (
     <TableContainer component={Paper}>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>ID</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Actions</TableCell>
+            <TableCell>Item</TableCell>
+            <TableCell>Item Code</TableCell>
+            <TableCell>Quantity</TableCell>
+            <TableCell>Price</TableCell>
+            <TableCell>Date</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -28,21 +30,43 @@ const InventoryTable = ({ rows, selectInv, deleteInv }) => {
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
-                  {row.id}
+                  {row.invnt_item}
                 </TableCell>
                 <TableCell component="th" scope="row">
-                  {row.name}
+                  {row.invnt_code}
+                </TableCell>
+                <TableCell component="th" scope="row">
+                  {row.qnty}
+                </TableCell>
+                <TableCell component="th" scope="row">
+                  {row.price}
+                </TableCell>
+                <TableCell component="th" scope="row">
+                  {row.date}
                 </TableCell>
                 <TableCell>
                   <Button
                     sx={{ margin: "0px 10px" }}
-                    onClick={() => selectInv({ id: row.id, name: row.name })}
+                    className="action-btn"
+                    onClick={() =>
+                      selectInv({
+                        invnt_item: row.invnt_item,
+                        invnt_code: row.invnt_code,
+                        qnty: row.qnty,
+                        price: row.price,
+                        date: row.date,
+                      })
+                    }
                   >
                     Update
                   </Button>
+
                   <Button
                     sx={{ margin: "0px 10px" }}
-                    onClick={() => deleteInv({ id: row.id })}
+                    className="action-btn"
+                    onClick={() =>
+                      deleteInventory({ invnt_code: row.invnt_code })
+                    }
                   >
                     Delete
                   </Button>
