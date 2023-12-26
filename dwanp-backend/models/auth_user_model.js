@@ -53,13 +53,19 @@ authusersSchema.statics.signup = async function(email,password)
     const usersignup = await this.create({email,password :hash})
 
     return usersignup
+}
 
-
-
-
-
+//static login method
+authusersSchema.statics.login = async function(email,passowrd)
+{
+     //validation
+     if(!email || !password)
+     {
+         throw Error('All fields must be filled')
+     }
 
 }
+
 
 
 const authusers = mongoose.model('authusers',authusersSchema);
