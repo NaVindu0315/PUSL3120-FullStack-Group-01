@@ -11,7 +11,7 @@ import Axios from "axios";
 import { useEffect, useState } from "react";
 import { Container } from "@mui/material";
 import posterImage from './Poster (2).png'; 
-import navbar from '../navbar'; // Adjust the path accordingly
+import MyComponent from './navbar'; // Adjust the path accordingly
 
 const Order = () => {
   const [Order, setOrder] = useState([]);
@@ -88,7 +88,11 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
   return (
     <> {/* Wrap multiple elements in a fragment */}
   <Container maxWidth="xl">
-  <navbar />
+
+  <navbar>
+  <MyComponent /> 
+    </navbar> 
+
   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
     <div style={{ position: 'relative' }}>
       <img src={posterImage} alt="Poster" style={{ width: '92rem', height: '35rem' }} />

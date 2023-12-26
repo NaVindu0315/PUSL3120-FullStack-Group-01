@@ -4,8 +4,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Container } from "@mui/material";
 
+function MyComponent() {
+return (
 <Container maxWidth="xl">
-<AppBar position="static"> {/* Add this line */}
+<AppBar position="static"> 
 <Toolbar>
   <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
     Wish
@@ -20,3 +22,7 @@ import { Container } from "@mui/material";
 </Toolbar>
 </AppBar>
 </Container>
+);
+}
+
+export default MyComponent;
