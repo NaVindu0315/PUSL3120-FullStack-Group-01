@@ -6,11 +6,12 @@
 import { Box } from "@mui/material";
 import OrderForm from "./OrderForm";
 import OrderTable from "./OrderTable";
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import Axios from "axios";  
 import { useEffect, useState } from "react";
 import { Container } from "@mui/material";
-import posterImage from './Poster (2).png'; 
+import posterImage from '../Poster (2).png'; 
+import MyComponent from './navbar'; 
 
 const Order = () => {
   const [Order, setOrder] = useState([]);
@@ -82,18 +83,23 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
 });
 }
 
-  const navigate = useNavigate();
+ // const navigate = useNavigate();
 
   return (
     <> {/* Wrap multiple elements in a fragment */}
-      <Container maxWidth="xl">
+  <Container maxWidth="xl">
+
+  <navbar>
+  <MyComponent />
+    </navbar> 
+
   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
     <div style={{ position: 'relative' }}>
-      <img src={posterImage} alt="Poster" style={{ width: '100rem', height: '35rem' }} />
+      <img src={posterImage} alt="Poster" style={{ width: '92rem', height: '35rem' }} />
       <h1 style={{
         position: 'absolute',
         top: '22rem',  
-        left: '80%',
+        left: '75%',
         transform: 'translateX(-50%)',  
         color: '#e6c235',  
         fontWeight: 'bold',  
@@ -101,24 +107,6 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
       }}>Order Page</h1>
     </div>
-    <button className="usr-btn" onClick={() => navigate('/')} variant="contained"
-            style={{
-              position: 'absolute',
-              top: 70,
-              left: 100,
-              width: 120,
-              height: 50,
-              color: 'black',
-              backgroundColor: '#e6c235',
-              borderRadius: '30px',
-              cursor: 'pointer',
-              '&:hover': {
-                opacity: '0.9',
-                backgroundColor: '#ffffff'
-              }
-            }}>
-      Back
-    </button>
   </Box>
 </Container>
 
