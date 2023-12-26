@@ -4,7 +4,6 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Container } from "@mui/material";
 
-
 function MyComponent() {
 return (
 <Container maxWidth="xl">
@@ -21,7 +20,7 @@ return (
         }}>
         <b>Wish</b>
   </Typography>
-  <Button color="inherit" href=""
+  <Button color="inherit" href="/Home"
       sx={{
         backgroundColor: 'black',
         color: 'white',
@@ -29,8 +28,7 @@ return (
       >
       <b>Home</b>
   </Button>
-  <Button color="inherit"
-  href='/'
+  <Button color="inherit" href="/Employee"
       sx={{
       color: 'black', 
       marginRight: '1rem',
@@ -41,7 +39,7 @@ return (
       >
       <b>Employee</b>
   </Button>
-  <Button color="inherit"
+  <Button color="inherit" href="/Inventory"
       sx={{
       color: 'black', 
       marginRight: '1rem',
@@ -52,7 +50,7 @@ return (
       >
       <b>Inventory</b>
   </Button>
-  <Button color="inherit"
+  <Button color="inherit" href="/Menu"
       sx={{
       color: 'black',
       marginRight: '1rem',
@@ -63,7 +61,7 @@ return (
       >
       <b>Menu</b>
   </Button>
-  <Button color="inherit"
+  <Button color="inherit" href="/Order"
   sx={{
       color: 'black', 
       marginRight: '1rem',
@@ -74,7 +72,7 @@ return (
       >
       <b>Order</b>
   </Button>
-  <Button color="inherit"
+  <Button color="inherit" href="/Table"
       sx={{
       color: 'black',
       marginRight: '1rem',
