@@ -90,7 +90,7 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
   <Container maxWidth="xl">
 
   <navbar>
-  <MyComponent /> 
+  <MyComponent />
     </navbar> 
 
   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
@@ -107,6 +107,24 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
       }}>Order Page</h1>
     </div>
+    <button className="usr-btn" onClick={() => navigate('/')} variant="contained"
+            style={{
+              position: 'absolute',
+              top: 70,
+              left: 100,
+              width: 120,
+              height: 50,
+              color: 'black',
+              backgroundColor: '#e6c235',
+              borderRadius: '30px',
+              cursor: 'pointer',
+              '&:hover': {
+                opacity: '0.9',
+                backgroundColor: '#ffffff'
+              }
+            }}>
+      Back
+    </button>
   </Box>
 </Container>
 

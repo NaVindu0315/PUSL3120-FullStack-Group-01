@@ -31,6 +31,8 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
             setDate(data.date);
         }
     }, [data])
+
+    //const navigate = useNavigate();
   
     return(
         <Grid
@@ -46,6 +48,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
         }}
         >
             <Grid item xs={12} sm={0} sx={{display:'flex', justifyContent: 'center', mt: '-200px'}}>
+            
                 <Typography 
                 component={'h1'} 
                 sx={{
@@ -196,3 +199,23 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
     }
 
     export default OrderForm;
+
+    /*/*<button className="usr-btn" onClick={() => navigate('/')} variant="contained"
+            style={{
+              
+              top: 70,
+              left: 100,
+              width: 120,
+              height: 50,
+              color: 'black',
+              backgroundColor: '#e6c235',
+              borderRadius: '30px',
+              cursor: 'pointer',
+              '&:hover': {
+                opacity: '0.9',
+                color: 'white',
+                backgroundColor: '#000000'
+              }
+            }}>
+      Back
+    </button>*/
