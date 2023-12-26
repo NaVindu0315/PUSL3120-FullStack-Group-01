@@ -16,4 +16,4 @@ router.post('/usersignup',authsignupUser
 )
 
 
-module.exports = auth_user_router
+module.exports = router;
