@@ -10,20 +10,76 @@ return (
 <AppBar position="static" sx={{
    backgroundColor: '#e6c235',
    color: '#000000', 
-   width: '110%',
-   
+   width: '108%',
+   transform: 'translateX(-4%)',
    }}> 
 <Toolbar>
-  <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-    Wish
+  <Typography variant="h6" component="div" 
+  sx={{ 
+    flexGrow: 1, 
+    }}>
+    <b>Wish</b>
   </Typography>
-  <Button color="inherit" href="/">
-    Home
+  <Button color="inherit" href="/"
+  sx={{
+  color: 'black', 
+  marginRight: '1rem',
+  '&:hover': {
+    backgroundColor: 'black',
+    color: 'white',
+  }}}>
+    <b>Home</b>
   </Button>
-  <Button color="inherit">
-    Orders
+  <Button color="inherit"
+  sx={{
+  color: 'black', 
+  marginRight: '1rem',
+  '&:hover': {
+    backgroundColor: 'black',
+    color: 'white',
+  }}}>
+    <b>Employee</b>
   </Button>
-  {/* Add more buttons as needed */}
+  <Button color="inherit"
+  sx={{
+  color: 'black', 
+  marginRight: '1rem',
+  '&:hover': {
+    backgroundColor: 'black',
+    color: 'white',
+  }}}>
+    <b>Inventory</b>
+  </Button>
+  <Button color="inherit"
+  sx={{
+  color: 'black',
+  marginRight: '1rem',
+  '&:hover': {
+    backgroundColor: 'black',
+    color: 'white',
+  } }}>
+    <b>Menu</b>
+  </Button>
+  <Button color="inherit"
+  sx={{
+  color: 'black', 
+  marginRight: '1rem',
+  '&:hover': {
+    backgroundColor: 'black',
+    color: 'white',
+  }}}>
+    <b>Order</b>
+  </Button>
+  <Button color="inherit"
+  sx={{
+  color: 'black',
+  marginRight: '1rem',
+  '&:hover': {
+    backgroundColor: 'black',
+    color: 'white',
+  } }}>
+    <b>Table</b>
+  </Button>
 </Toolbar>
 </AppBar>
 </Container>
