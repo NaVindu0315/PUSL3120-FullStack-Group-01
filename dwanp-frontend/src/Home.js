@@ -1,5 +1,6 @@
 //this is the homepage
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import {  Container, Box, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
 import { useLocation, useNavigate } from 'react-router-dom';
 import MyComponent from './navbar'; 
