@@ -23,6 +23,12 @@ const authusersSchema  = new Schema (
 authusersSchema.statics.signup = async(email,password) =>
 {   
     const exists = await this.findOne({email})
+    //checking whether the user is already has account
+    if (exists) {
+        throw Error('Email Alreday in use')
+    }
+
+
 
 
 }
