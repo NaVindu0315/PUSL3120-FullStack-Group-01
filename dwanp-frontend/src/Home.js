@@ -3,22 +3,21 @@
 import {  Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import MyComponent from './navbar'; 
+import posterImage from './Poster (2).png'; 
 
 const Home = ({ props }) => {
     const navigate = useNavigate();
     return (
         <Container maxWidth="xl">
             <navbar>
-  <MyComponent />
-    </navbar> 
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
-                <Typography variant="h2" component="h1">
-                    Dwanp Restaurants
-                </Typography>
-                <Typography variant="h5" sx={{ mt: 2 }}>
-                    Poster
-                </Typography>
-            </Box>
+               <MyComponent />
+            </navbar> 
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
+    <div style={{ position: 'relative' }}>
+      <img src={posterImage} alt="Poster" style={{ width: '92rem', height: '35rem' }} />
+      
+    </div>
+  </Box>
             <Grid container spacing={4}>
                 <Table sx={{ mt: 4 }}>
                     <TableHead>
