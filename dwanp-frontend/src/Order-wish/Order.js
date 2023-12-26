@@ -6,7 +6,7 @@
 import { Box } from "@mui/material";
 import OrderForm from "./OrderForm";
 import OrderTable from "./OrderTable";
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 import Axios from "axios";  
 import { useEffect, useState } from "react";
 import { Container } from "@mui/material";
@@ -83,7 +83,7 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
 });
 }
 
-  const navigate = useNavigate();
+ // const navigate = useNavigate();
 
   return (
     <> {/* Wrap multiple elements in a fragment */}
@@ -107,24 +107,6 @@ Axios.post('http://localhost:3001/api/deleteOrder', data)
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
       }}>Order Page</h1>
     </div>
-    <button className="usr-btn" onClick={() => navigate('/')} variant="contained"
-            style={{
-              position: 'absolute',
-              top: 70,
-              left: 100,
-              width: 120,
-              height: 50,
-              color: 'black',
-              backgroundColor: '#e6c235',
-              borderRadius: '30px',
-              cursor: 'pointer',
-              '&:hover': {
-                opacity: '0.9',
-                backgroundColor: '#ffffff'
-              }
-            }}>
-      Back
-    </button>
   </Box>
 </Container>
 
