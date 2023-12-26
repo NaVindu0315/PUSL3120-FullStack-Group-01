@@ -13,12 +13,55 @@ const Home = ({ props }) => {
             <navbar>
             <MyComponent activePage={location.pathname} />
             </navbar> 
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0}}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
     <div style={{ position: 'relative' }}>
-      <img src={posterImage} alt="Poster" style={{ width: '92rem', height: '35rem' }} />
-      
+      <img src={posterImage} alt="Poster" style={{ width: '93rem', height: '35rem' }} />
+        <button 
+            className="usr-btn" 
+            onClick={()=>navigate('/userreg')}
+            style={{
+                borderRadius: '10px',
+                backgroundColor: 'black',
+                color: '#e6c235',
+                position: 'absolute', 
+                width: '130px',
+                height: '40px',
+                bottom: '90%',
+                left: '70%',
+                transform: 'translate(90%)' ,
+                boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
+               /* '&:hover': {
+                  backgroundColor: 'black',
+                  color: 'white'
+                }*/
+              }}
+            >
+            UserRegistration
+        </button>
+        <button className="usr-btn" onClick={()=>navigate('/userlog')}>Login</button>
+        <button
+        className="usr-btn"
+        onClick={() => navigate('/emplog')}
+        style={{
+          borderRadius: '10px',
+          width: '20%',
+          height: '10%',
+          backgroundColor: '#e6c235',
+          color: 'black',
+          position: 'absolute', 
+          top: '70%',
+          left: '50%',
+          transform: 'translate(90%)' ,
+          '&:hover': {
+            backgroundColor: 'black',
+            color: 'white'
+          }
+        }}
+      >
+        <b>Employee Login</b>
+      </button>
     </div>
-  </Box >
+  </Box>
             <Grid container spacing={4}>
                 <Table sx={{ mt: 4 }}>
                     <TableHead>
@@ -76,47 +119,10 @@ const Home = ({ props }) => {
                     </TableBody>
                 </Table>
             </Grid>
-            <Grid><button className="usr-btn" onClick={()=>navigate('/userreg')}>UserRegistration</button>
-            <button className="usr-btn" onClick={()=>navigate('/userlog')}>Login</button>
+            <Grid>
+            <button className="usr-btn" onClick={() => navigate('/testhome')}>Testing Home</button>
             </Grid> 
             
-        
-            <Grid container spacing={2}> 
-            <Grid item xs={6}>
-                <button
-                className="usr-btn"
-                onClick={() => navigate('/emplog')}
-                style={{
-                    borderRadius: '20px',
-                    width: '50%',
-                    height: '50%',
-                    backgroundColor: '#e6c235',
-                    transform: 'translateX(60%)',
-                    color: 'black',
-                    marginBottom: '20%'
-                }}
-                >
-                Employee Login
-                </button>
-            </Grid>
-
-            <Grid item xs={6}> 
-                <button
-                className="usr-btn"
-                onClick={() => navigate('/testhome')}
-                style={{
-                    borderRadius: '20px',
-                    width: '50%',
-                    height: '50%',
-                    backgroundColor: '#e6c235',
-                    transform: 'translateX(50%)',
-                    color: 'black',
-                }}
-                >
-                Testing Home
-                </button>
-            </Grid>
-            </Grid>
 
         </Container>
     )
