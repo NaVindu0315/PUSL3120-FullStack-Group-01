@@ -7,7 +7,7 @@ const cors = require("cors");
 const invcontroller = require("./controllers/inventory_controller");
 
 //table controller
-const tablecontroller = require("./controllers/table_controller")
+const tablecontroller = require("./controllers/table_controller");
 
 app.use(cors());
 app.use(
