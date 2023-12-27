@@ -10,6 +10,7 @@ import InventoryTable from "./Inventory_Table";
 import Axios from "axios";
 import { useEffect, useState } from "react";
 import posterImage from "../Poster (2).png";
+import MyComponent from "../navbar.js";
 
 const Inventory = () => {
   const navigate = useNavigate();
@@ -95,6 +96,10 @@ const Inventory = () => {
   return (
     <Container maxWidth="xl">
       <Container maxWidth="xl">
+        <navbar>
+          <MyComponent />
+        </navbar>
+
         <Box
           sx={{
             display: "flex",
