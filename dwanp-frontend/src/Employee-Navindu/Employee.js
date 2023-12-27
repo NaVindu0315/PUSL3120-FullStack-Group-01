@@ -178,24 +178,7 @@ const Employee=()=>
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
       }}>Employees</h1>
     </div>
-    <button className="usr-btn" onClick={() => navigate('/')} variant="contained"
-            style={{
-              position: 'absolute',
-              top: 70,
-              left: 100,
-              width: 120,
-              height: 50,
-              color: 'black',
-              backgroundColor: '#e6c235',
-              borderRadius: '30px',
-              cursor: 'pointer',
-              '&:hover': {
-                opacity: '0.9',
-                backgroundColor: '#ffffff'
-              }
-            }}>
-      Back
-    </button>
+   
   </Box>
 </Container>
 
