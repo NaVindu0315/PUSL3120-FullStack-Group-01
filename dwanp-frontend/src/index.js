@@ -32,7 +32,7 @@ import EmpLogin from './authenication/emp_login';
 import UserDashboard from './dashboard/user_dashboard';
 import EmpDashboard from './dashboard/emp_dashboard';
 import Homepage from './Homepage2';
-
+import SignUp from './authenication/user_reg';
 
 
 
@@ -45,7 +45,7 @@ root.render(
  <Route path ='/testhome' element ={<Homepage/>}/> 
 
 {/*Authentication */}
-<Route path ='/userreg' element ={<UserRegistration/>}/>
+<Route path ='/userreg' element ={<SignUp/>}/>
 <Route path ='/userlog' element ={<UserLogin/>}/>
 <Route path ='/emplog' element ={<EmpLogin/>}/>
 
