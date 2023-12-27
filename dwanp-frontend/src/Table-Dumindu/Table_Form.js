@@ -8,12 +8,30 @@ import React, { useEffect, useState } from "react";
 import { Button, Grid, Typography, Input } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
-const TableForm = ({props}) =>
+const TableForm = ({addTable, updateTable, submitted, data, isUpdate}) =>
 {
     const [table_no, setTableNo] = useState(0);
-    const [used_time, setUsedTime] = useState();
-    const [used_date, setUsedDate] = useState();
+    const [used_date, setUsedDate] = useState('');
+    const [used_time, setUsedTime] = useState('');
     const [person_count, setPersonCount] = useState(0);
+
+    useEffect(() => {
+        if (!submitted) {
+            setTableNo(0);
+            setUsedDate('');
+            setUsedTime('');
+            setPersonCount(0);
+        }
+    }, [submitted]);
+
+    useEffect(() => {
+        if (data?.table_no && data.table_no !== 0) {
+            setTableNo(data.table_no);
+            setUsedDate(data.used_date);
+            setUsedTime(data.used_time);
+            setPersonCount(data.person_count);
+        }
+    }, [data]);
 
     return (
         <Grid container spacing={2} sx={{backgroundColor: "#ffffff", marginBottom: "30px", display: "block",}}>
@@ -129,36 +147,9 @@ const TableForm = ({props}) =>
                 marginTop: "20px", 
                 "&:hover": {opacity: "0.7", backgroundColor: "00c6e6",}
                 }}
+            onClick={() => isUpdate ? updateTable({table_no, used_date, used_time, person_count}) : addTable({table_no, used_date, used_time, person_count})}
             >
-                Add
-            </Button>
-
-            <Button 
-            sx={{
-                margin: "auto", 
-                marginBottom: "20px", 
-                backgroundColor: "#00c6e6", 
-                color: "#000000", 
-                marginLeft: "15px", 
-                marginTop: "20px", 
-                "&:hover": {opacity: "0.7", backgroundColor: "00c6e6",}
-                }}
-            >
-                Update
-            </Button>
-
-            <Button 
-            sx={{
-                margin: "auto", 
-                marginBottom: "20px", 
-                backgroundColor: "#00c6e6", 
-                color: "#000000", 
-                marginLeft: "15px", 
-                marginTop: "20px", 
-                "&:hover": {opacity: "0.7", backgroundColor: "00c6e6",}
-                }}
-            >
-                Delete
+                {isUpdate ? "Update" : "Add"}
             </Button>
         </Grid>
     );
