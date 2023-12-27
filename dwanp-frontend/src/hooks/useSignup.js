@@ -34,7 +34,10 @@ import { useauthcontext } from "./useAuthContext";
             localStorage,setItem('user',JSON.stringify(json))
 
             //update the authcontext
+            dispatch({type :'LOGIN',payload:json})
+            setisloading(false)
 
         }
     }
+    return {signup,isloading,error}
  }
