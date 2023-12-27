@@ -9,6 +9,8 @@ import { Box , Container, Typography} from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import TableForm from "./Table_Form";
 import TableTable from "./Table_Table";
+import posterImage from "../Poster (2).png";
+import MyComponent from "../navbar.js";
 
 //import for connecting backend and front end
 import Axios from "axios";
@@ -91,14 +93,29 @@ const TableReserve=()=>
 
     return (
         <Container maxWidth="xl">
+           <navbar>
+  <MyComponent />
+    </navbar> 
+             <Container maxWidth="xl">
+  <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
+    <div style={{ position: 'relative' }}>
+    
+      <img src={posterImage} alt="Poster" style={{ width: "1496px", height: '35rem' }} />
+      <h1 style={{
+        position: 'absolute',
+        top: '22rem',  
+        left: '80%',
+        transform: 'translateX(-50%)',  
+        color: '#e6c235',  
+        fontWeight: 'bold',  
+        fontSize: '60px',
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
+      }}>Table Reservation</h1>
+    </div>
+   
+  </Box>
+</Container>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
-          <Typography variant="h5" component="h5"> 
-            <button className="usr-btn" onClick={()=>navigate('/')}>Back</button>
-            
-            </Typography>
-            <Typography variant="h2" component="h1">
-              Table Reservation Page
-            </Typography>
             <TableForm
               addTable={addTable}
               updateTable={updateTable}
