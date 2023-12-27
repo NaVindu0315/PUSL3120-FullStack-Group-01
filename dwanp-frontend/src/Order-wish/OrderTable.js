@@ -33,13 +33,13 @@ const OrderTable = ({rows, selectedOrder, deleteOrder}) => {
                     <TableCell component='th' scope='row'>{row.date}</TableCell>
                     <TableCell>
                         <Button
-                            sx={{ margin: '0px 10px' }}
+                            sx={{ margin: '0px 10px', color:'#f5a105' }}
                             onClick={() => selectedOrder({ Orderid: row.Orderid, noOfPotions: row.noOfPotions, foodItemCode: row.foodItemCode, date: row.date})}
                             >
                                 Update
                         </Button>
                         <Button
-                            sx={{ margin: '0px 10px' }}
+                            sx={{ margin: '0px 10px', color:'#f5a105' }}
                             onClick={() => deleteOrder({ Orderid: row.Orderid })}
                             >
                                 Delete

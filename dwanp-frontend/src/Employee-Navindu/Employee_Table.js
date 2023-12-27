@@ -4,7 +4,7 @@
 //////////////////////
 
 
-import { Paper, TableCell, TableContainer, TableHead, TableRow , TableBody, Table,Button} from "@mui/material";
+import { Paper, TableCell, TableContainer, TableHead, TableRow , TableBody, Table,Button,Typography} from "@mui/material";
 import React, { useEffect, useState } from "react";
 //import { Button, Grid, Typography, Input } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
@@ -15,33 +15,37 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp,}) =>
     return(
         <TableContainer 
                 component={Paper}>
+                         <Typography component="h1" sx={{ color: "#000000", fontWeight: "bold", fontFamily: "Roboto, sans-serif" ,fontSize:"40px"}}>
+  Employee Details
+</Typography>
                     <Table>
                         <TableHead>
                             <TableRow>
-                                <TableCell>
-                                    Employee code
-                                </TableCell>
-                                <TableCell>
-                                    Name
-                                </TableCell>
-                                <TableCell>
-                                    Birthday 
-                                </TableCell>
-                                <TableCell>
-                                    Nic
-                                </TableCell>
-                                <TableCell>
-                                    Address
-                                </TableCell>
-                                <TableCell>
-                                    Telephone
-                                </TableCell>
-                                <TableCell>
-                                    Civil
-                                </TableCell>
-                                <TableCell>
-                                    Actions
-                                </TableCell>
+                            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Employee code
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Name
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Birthday
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Nic
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Address
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Telephone
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Civil
+</TableCell>
+<TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+  Actions
+</TableCell>
+
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -58,10 +62,23 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp,}) =>
                             <TableCell component='th' scope="row">{row.civil}</TableCell>
                             
                              <TableCell>
-                                <Button sx={{margin:'0px 10px'}}
+                                <Button 
+                                  sx={{
+                                    margin: "auto",
+                                    marginBottom: "20px",
+                                    backgroundColor: "black",  /* Set background color to black */
+                                    color: "white",            /* Set text color to white */
+                                    marginLeft: "15px",
+                                    marginTop: "20px",
+                                    "&:hover": {
+                                      opacity: 0.7,
+                                      backgroundColor: "black",  /* Maintain black background on hover */
+                                    },
+                                  }}
                                 className="action-btn"
                                 onClick={
                                 () => {
+
                             selectedEmp({
                                         emp_code: row.emp_code,
                                         emp_name : row.emp_name,
@@ -78,7 +95,19 @@ const EmployeeTable = ({rows, selectedEmp, deleteEmp,}) =>
                                 >
                                 Update
                                 </Button>
-                                <Button sx={{margin:'0px 10px'}}
+                                <Button 
+                                  sx={{
+                                    margin: "auto",
+                                    marginBottom: "20px",
+                                    backgroundColor: "black",  /* Set background color to black */
+                                    color: "white",            /* Set text color to white */
+                                    marginLeft: "15px",
+                                    marginTop: "20px",
+                                    "&:hover": {
+                                      opacity: 0.7,
+                                      backgroundColor: "black",  /* Maintain black background on hover */
+                                    },
+                                  }}
                                 className="action-btn"
                                 onClick={
                                     () =>
