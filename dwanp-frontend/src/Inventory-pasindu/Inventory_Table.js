@@ -106,7 +106,7 @@ const InventoryTable = ({ rows, selectInv, deleteInventory }) => {
                       "&:hover": {
                         opacity: 0.7,
                         backgroundColor:
-                          "black" /* Maintain black background on hover */,
+                          "black" /* set black background on hover */,
                       },
                     }}
                     className="action-btn"
