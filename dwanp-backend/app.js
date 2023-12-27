@@ -178,12 +178,32 @@ app.post('/deleteorder', (req,res) => {
 //table - dumindu
 
 //gettableview
+app.get('/gettableview', (req,res) => {
+  controller.getOrder((req, res, next) =>{
+      res.send();
+  });
+});
 
 //addtable
+app.post('/addtable', (req,res) => {
+  controller.addOrder(req.body, (callack) =>{
+      res.send();
+  });
+});
+
+//updatetable
+app.post('/updatetable', (req,res) => {
+  controller.updateOrder(req.body, (callack) =>{
+      res.send(callack);
+  });
+});
 
 //deletetable
-
-//deletetable
+app.post('/deletetable', (req,res) => {
+  controller.deleteOrder(req.body, (callack) =>{
+      res.send(callack);
+  });
+});
 
 ///
 module.exports = app;
