@@ -21,10 +21,13 @@ return (
         <b>Wish</b>
   </Typography>
   <Button color="inherit" href="/Home"
-      sx={{
+    sx={{
+      color: 'black', 
+      marginRight: '1rem',
+      '&:hover': {
         backgroundColor: 'black',
         color: 'white',
-      }}
+      }}}
       >
       <b>Home</b>
   </Button>
