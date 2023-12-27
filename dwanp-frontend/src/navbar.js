@@ -18,7 +18,7 @@ return (
       sx={{ 
         flexGrow: 1, 
         }}>
-        <b>Wish</b>
+        <b>DWANP Restuarants</b>
   </Typography>
   <Button color="inherit" href="/Home"
     sx={{
