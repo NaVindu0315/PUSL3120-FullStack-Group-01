@@ -8,11 +8,24 @@
 //import { Button, Grid, Typography, Input } from "@mui/material";
 //import { useNavigate } from 'react-router-dom';
 
-import { Table, Paper, TableCell, TableContainer, TableHead, TableRow, TableBody, Button } from "@mui/material";
+import { Table, Paper, TableCell, TableContainer, TableHead, TableRow, TableBody, Button,Typography } from "@mui/material";
 
 const OrderTable = ({rows, selectedOrder, deleteOrder}) => {
     return (
     <TableContainer component={Paper} sx={{width:'90%', marginLeft: '50px'}}>
+         <Typography 
+                component={'h1'} 
+                sx={{
+                color:'#000000', 
+                fontSize: '3rem',
+                fontWeight: 'bold',
+                backgroundColor:'#e6c235',
+                width: '100%',
+               
+                textAlign:"center",
+                
+                }}>Employee Details
+                </Typography>
         <Table>
             <TableHead>
                 <TableRow>
