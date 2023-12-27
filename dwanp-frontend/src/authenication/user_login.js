@@ -1,93 +1,35 @@
-import {  Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react"
 
-const UserLogin = ({props}) =>
-{
-    const navigate = useNavigate();
-    return(
+const Login = () => {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-        <Container maxWidth="xl">
-            <Typography variant="h5" component="h5"> 
-            <button className="usr-btn" onClick={()=>navigate('/')}>Back</button>
-            
-            </Typography>
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
-            <Typography variant="h2" component="h1">
-                User Login
-            </Typography>
-            <Typography variant="h5" sx={{ mt: 2 }}>
-              Login
-            </Typography>
-        </Box>
-        <Grid container spacing={4}>
-            <Table sx={{ mt: 4 }}>
-                <TableHead>
+  const handleSubmit = async (e) => {
+    e.preventDefault()
 
+    console.log(email, password)
+  }
 
-                    <TableRow>
+  return (
+    <form className="login" onSubmit={handleSubmit}>
+      <h3>Log In</h3>
+      
+      <label>Email address:</label>
+      <input 
+        type="email" 
+        onChange={(e) => setEmail(e.target.value)} 
+        value={email} 
+      />
+      <label>Password:</label>
+      <input 
+        type="password" 
+        onChange={(e) => setPassword(e.target.value)} 
+        value={password} 
+      />
 
-
-                        <TableCell></TableCell>
-
-
-                        <TableCell></TableCell>
-
-
-                        <TableCell></TableCell>
-
-
-                    </TableRow>
-
-
-                </TableHead>
-
-
-                <TableBody>
-              {/*first row */}
-                        <TableRow >
-                            <TableCell></TableCell>
-                            <TableCell>
-                           Nic
-                            </TableCell>
-                            <TableCell>
-                            <input
-                        type="text"
-                        //value={textValue}
-                            //onChange={(event) => setTextValue(event.target.value)}
-    />
-                            </TableCell>
-                        </TableRow>
-            {/*second row */}
-                         <TableRow >
-                            <TableCell></TableCell>
-                            <TableCell>
-                      Password
-                            </TableCell>
-                            <TableCell>
-                            <input
-                        type="text"
-                        //value={textValue}
-                            //onChange={(event) => setTextValue(event.target.value)}
-    />
-                            </TableCell>
-                        </TableRow>
-             {/*third row */}
-             <TableRow >
-                            <TableCell></TableCell>
-                            <TableCell>
-                            <TableCell> <button className="usr-btn" onClick={()=>navigate('/userreg')}>Register</button></TableCell>
-                            </TableCell>
-                            <TableCell> <button className="usr-btn" onClick={()=>navigate('/userdashboard')}>Login</button></TableCell>
-                        </TableRow>
-                    
-                </TableBody>
-            </Table>
-        </Grid>
-    </Container>
-
-        
-
-
-    )
+      <button>Log in</button>
+    </form>
+  )
 }
-export default UserLogin;
+
+export default Login

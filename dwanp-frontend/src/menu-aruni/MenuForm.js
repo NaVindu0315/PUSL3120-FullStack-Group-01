@@ -42,7 +42,8 @@ const navigate = useNavigate();
     <Grid container spacing={2}
     sx={{ backgroundColor: "#ffffff", marginBottom: "30px" }}>
         <Grid item xs={12}>
-    <Typography component="h1" sx={{ color: "#000000" }}>
+    <Typography component="h1" 
+    sx={{ color: "#000000", fontWeight: "bold", fontFamily: "Roboto, sans-serif" ,fontSize:"40px"}}>
       Menu Page
     </Typography>
   </Grid>
@@ -121,13 +122,13 @@ const navigate = useNavigate();
         sx={{
           margin: "auto",
           marginBottom: "20px",
-          backgroundColor: "#00c6e6",
-          color: "#000000",
+          backgroundColor: "black",
+          color: "white",
           marginLeft: "15px",
           marginTop: "20px",
           "&:hover": {
             opacity: 0.7,
-            backgroundColor: "#00c6e6",
+            backgroundColor: "black",
           },
         }}
         onClick={()=>{
@@ -144,13 +145,13 @@ const navigate = useNavigate();
         sx={{
           margin: "auto",
           marginBottom: "20px",
-          backgroundColor: "#00c6e6",
-          color: "#000000",
+          backgroundColor: "black",
+          color: "white",
           marginLeft: "15px",
           marginTop: "20px",
           "&:hover": {
             opacity: 0.7,
-            backgroundColor: "#00c6e6",
+            backgroundColor: "black",
           },
         }}
         onClick={()=>

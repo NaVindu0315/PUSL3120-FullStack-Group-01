@@ -172,8 +172,8 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                 
                 margin:'auto',
                 marginBottom: '-9%',
-                backgroundColor: '#e6c235',
-                color: '#000000',
+                backgroundColor: 'black',
+                color: 'white',
                 marginLeft: '50px',
                 marginTop:'20px',
                 width: '10%',
@@ -185,6 +185,7 @@ const OrderForm = ({ addOrder, updateOrder, submitted, data, isEdit }) =>{
                     backgroundColor: '#000000'
                 }
             }}
+      
             onClick={() => isEdit ? updateOrder({ Orderid, foodItemCode, noOfPotions, date }) : addOrder({ Orderid, foodItemCode, noOfPotions, date })}
             >
                 {
