@@ -27,11 +27,21 @@ const InventoryTable = ({ rows, selectInv, deleteInventory }) => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Item</TableCell>
-            <TableCell>Item Code</TableCell>
-            <TableCell>Quantity</TableCell>
-            <TableCell>Price</TableCell>
-            <TableCell>Date</TableCell>
+            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+              Item Name
+            </TableCell>
+            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+              Item Code
+            </TableCell>
+            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+              Quantity
+            </TableCell>
+            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+              Price
+            </TableCell>
+            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+              Date
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
