@@ -1,19 +1,13 @@
-//dumindu
-//meke employeeschema wenuwt enna one ubala krana eka ex: orderSchema ,tableSchema
-//const Employee wenuwt ubalage ex: Order,Tablereserver
-//cll ekk dpn meka ghnna kalin
-
-/*
 const mongoose = require('mongoose');
-const Schema  = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-///defining employee schema
-const employeeSchema = new Schema(
-    {
-        id:Number,
-        name : String,
-    }
-);
-const Employee = mongoose.model('employees',employeeSchema);
-module.exports = Employee;
-*/
+const tableSchema = new Schema({
+    table_no: Number,
+    used_date: String,
+    used_time: String,
+    person_count: Number,
+});
+
+const Table = mongoose.model('Table', tableSchema);
+
+module.exports = Table;

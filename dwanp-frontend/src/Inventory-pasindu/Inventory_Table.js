@@ -7,19 +7,41 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from "@mui/material";
 
 const InventoryTable = ({ rows, selectInv, deleteInventory }) => {
   return (
     <TableContainer component={Paper}>
+      <Typography
+        component="h1"
+        sx={{
+          color: "#000000",
+          fontWeight: "bold",
+          fontFamily: "Roboto, sans-serif",
+          fontSize: "40px",
+        }}
+      >
+        Inventory Details
+      </Typography>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Item</TableCell>
-            <TableCell>Item Code</TableCell>
-            <TableCell>Quantity</TableCell>
-            <TableCell>Price</TableCell>
-            <TableCell>Date</TableCell>
+            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+              Item Name
+            </TableCell>
+            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+              Item Code
+            </TableCell>
+            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+              Quantity
+            </TableCell>
+            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+              Price
+            </TableCell>
+            <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
+              Date
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -46,7 +68,19 @@ const InventoryTable = ({ rows, selectInv, deleteInventory }) => {
                 </TableCell>
                 <TableCell>
                   <Button
-                    sx={{ margin: "0px 10px" }}
+                    sx={{
+                      margin: "auto",
+                      marginBottom: "20px",
+                      backgroundColor: "black",
+                      color: "white",
+                      marginLeft: "15px",
+                      marginTop: "20px",
+                      "&:hover": {
+                        opacity: 0.7,
+                        backgroundColor:
+                          "black" /* set black background on hover */,
+                      },
+                    }}
                     className="action-btn"
                     onClick={() =>
                       selectInv({
@@ -62,7 +96,19 @@ const InventoryTable = ({ rows, selectInv, deleteInventory }) => {
                   </Button>
 
                   <Button
-                    sx={{ margin: "0px 10px" }}
+                    sx={{
+                      margin: "auto",
+                      marginBottom: "20px",
+                      backgroundColor: "black",
+                      color: "white",
+                      marginLeft: "15px",
+                      marginTop: "20px",
+                      "&:hover": {
+                        opacity: 0.7,
+                        backgroundColor:
+                          "black" /* set black background on hover */,
+                      },
+                    }}
                     className="action-btn"
                     onClick={() =>
                       deleteInventory({ invnt_code: row.invnt_code })

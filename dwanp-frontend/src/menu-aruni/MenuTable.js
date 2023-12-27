@@ -5,7 +5,7 @@
 
 
 import React, { useEffect, useState } from "react";
-import {  Paper, TableCell, TableContainer, TableHead, TableRow , TableBody, Table,Button } from "@mui/material";
+import {  Paper, TableCell, TableContainer, TableHead, TableRow , TableBody, Table,Button, Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -13,20 +13,23 @@ const MenuTable = ({rows, selectedMenu, deleteMenu,}) => {
 
     return(
 <TableContainer 
-component={Paper}>
+   component={Paper}>
+   <Typography component="h1" sx={{ color: "#000000", fontWeight: "bold", fontFamily: "Roboto, sans-serif" ,fontSize:"40px"}}>
+    Menu Details
+    </Typography>
     <Table>
         <TableHead>
             <TableRow>
-                <TableCell>
+                <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
                     Menu item Number
                 </TableCell>
-                <TableCell>
+                <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
                     Menu item Name
                 </TableCell>
-                <TableCell>
+                <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
                     Menu Price
                 </TableCell>
-                <TableCell>
+                <TableCell sx={{ fontWeight: "bold", fontSize: 16 }}>
                     Potion
                 </TableCell>
                 </TableRow>
@@ -42,9 +45,21 @@ component={Paper}>
                                  <TableCell component='th' scope="row">{row.potion}</TableCell>
                                  
                                   <TableCell>
-                                     <Button sx={{margin:'0px 10px'}}
-                                     className="action-btn"
-                                     onClick={
+                                     <Button 
+                                      sx={{
+                                        margin: "auto",
+                                        marginBottom: "20px",
+                                        backgroundColor: "black",  /* Set background color to black */
+                                        color: "white",            /* Set text color to white */
+                                        marginLeft: "15px",
+                                        marginTop: "20px",
+                                        "&:hover": {
+                                          opacity: 0.7,
+                                          backgroundColor: "black",  /* Maintain black background on hover */
+                                        },
+                                      }}
+                                    className="action-btn"
+                                    onClick={
                                      () => {
                                  selectedMenu({
                                              menu_item_no: row.menu_item_no,
@@ -60,9 +75,22 @@ component={Paper}>
                                      Update
                         </Button>
                         <Button
-                            sx={{ margin: '0px 10px' }}
-                            className="action-btn"
-                            onClick={() => deleteMenu({ menu_item_no: row.menu_item_no })}
+                            sx={{
+                                    margin: "auto",
+                                    marginBottom: "20px",
+                                    backgroundColor: "black",  /* Set background color to black */
+                                    color: "white",            /* Set text color to white */
+                                    marginLeft: "15px",
+                                    marginTop: "20px",
+                                    "&:hover": {
+                                      opacity: 0.7,
+                                      backgroundColor: "black",  /* Maintain black background on hover */
+                                    },
+                                  }}
+                                className="action-btn"
+                            onClick={
+                                () => 
+                                deleteMenu({ menu_item_no: row.menu_item_no })}
                             >
                                 Delete
                         </Button>

@@ -21,6 +21,8 @@ const orderrouter = require('./routes/order_router');
 //employee
 
 //table
+const tablerouter = require('./routes/table_router');
+
 //authentication  
 //importing auth router
 const auth_user_router = require('./routes/auth_user_router')
@@ -57,6 +59,7 @@ app.use('/api',orderrouter);
 app.use("/api", emprouter);
 app.use("/api", invrouter);
 app.use('/api',menrouter);
+app.use('/api', tablerouter);
 
 //for the authentication here um gonna use  my own but in the tutorial it says ('./api/user',auth_user_router)
 app.use('/api/user',auth_user_router);
