@@ -13,6 +13,7 @@ import Axios from "axios";
 import { useEffect ,useState } from "react";
 import posterImage from './Poster (2).png'; 
 //import './empstyle.css';
+import MyComponent from '../navbar'
 
 
 const Employee=()=>
@@ -157,6 +158,10 @@ const Employee=()=>
 
     return (
         <Container maxWidth="xl" >
+          
+  <navbar>
+  <MyComponent />
+    </navbar> 
              <Container maxWidth="xl">
   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
     <div style={{ position: 'relative' }}>
