@@ -21,6 +21,8 @@ const orderrouter = require('./routes/order_router');
 //employee
 
 //table
+const tablerouter = require('./routes/table_router');
+
 //authentication  
 //importing auth router
 const auth_user_router = require('./routes/auth_user_router')
