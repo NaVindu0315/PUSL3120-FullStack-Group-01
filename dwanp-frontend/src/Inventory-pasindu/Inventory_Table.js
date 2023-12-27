@@ -71,15 +71,14 @@ const InventoryTable = ({ rows, selectInv, deleteInventory }) => {
                     sx={{
                       margin: "auto",
                       marginBottom: "20px",
-                      backgroundColor:
-                        "black" /* Set background color to black */,
-                      color: "white" /* Set text color to white */,
+                      backgroundColor: "black",
+                      color: "white",
                       marginLeft: "15px",
                       marginTop: "20px",
                       "&:hover": {
                         opacity: 0.7,
                         backgroundColor:
-                          "black" /* Maintain black background on hover */,
+                          "black" /* set black background on hover */,
                       },
                     }}
                     className="action-btn"
