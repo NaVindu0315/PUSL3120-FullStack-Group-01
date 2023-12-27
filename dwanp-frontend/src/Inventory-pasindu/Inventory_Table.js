@@ -96,7 +96,19 @@ const InventoryTable = ({ rows, selectInv, deleteInventory }) => {
                   </Button>
 
                   <Button
-                    sx={{ margin: "0px 10px" }}
+                    sx={{
+                      margin: "auto",
+                      marginBottom: "20px",
+                      backgroundColor: "black",
+                      color: "white",
+                      marginLeft: "15px",
+                      marginTop: "20px",
+                      "&:hover": {
+                        opacity: 0.7,
+                        backgroundColor:
+                          "black" /* Maintain black background on hover */,
+                      },
+                    }}
                     className="action-btn"
                     onClick={() =>
                       deleteInventory({ invnt_code: row.invnt_code })
