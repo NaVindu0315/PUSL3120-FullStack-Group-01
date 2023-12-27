@@ -9,6 +9,7 @@ import InventoryForm from "./Inventory_Form";
 import InventoryTable from "./Inventory_Table";
 import Axios from "axios";
 import { useEffect, useState } from "react";
+import posterImage from "./Poster (2).png";
 
 const Inventory = () => {
   const navigate = useNavigate();
@@ -101,6 +102,7 @@ const Inventory = () => {
           mt: 4,
         }}
       >
+        /div style
         <Typography variant="h5" component="h5">
           <button className="usr-btn" onClick={() => navigate("/")}>
             Back
