@@ -160,7 +160,8 @@ const InventoryForm = ({
                     marginTop: "20px",
                     "&:hover": {
                       opacity: 0.7,
-                      backgroundColor: "black",
+                      backgroundColor:
+                        "black" /* set black background on hover */,
                     },
                   }}
                   onClick={() => {
