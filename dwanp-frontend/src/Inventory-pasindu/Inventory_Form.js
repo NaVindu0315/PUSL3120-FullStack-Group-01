@@ -182,13 +182,14 @@ const InventoryForm = ({
                   sx={{
                     margin: "auto",
                     marginBottom: "20px",
-                    backgroundColor: "#00c6e6",
-                    color: "#000000",
+                    backgroundColor:
+                      "black" /* Set background color to black */,
+                    color: "white" /* Set text color to white */,
                     marginLeft: "15px",
                     marginTop: "20px",
                     "&:hover": {
                       opacity: 0.7,
-                      backgroundColor: "#00c6e6",
+                      backgroundColor: "black",
                     },
                   }}
                   onClick={() => {
