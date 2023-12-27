@@ -33,7 +33,7 @@ import UserDashboard from './dashboard/user_dashboard';
 import EmpDashboard from './dashboard/emp_dashboard';
 import Homepage from './Homepage2';
 import SignUp from './authenication/user_reg';
-
+import Login from './authenication/user_login';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -46,7 +46,7 @@ root.render(
 
 {/*Authentication */}
 <Route path ='/userreg' element ={<SignUp/>}/>
-<Route path ='/userlog' element ={<UserLogin/>}/>
+<Route path ='/userlog' element ={<Login/>}/>
 <Route path ='/emplog' element ={<EmpLogin/>}/>
 
 {/*Dashboards */}
