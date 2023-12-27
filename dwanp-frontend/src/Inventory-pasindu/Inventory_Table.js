@@ -7,11 +7,23 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  Typography,
 } from "@mui/material";
 
 const InventoryTable = ({ rows, selectInv, deleteInventory }) => {
   return (
     <TableContainer component={Paper}>
+      <Typography
+        component="h1"
+        sx={{
+          color: "#000000",
+          fontWeight: "bold",
+          fontFamily: "Roboto, sans-serif",
+          fontSize: "40px",
+        }}
+      >
+        Inventory Details
+      </Typography>
       <Table>
         <TableHead>
           <TableRow>
