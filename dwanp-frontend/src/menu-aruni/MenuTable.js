@@ -14,9 +14,19 @@ const MenuTable = ({rows, selectedMenu, deleteMenu,}) => {
     return(
 <TableContainer 
    component={Paper}>
-   <Typography component="h1" sx={{ color: "#000000", fontWeight: "bold", fontFamily: "Roboto, sans-serif" ,fontSize:"40px"}}>
-    Menu Details
-    </Typography>
+    <Typography 
+                component={'h1'} 
+                sx={{
+                color:'#000000', 
+                fontSize: '3rem',
+                fontWeight: 'bold',
+                backgroundColor:'#e6c235',
+                width: '100%',
+               
+                textAlign:"center",
+                
+                }}>Menu Details
+                </Typography>
     <Table>
         <TableHead>
             <TableRow>
