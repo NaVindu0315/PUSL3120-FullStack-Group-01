@@ -2,13 +2,15 @@
 
 import {  Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
-
-
+import MyComponent from '../navbar'; 
 
 const UserDashboard = ({ props }) => {
     const navigate = useNavigate();
     return (
         <Container maxWidth="xl">
+            <navbar>
+            <MyComponent />
+            </navbar> 
             <Typography variant="h5" component="h5"> 
             <button className="usr-btn" onClick={()=>navigate('/')}>Back</button>
             

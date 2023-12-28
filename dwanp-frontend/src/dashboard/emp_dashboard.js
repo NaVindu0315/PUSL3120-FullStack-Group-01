@@ -4,7 +4,6 @@ import {  Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow
 import { useNavigate } from 'react-router-dom';
 import MyComponent from '../navbar'; 
 
-
 const EmpDashboard = ({ props }) => {
     const navigate = useNavigate();
     return (
