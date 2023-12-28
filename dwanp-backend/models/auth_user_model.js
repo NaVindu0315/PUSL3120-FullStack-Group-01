@@ -56,7 +56,7 @@ authusersSchema.statics.signup = async function(email,password)
 }
 
 //static login method
-authusersSchema.statics.login = async function(email,password)
+/*authusersSchema.statics.login = async function(email,password)
 {
      //validation
      if(!email || !password)
@@ -83,7 +83,29 @@ authusersSchema.statics.login = async function(email,password)
      return 1;
 
      //return usersignup;
-}
+}*/
+//bard try
+authusersSchema.statics.login = async function (email, password) {
+    // Validation
+    if (!email || !password) {
+      throw new Error('All fields must be filled');
+    }
+  
+    const user = await this.findOne({ email });
+  
+    // Check for existing user and password match
+    if (!user) {
+      throw new Error('Incorrect email');
+    } else if (!await bcrypt.compare(password, user.password)) {
+      throw new Error('Incorrect password');
+    }
+  
+    // Generate a secure authentication token (e.g., using a library like jsonwebtoken)
+   // const token = createAuthToken(user); // Replace with your token generation logic
+  
+    return { status: 'success' }; // Return a meaningful response with the token
+  };
+  
 
 
 

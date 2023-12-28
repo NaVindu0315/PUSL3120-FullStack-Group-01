@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Axios from "axios";
 import { Button, Table } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -22,6 +24,8 @@ const SignUp = () => {
       setSubmitted(false);
       setEmail("");
       setPassword("");
+      navigate('/userlog');
+
     } catch (error) {
       console.error("Axios Error:", error);
       setSubmitted(false); // Reset loading state after error
