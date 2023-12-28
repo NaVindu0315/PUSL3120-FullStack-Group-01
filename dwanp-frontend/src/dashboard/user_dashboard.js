@@ -85,7 +85,7 @@ const UserDashboard = ({ props }) => {
                 fontSize: '18px',
                 width: '25%',
                 height: '10%',
-                bottom: '-30%',
+                bottom: '-15%',
                 left: '42%',
                 transform: 'translate(90%)' ,
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
