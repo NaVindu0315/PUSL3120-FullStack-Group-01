@@ -16,9 +16,9 @@ const authloginUser = async (req,res) =>
     try{
         const usersignup = await authusers.login(email,password)
         //create a token
-        const token = createToke(usersignup._id)
+        //const token = createToke(usersignup._id)
 
-        res.status(200).json({email,token})
+        res.status(200).json({email,password})
     } 
     catch(error)
     {
@@ -41,9 +41,9 @@ const authsignupUser = async (req,res) =>
     try{
         const usersignup = await authusers.signup(email,password)
         //create a token
-        const token = createToke(usersignup._id)
+      //  const token = createToke(usersignup._id)
 
-        res.status(200).json({email,token})
+        res.status(200).json({email,password})
     } 
     catch(error)
     {
