@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Axios from "axios";
-import { Button, Table ,Container } from "@mui/material";
+import { Button, Table ,Container, TableHead, TableRow, TableCell } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
 import Navbarr from "./Navbarr";
@@ -44,26 +44,68 @@ const SignUp = () => {
     <Navbarr/>
   </navbar>
 
-
+<center>
     <Table>
-      <h3>Sign Up</h3>
+      <TableHead>
+      <h2>Sign Up</h2>
+      </TableHead>
+      <TableRow>
+        <TableCell>
+        <label>Email address:</label>
 
-      <label>Email address:</label>
-      <input
+        </TableCell>
+        <TableCell>
+        <input
         type="email"
         onChange={(e) => setEmail(e.target.value)}
         value={email}
       />
-      <label>Password:</label>
-      <input
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>
+        <label>Password:</label>
+        </TableCell>
+        <TableCell>
+        <input
         type="password"
         onChange={(e) => setPassword(e.target.value)}
         value={password}
       />
-      <Button disabled={submitted} onClick={handleSubmit}>
+        </TableCell>
+        </TableRow>
+        <TableRow>
+        <TableCell>
+
+        </TableCell>
+        <TableCell>
+        <Button disabled={submitted} 
+                sx={{
+                  margin: "auto",
+                  marginBottom: "20px",
+                  backgroundColor: "black",  /* Set background color to black */
+                  color: "white",            /* Set text color to white */
+                  marginLeft: "15px",
+                  marginTop: "20px",
+                  "&:hover": {
+                    opacity: 0.7,
+                    backgroundColor: "black",  /* Maintain black background on hover */
+                  },
+                }}
+        
+        onClick={handleSubmit}>
         Sign Up
       </Button>
+        </TableCell>
+     
+      </TableRow>
+      
+ 
+    
+  
+     
     </Table>
+    </center>
     </Container>
   );
 };
