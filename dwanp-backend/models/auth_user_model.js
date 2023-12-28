@@ -47,10 +47,10 @@ authusersSchema.statics.signup = async function(email,password)
         throw Error('Email Alreday in use')
     }
     //hashing the password
-    //const salt = await bcrypt.genSalt(10)
-    //const hash = await bcrypt.hash(password,salt)
+    const salt = await bcrypt.genSalt(10)
+    const hash = await bcrypt.hash(password,salt)
     //here instead of usersignup yt tutrial used user
-    const usersignup = await this.create({email,password})
+    const usersignup = await this.create({email,password:hash})
 
     return usersignup
 }
@@ -70,14 +70,19 @@ authusersSchema.statics.login = async function(email,password)
      }
     
      //pwd
-     //const match = await bcrypt.compare(password,usersignup.password)
-     const match = await this.find({password:usersignup.password})
+     const match = await bcrypt.compare(password,usersignup.password)
+     //const match = await this.find({password:usersignup.password})
      if(!match)
      {
         throw Error('Incorrect password')
      }
+     else
+     {
+            console.log('password matched')
+     }
+     return "login success"
 
-     return usersignup;
+     //return usersignup;
 }
 
 
