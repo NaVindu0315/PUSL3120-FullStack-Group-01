@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Axios from "axios";
-import { Button, Table } from "@mui/material";
+import { Button, Table ,Container } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
+
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -35,6 +36,9 @@ const SignUp = () => {
   };
 
   return (
+    <Container maxWidth="xl" >
+
+
     <Table>
       <h3>Sign Up</h3>
 
@@ -54,6 +58,7 @@ const SignUp = () => {
         Sign Up
       </Button>
     </Table>
+    </Container>
   );
 };
 
