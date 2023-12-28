@@ -3,9 +3,11 @@ const app = express();
 const cors = require("cors");
 //for controllers
 
-
 //pasindu
 const invcontroller = require("./controllers/inventory_controller");
+
+//table controller
+const tablecontroller = require("./controllers/table_controller");
 
 app.use(cors());
 app.use(
@@ -177,13 +179,33 @@ app.post('/deleteorder', (req,res) => {
 
 //table - dumindu
 
-//gettableview
+//gettables
+app.get('/tables', (req,res) => {
+  tablecontroller.getTables((req, res, next) =>{
+      res.send();
+  });
+});
 
 //addtable
+app.post('/addtable', (req,res) => {
+  tablecontroller.addTable(req.body, (callack) =>{
+      res.send();
+  });
+});
+
+//updatetable
+app.post('/updatetable', (req,res) => {
+  tablecontroller.updateTable(req.body, (callack) =>{
+      res.send(callack);
+  });
+});
 
 //deletetable
-
-//deletetable
+app.post('/deletetable', (req,res) => {
+  tablecontroller.deleteTable(req.body, (callack) =>{
+      res.send(callack);
+  });
+});
 
 ///
 module.exports = app;
