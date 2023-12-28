@@ -34,7 +34,7 @@ import EmpDashboard from './dashboard/emp_dashboard';
 import Homepage from './Homepage2';
 import SignUp from './authenication/user_reg';
 import Login from './authenication/user_login';
-import ChatApp from './chat';
+
 
 
 
@@ -45,7 +45,7 @@ root.render(
  <Route path='/' element ={<App/>}/>
  <Route path ='/home' element ={<Home/>}/>
  <Route path ='/testhome' element ={<Homepage/>}/> 
- <Route path ='/chat' element ={<ChatApp/>}/> 
+
 {/*Authentication */}
 <Route path ='/userreg' element ={<SignUp/>}/>
 <Route path ='/userlog' element ={<Login/>}/>
