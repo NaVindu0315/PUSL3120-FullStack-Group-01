@@ -18,60 +18,12 @@ return (
       sx={{ 
         flexGrow: 1, 
         }}>
-        <b>Wish</b>
+        <b>Sign Up</b>
   </Typography>
-  <Button color="inherit" href="/Home"
-      sx={{
-        backgroundColor: 'black',
-        color: 'white',
-      }}
-      >
-      <b>Home</b>
-  </Button>
-  <Button color="inherit" href="/Employee"
-      sx={{
-      color: 'black', 
-      marginRight: '1rem',
-      '&:hover': {
-        backgroundColor: 'black',
-        color: 'white',
-      }}}
-      >
-      <b>Employee</b>
-  </Button>
-  <Button color="inherit" href="/Inventory"
-      sx={{
-      color: 'black', 
-      marginRight: '1rem',
-      '&:hover': {
-        backgroundColor: 'black',
-        color: 'white',
-      }}}
-      >
-      <b>Inventory</b>
-  </Button>
-  <Button color="inherit" href="/Menu"
-      sx={{
-      color: 'black',
-      marginRight: '1rem',
-      '&:hover': {
-        backgroundColor: 'black',
-        color: 'white',
-      } }}
-      >
-      <b>Menu</b>
-  </Button>
-  <Button color="inherit" href="/Order"
-  sx={{
-      color: 'black', 
-      marginRight: '1rem',
-      '&:hover': {
-        backgroundColor: 'black',
-        color: 'white',
-      }}}
-      >
-      <b>Order</b>
-  </Button>
+ 
+ 
+ 
+
   <Button color="inherit" href="/Table"
       sx={{
       color: 'black',
@@ -80,8 +32,9 @@ return (
         backgroundColor: 'black',
         color: 'white',
       } }}
+      
       >
-      <b>Table</b>
+      <b>Login</b>
   </Button>
 </Toolbar>
 </AppBar>
