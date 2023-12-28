@@ -1,14 +1,16 @@
 //this is the homepage
 
-import {  Container, Box, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
+import {  Container, Box, Grid} from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import MyComponent from '../navbar'; 
 import posterImage from '../Poster (2).png'; 
+import { IconButton } from '@mui/material';
+import PersonAddAltRoundedIcon from '@mui/icons-material/PersonAddAltRounded';
 
 const EmpDashboard = ({ props }) => {
     const navigate = useNavigate();
     return (
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" >
             <navbar>
             <MyComponent />
             </navbar> 
@@ -27,77 +29,111 @@ const EmpDashboard = ({ props }) => {
                 }}>Employee Dashboard</h1>
                 </div>
             </Box>
-            <Grid container spacing={4}>
-                <Table sx={{ mt: 4 }}>
-                    <TableHead>
 
 
-                        <TableRow>
-                            ***welcome poster here 
+            <Grid>
+                <IconButton
+                className="usr-btn" onClick={()=>navigate('/menu')}
+            style={{
+                borderRadius: '10px',
+                backgroundColor: 'black',
+                color: '#e6c235',
+                position: 'absolute', 
+                fontSize: '13px',
+                width: '25%',
+                height: '10%',
+                bottom: '0%',
+                left: '17%',
+                transform: 'translate(90%)' ,
+                boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
+            }}
+                >
+                    <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+                    Menu
+                </IconButton>
 
+                <IconButton
+                className="usr-btn" onClick={()=>navigate('/inventory')}
+            style={{
+                borderRadius: '10px',
+                backgroundColor: 'black',
+                color: '#e6c235',
+                position: 'absolute', 
+                fontSize: '13px',
+                width: '25%',
+                height: '10%',
+                bottom: '0%',
+                left: '17%',
+                transform: 'translate(90%)' ,
+                boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
+            }}
+                >
+                    <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+                    Inventory
+                </IconButton>
+           
+                <IconButton
+                className="usr-btn" onClick={()=>navigate('/order')}
+            style={{
+                borderRadius: '10px',
+                backgroundColor: 'black',
+                color: '#e6c235',
+                position: 'absolute', 
+                fontSize: '13px',
+                width: '25%',
+                height: '10%',
+                bottom: '0%',
+                left: '17%',
+                transform: 'translate(90%)' ,
+                boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
+            }}
+                >
+                    <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+                    Order
+                </IconButton>
+                
+                <IconButton
+                className="usr-btn" onClick={()=>navigate('/employee')}
+            style={{
+                borderRadius: '10px',
+                backgroundColor: 'black',
+                color: '#e6c235',
+                position: 'absolute', 
+                fontSize: '13px',
+                width: '25%',
+                height: '10%',
+                bottom: '0%',
+                left: '17%',
+                transform: 'translate(90%)' ,
+                boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
+            }}
+                >
+                    <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+                    Employee
+                </IconButton>
 
-                            <TableCell></TableCell>
-
-
-                            <TableCell></TableCell>
-
-
-                            <TableCell></TableCell>
-
-
-                        </TableRow>
-                        
-
-
-                    </TableHead>
-
-
-                    <TableBody>
-                  {/*first row */}
-                            <TableRow >
-                         {  /*     <TableCell></TableCell>
-                                <TableCell>
-                                <button className="usr-btn" onClick={()=>navigate('/menu')}>Menu</button>
-                                </TableCell>
-                                <TableCell>
-                                <button className="usr-btn" onClick={()=>navigate('/inventory')}>Inventory</button>
-    </TableCell>*/}
-                            </TableRow>
-                {/*second row */}
-                             <TableRow >
-                        {/*        <TableCell></TableCell>
-                                <TableCell>
-                                <button className="usr-btn" onClick={()=>navigate('/order')}>Order</button>
-                                </TableCell>
-                                <TableCell>
-                                <button className="usr-btn" onClick={()=>navigate('/employee')}>Employee</button>
-                                </TableCell>*/}
-                            </TableRow>
-                 {/*third row */}
-                 <TableRow >
-                                <TableCell></TableCell>
-                                <TableCell>
-                                    {/**<button className="usr-btn" onClick={()=>navigate('/tableview')}>Table</button> */}
-                                
-                                </TableCell>
-                                <TableCell></TableCell>
-                            </TableRow>
-                        
-                    </TableBody>
-                </Table>
+                <IconButton
+                className="usr-btn" onClick={()=>navigate('/')}
+            style={{
+                borderRadius: '10px',
+                backgroundColor: 'black',
+                color: '#e6c235',
+                position: 'absolute', 
+                fontSize: '13px',
+                width: '25%',
+                height: '10%',
+                bottom: '0%',
+                left: '17%',
+                transform: 'translate(90%)' ,
+                boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
+            }}
+                >
+                    <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+                    Contact Customers
+                </IconButton>
             </Grid>
-
-            <Grid><button className="usr-btn" onClick={()=>navigate('/menu')}>Menu</button>
-            <button className="usr-btn" onClick={()=>navigate('/inventory')}>Inventory</button>
-            </Grid> 
-            <Grid></Grid>
-            
-            <Grid><button className="usr-btn" onClick={()=>navigate('/order')}>Order</button>
-            <button className="usr-btn" onClick={()=>navigate('/employee')}>Employee</button>
-            </Grid> 
-            
-            <Grid> <button className="usr-btn" onClick={()=>navigate('')}>Contact Customers</button> </Grid>
         </Container>
+        
 
     )
 

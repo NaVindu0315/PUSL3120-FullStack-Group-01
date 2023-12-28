@@ -24,7 +24,7 @@ function MyComponent() {
               flexGrow: 1,
             }}
           >
-            <b>Wish</b>
+            <b>DWANP</b> restaurent
           </Typography>
           <Button
             href="/Home"
