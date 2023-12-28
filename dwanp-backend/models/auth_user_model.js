@@ -35,10 +35,10 @@ authusersSchema.statics.signup = async function(email,password)
 
     }
     //password check character limit and other
-    if(!validator.isStrongPassword(password))
+   /* if(!validator.isStrongPassword(password))
     {
         throw Error('passowrd not strong enough')
-    }
+    }*/
 
 
     const exists = await this.findOne({email})
@@ -50,13 +50,13 @@ authusersSchema.statics.signup = async function(email,password)
     const salt = await bcrypt.genSalt(10)
     const hash = await bcrypt.hash(password,salt)
     //here instead of usersignup yt tutrial used user
-    const usersignup = await this.create({email,password :hash})
+    const usersignup = await this.create({email,password:hash})
 
     return usersignup
 }
 
 //static login method
-authusersSchema.statics.login = async function(email,password)
+/*authusersSchema.statics.login = async function(email,password)
 {
      //validation
      if(!email || !password)
@@ -71,13 +71,41 @@ authusersSchema.statics.login = async function(email,password)
     
      //pwd
      const match = await bcrypt.compare(password,usersignup.password)
+     //const match = await this.find({password:usersignup.password})
      if(!match)
      {
         throw Error('Incorrect password')
      }
+     else
+     {
+          //  console.log('password matched')
+     }
+     return 1;
 
-     return usersignup;
-}
+     //return usersignup;
+}*/
+//bard try
+authusersSchema.statics.login = async function (email, password) {
+    // Validation
+    if (!email || !password) {
+      throw new Error('All fields must be filled');
+    }
+  
+    const user = await this.findOne({ email });
+  
+    // Check for existing user and password match
+    if (!user) {
+      throw new Error('Incorrect email');
+    } else if (!await bcrypt.compare(password, user.password)) {
+      throw new Error('Incorrect password');
+    }
+  
+    // Generate a secure authentication token (e.g., using a library like jsonwebtoken)
+   // const token = createAuthToken(user); // Replace with your token generation logic
+  
+    return { status: 'success' }; // Return a meaningful response with the token
+  };
+  
 
 
 
