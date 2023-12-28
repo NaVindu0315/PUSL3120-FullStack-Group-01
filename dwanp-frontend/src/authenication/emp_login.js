@@ -52,7 +52,7 @@ const EmpLogin = ({props}) =>
     <Table>
      
     <TableHead>
-        <h2>Login</h2>
+        <h2>Employee Login</h2>
         </TableHead>
   
         <TableRow>

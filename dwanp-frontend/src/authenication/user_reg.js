@@ -47,7 +47,7 @@ const SignUp = () => {
 <center>
     <Table>
       <TableHead>
-      <h2>Sign Up</h2>
+      <h2> User Sign Up</h2>
       </TableHead>
       <TableRow>
         <TableCell>
