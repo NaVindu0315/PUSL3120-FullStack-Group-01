@@ -9,9 +9,20 @@ const emprouter = require("./routes/employee_router");
 //creating for the sockets remove this if anything goes wrong
 const io = require('socket.io')(port)
 
-io.on('connection', (socket) => {
+const chatusers = {}
 
-  socket.emit('chat message','hello world')
+io.on('connection', socket => {
+  socket.on('new-user', name => {
+    chatusers[socket.id] = name
+    socket.broadcast.emit('user-connected', name)
+  })
+  socket.on('send-chat-message', message => {
+    io.emit('chat-message', { message: message, name: chatusers[socket.id] })
+  })
+  socket.on('disconnect', () => {
+    socket.broadcast.emit('user-disconnected', chatusers[socket.id])
+    delete chatusers[socket.id]
+  })
 })
 //to import routers
 

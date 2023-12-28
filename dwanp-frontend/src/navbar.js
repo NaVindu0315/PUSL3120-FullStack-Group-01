@@ -106,6 +106,20 @@ function MyComponent() {
           >
             <b>Table</b>
           </Button>
+          <Button
+            color="inherit"
+            href="/chat"
+            sx={{
+              color: "black",
+              marginRight: "1rem",
+              "&:hover": {
+                backgroundColor: "black",
+                color: "white",
+              },
+            }}
+          >
+            <b>Chat</b>
+          </Button>
         </Toolbar>
       </AppBar>
     </Container>
