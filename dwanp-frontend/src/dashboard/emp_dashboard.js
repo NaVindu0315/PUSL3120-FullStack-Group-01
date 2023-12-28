@@ -6,6 +6,10 @@ import MyComponent from '../navbar';
 import posterImage from '../Poster (2).png'; 
 import { IconButton } from '@mui/material';
 import WidgetsIcon from '@mui/icons-material/Widgets';
+import InventoryIcon from '@mui/icons-material/Inventory';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import GroupsIcon from '@mui/icons-material/Groups';
+import CallIcon from '@mui/icons-material/Call';
 
 const EmpDashboard = ({ props }) => {
     const navigate = useNavigate();
@@ -39,7 +43,7 @@ const EmpDashboard = ({ props }) => {
                 backgroundColor: 'black',
                 color: '#e6c235',
                 position: 'absolute', 
-                fontSize: '13px',
+                fontSize: '18px',
                 width: '25%',
                 height: '10%',
                 bottom: '0%',
@@ -59,7 +63,7 @@ const EmpDashboard = ({ props }) => {
                 backgroundColor: 'black',
                 color: '#e6c235',
                 position: 'absolute', 
-                fontSize: '13px',
+                fontSize: '18px',
                 width: '25%',
                 height: '10%',
                 bottom: '-15%',
@@ -68,7 +72,7 @@ const EmpDashboard = ({ props }) => {
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
             }}
                 >
-                    <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+                    <InventoryIcon style={{ marginRight: '7px' }} /> 
                     Inventory
                 </IconButton>
            
@@ -79,7 +83,7 @@ const EmpDashboard = ({ props }) => {
                 backgroundColor: 'black',
                 color: '#e6c235',
                 position: 'absolute', 
-                fontSize: '13px',
+                fontSize: '18px',
                 width: '25%',
                 height: '10%',
                 bottom: '-15%',
@@ -88,7 +92,7 @@ const EmpDashboard = ({ props }) => {
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
             }}
                 >
-                    <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+                    <RestaurantIcon style={{ marginRight: '7px' }} /> 
                     Order
                 </IconButton>
                 
@@ -99,7 +103,7 @@ const EmpDashboard = ({ props }) => {
                 backgroundColor: 'black',
                 color: '#e6c235',
                 position: 'absolute', 
-                fontSize: '13px',
+                fontSize: '18px',
                 width: '25%',
                 height: '10%',
                 bottom: '-30%',
@@ -108,7 +112,7 @@ const EmpDashboard = ({ props }) => {
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
             }}
                 >
-                    <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+                    <GroupsIcon style={{ marginRight: '7px' }} /> 
                     Employee
                 </IconButton>
 
@@ -119,16 +123,17 @@ const EmpDashboard = ({ props }) => {
                 backgroundColor: 'black',
                 color: '#e6c235',
                 position: 'absolute', 
-                fontSize: '13px',
+                fontSize: '18px',
                 width: '25%',
                 height: '10%',
                 bottom: '-30%',
                 left: '42%',
                 transform: 'translate(90%)' ,
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
+
             }}
                 >
-                    <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+                    <CallIcon style={{ marginRight: '15px',mr: 5 }} /> 
                     Contact Customers
                 </IconButton>
             </Grid>
