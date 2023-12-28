@@ -130,7 +130,7 @@ const TableReserve=()=>
                   setIsUpdate(true);
               }}
               deleteTable={data => {
-                  window.confirm('Are you sure?') && deleteTable(data)
+                  window.confirm('Do you want to delete this table?') && deleteTable(data)
               }}
             />
           </Box>  
