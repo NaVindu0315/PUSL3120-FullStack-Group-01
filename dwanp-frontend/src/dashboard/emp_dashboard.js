@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import MyComponent from '../navbar'; 
 import posterImage from '../Poster (2).png'; 
 import { IconButton } from '@mui/material';
-import PersonAddAltRoundedIcon from '@mui/icons-material/PersonAddAltRounded';
+import WidgetsIcon from '@mui/icons-material/Widgets';
 
 const EmpDashboard = ({ props }) => {
     const navigate = useNavigate();
@@ -48,7 +48,7 @@ const EmpDashboard = ({ props }) => {
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
             }}
                 >
-                    <PersonAddAltRoundedIcon style={{ marginRight: '7px' }} /> 
+                    <WidgetsIcon style={{ marginRight: '7px' }} /> 
                     Menu
                 </IconButton>
 
@@ -62,8 +62,8 @@ const EmpDashboard = ({ props }) => {
                 fontSize: '13px',
                 width: '25%',
                 height: '10%',
-                bottom: '0%',
-                left: '17%',
+                bottom: '-15%',
+                left: '-8%',
                 transform: 'translate(90%)' ,
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
             }}
@@ -82,8 +82,8 @@ const EmpDashboard = ({ props }) => {
                 fontSize: '13px',
                 width: '25%',
                 height: '10%',
-                bottom: '0%',
-                left: '17%',
+                bottom: '-15%',
+                left: '42%',
                 transform: 'translate(90%)' ,
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
             }}
@@ -102,8 +102,8 @@ const EmpDashboard = ({ props }) => {
                 fontSize: '13px',
                 width: '25%',
                 height: '10%',
-                bottom: '0%',
-                left: '17%',
+                bottom: '-30%',
+                left: '-8%',
                 transform: 'translate(90%)' ,
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
             }}
@@ -122,8 +122,8 @@ const EmpDashboard = ({ props }) => {
                 fontSize: '13px',
                 width: '25%',
                 height: '10%',
-                bottom: '0%',
-                left: '17%',
+                bottom: '-30%',
+                left: '42%',
                 transform: 'translate(90%)' ,
                 boxShadow: '0px 0px 5px rgba(255, 255, 0, 0.5)',
             }}
