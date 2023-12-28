@@ -18,13 +18,35 @@ return (
       sx={{ 
         flexGrow: 1, 
         }}>
-        <b>Sign Up</b>
+        <b>DWANP Restuarants</b>
   </Typography>
+  <Button color="inherit" href="/"
+      sx={{
+      color: 'black',
+      marginRight: '1rem',
+      '&:hover': {
+        backgroundColor: 'black',
+        color: 'white',
+      } }}
+      
+      >
+      <b>Home</b>
+  </Button>
  
- 
- 
+  <Button color="inherit" href="/userreg"
+      sx={{
+      color: 'black',
+      marginRight: '1rem',
+      '&:hover': {
+        backgroundColor: 'black',
+        color: 'white',
+      } }}
+      
+      >
+      <b>Register</b>
+  </Button>
 
-  <Button color="inherit" href="/Table"
+  <Button color="inherit" href="/userlog"
       sx={{
       color: 'black',
       marginRight: '1rem',
