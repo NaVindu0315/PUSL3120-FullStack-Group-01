@@ -3,6 +3,9 @@ import Axios from "axios";
 import { Button, Table ,Container } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
+import Navbarr from "./Navbarr";
+
+
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -37,6 +40,9 @@ const SignUp = () => {
 
   return (
     <Container maxWidth="xl" >
+  <navbar>
+    <Navbarr/>
+  </navbar>
 
 
     <Table>
