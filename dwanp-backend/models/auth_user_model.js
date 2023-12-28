@@ -35,10 +35,10 @@ authusersSchema.statics.signup = async function(email,password)
 
     }
     //password check character limit and other
-    if(!validator.isStrongPassword(password))
+   /* if(!validator.isStrongPassword(password))
     {
         throw Error('passowrd not strong enough')
-    }
+    }*/
 
 
     const exists = await this.findOne({email})
