@@ -1,6 +1,11 @@
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom';
 import Axios from "axios";
+import { Button, Table ,Container, TableHead, TableRow, TableCell } from "@mui/material";
+
+//import { useNavigate } from 'react-router-dom';
+
+import Navbarr from "./Navbarr";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -39,8 +44,16 @@ const Login = () => {
   };
 
   return (
-    <form className="login" onSubmit={handleSubmit}>
-      <h3>Log In</h3>
+    <Container maxWidth="xl" >
+        <navbar>
+    <Navbarr/>
+  </navbar>
+  <Table>
+   
+
+      
+ 
+
       
       <label>Email address:</label>
       <input 
@@ -55,8 +68,12 @@ const Login = () => {
         value={password} 
       />
 
-      <button>Log in</button>
-    </form>
+      <button
+      onClick={handleSubmit}
+      >Log in</button>
+
+    </Table>
+    </Container>
   )
 }
 
