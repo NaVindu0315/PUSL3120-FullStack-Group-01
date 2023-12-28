@@ -3,6 +3,7 @@
 import {  Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import MyComponent from '../navbar'; 
+import posterImage from '..//Poster (2).png'; 
 
 const UserDashboard = ({ props }) => {
     const navigate = useNavigate();
@@ -12,20 +13,21 @@ const UserDashboard = ({ props }) => {
             <MyComponent />
             </navbar> 
             <Typography variant="h5" component="h5"> 
-            <button className="usr-btn" onClick={()=>navigate('/')}>Back</button>
-            
             </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
-                <Typography variant="h2" component="h1">
-                    Dwanp Restaurants -User Dashboard
-                </Typography>
-                <Typography variant="h5" sx={{ mt: 2 }}>
-                    Poster
-                </Typography>
-
-                <Typography variant="h2" sx={{ mt: 2 }}>
-                    Welcome Users
-                </Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
+                <div style={{ position: 'relative' }}>
+                <img src={posterImage} alt="Poster" style={{ width: '92rem', height: '35rem' }} />
+                <h1 style={{
+                    position: 'absolute',
+                    top: '22rem',  
+                    left: '75%',
+                    transform: 'translateX(-50%)',  
+                    color: '#e6c235',  
+                    fontWeight: 'bold',  
+                    fontSize: '60px',
+                    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
+                }}>User Dashboard</h1>
+                </div>
             </Box>
             <Grid container spacing={4}>
                 <Table sx={{ mt: 4 }}>
