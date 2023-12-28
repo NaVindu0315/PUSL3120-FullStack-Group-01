@@ -36,6 +36,7 @@ import SignUp from './authenication/user_reg';
 import Login from './authenication/user_login';
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  <BrowserRouter>
@@ -74,6 +75,7 @@ root.render(
  <Route path ='/tableview' element ={<TableReserve/>}/>
  <Route path ='/tableform' element ={<TableForm/>}/>
  <Route path ='/tabletable' element ={<TableTable/>}/>
+ 
 
  </Routes>
  </BrowserRouter>

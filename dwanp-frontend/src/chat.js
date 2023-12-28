@@ -6,7 +6,7 @@ const ChatApp = () => {
   const [inputMessage, setInputMessage] = useState('');
 
   useEffect(() => {
-   // const socket = io('http://localhost:3000');
+   const socket = io('http://localhost:3002');
 
     socket.on('message', (message) => {
       setMessages((prevMessages) => [...prevMessages, message]);
@@ -29,7 +29,7 @@ const ChatApp = () => {
           <div key={index}>{message}</div>
         ))}
       </div>
-      <form id="send-container" onSubmit={handleSubmit}>
+      <form id="send-container" onSubmit={null}>
         <input type="text" id="message-input" value={inputMessage} onChange={(e) => setInputMessage(e.target.value)} />
         <button type="submit" id="send-button">Send</button>
       </form>
