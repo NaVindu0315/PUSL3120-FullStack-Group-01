@@ -6,7 +6,13 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const emprouter = require("./routes/employee_router");
+//creating for the sockets remove this if anything goes wrong
+const io = require('socket.io')(port)
 
+io.on('connection', (socket) => {
+
+  socket.emit('chat message','hello world')
+})
 //to import routers
 
 // adala cmnt ekat ytin line eke router path dapan adala thana
