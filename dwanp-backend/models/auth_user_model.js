@@ -78,9 +78,9 @@ authusersSchema.statics.login = async function(email,password)
      }
      else
      {
-            console.log('password matched')
+          //  console.log('password matched')
      }
-     return "login success"
+     return 1;
 
      //return usersignup;
 }
