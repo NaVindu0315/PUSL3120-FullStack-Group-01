@@ -1,6 +1,6 @@
 //this is the homepage
 
-import {  Container, Box, Typography, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
+import {  Container, Box, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import MyComponent from '../navbar'; 
 import posterImage from '../Poster (2).png'; 
