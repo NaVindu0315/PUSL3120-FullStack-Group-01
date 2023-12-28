@@ -17,14 +17,14 @@ const EmpDashboard = ({ props }) => {
                 <img src={posterImage} alt="Poster" style={{ width: '92rem', height: '35rem' }} />
                 <h1 style={{
                     position: 'absolute',
-                    top: '22rem',  
-                    left: '75%',
+                    top: '19rem',  
+                    left: '80%',
                     transform: 'translateX(-50%)',  
                     color: '#e6c235',  
                     fontWeight: 'bold',  
                     fontSize: '60px',
                     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
-                }}>User Dashboard</h1>
+                }}>Employee Dashboard</h1>
                 </div>
             </Box>
             <Grid container spacing={4}>
