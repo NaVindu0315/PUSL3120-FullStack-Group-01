@@ -62,6 +62,31 @@ const io = new Server(server2,
   }
   
   );
+     ///io
+
+     io.on('connection', (socket) => {
+      // console.log(socket.id);
+       console.log('user connected',socket.id);
+
+
+       socket.on("join_room",(data) => {
+           socket.join(data);
+           console.log("User joined room: "+data + " with id: "+socket.id);
+       } );
+
+       //For sending message
+       socket.on("send_message", (data) => {
+           //socket.to(data.room).emit("receive_message",data);
+           //console.log(data);
+           socket.to(data.room).emit("receive_message",data);
+       } );
+
+
+       socket.on("disconnect", () => {
+           console.log("User disconnected",socket.id);
+       } );
+   } );
+
 //end
 
 connect();
