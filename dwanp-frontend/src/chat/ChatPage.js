@@ -42,7 +42,7 @@ return (
             {messageList.map((messageContent) => {
                 return (
                     <div className="message"
-                     id={username ===messageContent.author ? "you" : "other"}>
+                     id={username ===messageContent.author ? "other" : "you"}>
                         <div>
                            
                      
