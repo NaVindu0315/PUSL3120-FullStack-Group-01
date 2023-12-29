@@ -1,6 +1,11 @@
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom';
 import Axios from "axios";
+import { Button, Table ,Container, TableHead, TableRow, TableCell } from "@mui/material";
+
+//import { useNavigate } from 'react-router-dom';
+
+import Navbarr from "./Navbarr";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -39,24 +44,78 @@ const Login = () => {
   };
 
   return (
-    <form className="login" onSubmit={handleSubmit}>
-      <h3>Log In</h3>
-      
+    <Container maxWidth="xl" >
+        <navbar>
+    <Navbarr/>
+  </navbar>
+  <Table>
+   
+  <TableHead>
+      <h2> User Login</h2>
+      </TableHead>
+
+      <TableRow>
+        <TableCell>
+          
       <label>Email address:</label>
-      <input 
+
+        </TableCell>
+        <TableCell>
+        <input 
         type="email" 
         onChange={(e) => setEmail(e.target.value)} 
         value={email} 
       />
-      <label>Password:</label>
-      <input 
+
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>
+ 
+    
+        <label>Password:</label>
+        </TableCell>
+        <TableCell>
+        <input 
         type="password" 
         onChange={(e) => setPassword(e.target.value)} 
         value={password} 
       />
+        </TableCell>
+      </TableRow>
+      <TableRow>
+        <TableCell>
 
-      <button>Log in</button>
-    </form>
+        </TableCell>
+        <TableCell>
+        <Button disabled={submitted} 
+                sx={{
+                  margin: "auto",
+                  marginBottom: "20px",
+                  backgroundColor: "black",  /* Set background color to black */
+                  color: "white",            /* Set text color to white */
+                  marginLeft: "15px",
+                  marginTop: "20px",
+                  "&:hover": {
+                    opacity: 0.7,
+                    backgroundColor: "black",  /* Maintain black background on hover */
+                  },
+                }}
+        
+        onClick={handleSubmit}>
+        Login
+      </Button>
+        </TableCell>
+      </TableRow>
+ 
+
+     
+   
+
+
+
+    </Table>
+    </Container>
   )
 }
 
