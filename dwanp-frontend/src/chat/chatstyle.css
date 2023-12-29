@@ -6,9 +6,15 @@
     font-family: "Open Sans", sans-serif;
     display: grid;
     place-items: center;
+    margin: 0 auto;
+  }
+.paka
+  {
+    
+    margin:  0 auto;
   }
   body {
-    margin: 0%;
+    margin: 0 auto;
     padding: 0%;
   }
   @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
@@ -24,6 +30,7 @@
     margin-bottom: 1rem;
   }
   .joinChatContainer input {
+    margin-left: 100px;
     width: 210px;
     height: 40px;
     margin: 7px;
@@ -41,24 +48,22 @@
     border-radius: 5px;
     padding: 5px;
     font-size: 16px;
-    background: #43a047;
+    background: #0c0c0c;
     color: #fff;
     cursor: pointer;
   }
   
   .joinChatContainer button:hover {
-    background: #2e7d32;
+    background: #0b0c0b;
   }
   
-  .chat-window {
-    width: 300px;
-    height: 420px;
-  }
+
   
   .chat-window p {
     margin: 0;
   }
-  .chat-window .chat-header {
+   .chat-header {
+    width: 600px;
     height: 45px;
     border-radius: 6px;
     background: #263238;
@@ -73,31 +78,32 @@
     line-height: 45px;
   }
   
-  .chat-window .chat-body {
+   .chat-body {
     height: calc(450px - (45px + 70px));
+    width: 600px;
     border: 1px solid #263238;
     background: #fff;
   
     position: relative;
   }
-  .chat-window .chat-body .message-container {
+ .chat-body .message-container {
     width: 100%;
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
   }
   
-  .chat-window .chat-body .message-container::-webkit-scrollbar {
+ .chat-body .message-container::-webkit-scrollbar {
     display: none;
   }
-  .chat-window .chat-body .message {
+   .chat-body .message {
     height: auto;
     padding: 10px;
     display: flex;
   }
   
-  .chat-window .chat-body .message .message-content {
-    width: auto;
+  .chat-body .message .message-content {
+    width: 600px;
     height: auto;
     min-height: 40px;
     max-width: 120px;
@@ -151,14 +157,16 @@
     font-size: 12px;
   }
   
-  .chat-window .chat-footer {
+   .chat-footer {
+    width: 600px;
     height: 40px;
     border: 1px solid #263238;
     border-top: none;
     display: flex;
   }
   
-  .chat-window .chat-footer input {
+ .chat-footer input {
+    width: 600px;
     height: 100%;
     flex: 85%;
     border: 0;

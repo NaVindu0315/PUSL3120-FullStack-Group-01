@@ -31,6 +31,7 @@ function ChatHome2() {
             </navbar>
             <h3>Join A Chat</h3>
             <input
+            className='paka'
               type="text"
               placeholder="John..."
               onChange={(event) => {
@@ -38,7 +39,7 @@ function ChatHome2() {
               }}
             />
            
-            <button onClick={joinRoom}>Join A Room</button>
+            <button className="btnpaka"onClick={joinRoom}>Join A Room</button>
           </div>
         ) : (
           <ChatPage socket={socket} username={username} room={room} />
