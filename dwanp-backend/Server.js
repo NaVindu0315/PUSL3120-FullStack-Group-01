@@ -48,11 +48,12 @@ const connect = async () => {
 
 ///for the sockets 
 //begin 
+
 const http = require('http');
 const {Server} = require("socket.io");
-const server2 = http.createServer(app);
+const server = http.createServer(app);
 
-const io = new Server(server2,
+const io = new Server(server,
     
   {
       cors: {
@@ -65,13 +66,13 @@ const io = new Server(server2,
      ///io
 
      io.on('connection', (socket) => {
-      // console.log(socket.id);
-       console.log('user connected',socket.id);
+    //   console.log(socket.id);
+      // console.log('user connected',socket.id);
 
 
        socket.on("join_room",(data) => {
            socket.join(data);
-           console.log("User joined room: "+data + " with id: "+socket.id);
+           //console.log("User joined room: "+data + " with id: "+socket.id);
        } );
 
        //For sending message
@@ -92,11 +93,14 @@ const io = new Server(server2,
 connect();
 
 //before below line was this  ---> const server = app.listen(port, host, () => {
-
+/*
 const server = app.listen(port, host, () => {
   console.log("Node server is listenging to ", server.address().port);
 });
-
+*/
+server.listen(3001, () => {
+  console.log('running on port 3001');
+}   );
 
 
 
