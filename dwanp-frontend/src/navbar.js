@@ -96,7 +96,7 @@ function MyComponent() {
           </Button>
           <Button
             
-            href="/Table"
+            href="/tableview"
             sx={{
               color: "black",
               marginRight: "1rem",

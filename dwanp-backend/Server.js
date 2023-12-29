@@ -45,7 +45,18 @@ const connect = async () => {
   }
 };
 
+
+///for the sockets 
+//begin 
+
+
+
+//end
+
 connect();
+
+//before below line was this  ---> const server = app.listen(port, host, () => {
+
 const server = app.listen(port, host, () => {
   console.log("Node server is listenging to ", server.address().port);
 });
