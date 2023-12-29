@@ -35,9 +35,9 @@ useEffect(() => {
 }, [socket]);
 return (
     <div className="chat-window">
-        <Navbarr></Navbarr>
+        <MyComponent></MyComponent>
         <div className="chat-header">
-            <p>Live Chat</p>
+            <p>Connect With DWANP</p>
         </div>
         <ScrollToBottom className="messageContainer">
         <div className="chat-body">
