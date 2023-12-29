@@ -29,7 +29,12 @@ function ChatHome2() {
             <navbar>
                 <MyComponent></MyComponent>
             </navbar>
-            <h3>Join A Chat</h3>
+            <h3>DWANP Chat</h3>
+            <div className='d'>
+                <h5>
+                    
+                </h5>
+            </div>
             <input
             className='paka'
               type="text"
@@ -38,7 +43,9 @@ function ChatHome2() {
                 setuserrname(event.target.value);
               }}
             />
-           
+           <div>
+            <h1></h1>
+            </div>
             <button className="btnpaka"onClick={joinRoom}>Connect</button>
           </div>
         ) : (
