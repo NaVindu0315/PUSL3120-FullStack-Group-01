@@ -1,6 +1,8 @@
 import React from "react";
 import { useState,useEffect } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
+import MyComponent from "../navbar";
+import Navbarr from "../authenication/Navbarr";
 
 function ChatPage ({ socket, username, room })  {
     const [currentMessage, setCurrentMessage] = useState("")
@@ -33,6 +35,7 @@ useEffect(() => {
 }, [socket]);
 return (
     <div className="chat-window">
+        <Navbarr></Navbarr>
         <div className="chat-header">
             <p>Live Chat</p>
         </div>

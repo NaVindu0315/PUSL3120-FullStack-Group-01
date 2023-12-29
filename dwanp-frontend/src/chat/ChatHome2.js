@@ -3,6 +3,7 @@ import { useState } from "react";
 import ChatPage from './ChatPage';
 
 import io from "socket.io-client";
+import MyComponent from '../navbar';
 
 const socket = io.connect("http://localhost:3001");
 function ChatHome2() {
@@ -21,9 +22,13 @@ function ChatHome2() {
     
        }
        return (
+        
         <div className="App">
         {!showChat ? (
           <div className="joinChatContainer">
+            <navbar>
+                <MyComponent></MyComponent>
+            </navbar>
             <h3>Join A Chat</h3>
             <input
               type="text"
