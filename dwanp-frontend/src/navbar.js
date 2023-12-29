@@ -96,7 +96,7 @@ function MyComponent() {
           </Button>
           <Button
             
-            href="/Table"
+            href="/tableview"
             sx={{
               color: "black",
               marginRight: "1rem",
@@ -107,6 +107,20 @@ function MyComponent() {
             }}
           >
             <b>Table</b>
+          </Button>
+          <Button
+            
+            href="/chat"
+            sx={{
+              color: "black",
+              marginRight: "1rem",
+              "&:hover": {
+                backgroundColor: "black",
+                color: "white",
+              },
+            }}
+          >
+            <b>Contact</b>
           </Button>
         </Toolbar>
       </AppBar>

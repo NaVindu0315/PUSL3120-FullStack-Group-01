@@ -34,6 +34,8 @@ import EmpDashboard from './dashboard/emp_dashboard';
 import Homepage from './Homepage2';
 import SignUp from './authenication/user_reg';
 import Login from './authenication/user_login';
+import ChatHome2 from './chat/ChatHome2';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -52,7 +54,7 @@ root.render(
 {/*Dashboards */}
 <Route path ='/userdashboard' element ={<UserDashboard/>}/>
 <Route path ='/empdashboard' element ={<EmpDashboard/>}/>
-
+<Route path ='/chat' element ={<ChatHome2/>}/>
 
  {/*menu */}
  <Route path ='/menu' element ={<Menu2/>}/>
