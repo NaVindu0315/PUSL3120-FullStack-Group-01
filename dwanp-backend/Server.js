@@ -48,9 +48,20 @@ const connect = async () => {
 
 ///for the sockets 
 //begin 
+const http = require('http');
+const {Server} = require("socket.io");
+const server2 = http.createServer(app);
 
-
-
+const io = new Server(server2,
+    
+  {
+      cors: {
+          origin: "http://localhost:3000",
+          methods: ["GET", "POST"]
+      }
+  }
+  
+  );
 //end
 
 connect();
