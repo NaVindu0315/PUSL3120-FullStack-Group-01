@@ -33,13 +33,13 @@ function ChatHome2() {
             <input
             className='paka'
               type="text"
-              placeholder="John..."
+              placeholder="Enter your name"
               onChange={(event) => {
                 setuserrname(event.target.value);
               }}
             />
            
-            <button className="btnpaka"onClick={joinRoom}>Join A Room</button>
+            <button className="btnpaka"onClick={joinRoom}>Connect</button>
           </div>
         ) : (
           <ChatPage socket={socket} username={username} room={room} />
