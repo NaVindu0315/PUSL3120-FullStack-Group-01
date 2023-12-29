@@ -8,7 +8,8 @@ const socket = io.connect("http://localhost:3001");
 function ChatHome2() {
 
     const [username,setuserrname] = useState("");
-    const [room,setroom] = useState(""); 
+   // const [room,setroom] = useState(""); 
+    const room = 23;
     //for chat displaying 
     const [showChat, setShowChat] = useState(false);
 
@@ -31,13 +32,7 @@ function ChatHome2() {
                 setuserrname(event.target.value);
               }}
             />
-            <input
-              type="text"
-              placeholder="Room ID..."
-              onChange={(event) => {
-                setroom(event.target.value);
-              }}
-            />
+           
             <button onClick={joinRoom}>Join A Room</button>
           </div>
         ) : (
