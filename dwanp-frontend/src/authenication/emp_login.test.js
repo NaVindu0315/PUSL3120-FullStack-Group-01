@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import EmpLogin from './emp_login'; // adjust this import path to your file structure
+import EmpLogin from './emp_login';
 
 describe('EmpLogin Component', () => {
   test('renders Login button', () => {

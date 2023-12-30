@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
 
-function MyComponent() {
+function MyComponent2() {
   return (
     <Container maxWidth="xl">
       <AppBar
@@ -122,24 +122,11 @@ function MyComponent() {
           >
             <b>Contact</b>
           </Button>
-          <Button
-            
-            href="/"
-            sx={{
-              color: "black",
-              marginRight: "1rem",
-              "&:hover": {
-                backgroundColor: "black",
-                color: "white",
-              },
-            }}
-          >
-            <b>Logout</b>
-          </Button>
+         
         </Toolbar>
       </AppBar>
     </Container>
   );
 }
 
-export default MyComponent;
+export default MyComponent2;

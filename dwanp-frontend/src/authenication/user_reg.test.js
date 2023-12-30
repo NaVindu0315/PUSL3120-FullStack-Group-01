@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import SignUp from './user_reg'; // adjust this import path to your file structure
+import SignUp from './user_reg'; 
 
 describe('SignUp Component', () => {
   test('renders Sign Up button', () => {
