@@ -2,7 +2,7 @@
 module.exports = {
     // ...
     moduleNameMapper: {
-      "^@components/(.*)$": "<rootDir>/src/components/$1",
+      "^@components/(.*)$": "<rootDir>/src/$1/$1",
       "^@utils/(.*)$": "<rootDir>/src/utils/$1",
       // add more mappings as needed
     },
