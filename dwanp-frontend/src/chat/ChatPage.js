@@ -3,6 +3,7 @@ import { useState,useEffect } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
 import MyComponent from "../navbar";
 import Navbarr from "../authenication/Navbarr";
+// import { useLocation } from "react-router-dom";
 
 function ChatPage ({ socket, username, room })  {
     const [currentMessage, setCurrentMessage] = useState("")
