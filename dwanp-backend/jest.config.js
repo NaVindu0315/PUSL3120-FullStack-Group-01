@@ -1,5 +1,5 @@
 module.exports  = {
     testMatch : [
-        '<rootDir>/Test/*/*.test.js'
+        '<rootDir>/dwanp-backend/*.test.js'
     ]
 }
