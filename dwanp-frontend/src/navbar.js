@@ -122,6 +122,20 @@ function MyComponent() {
           >
             <b>Contact</b>
           </Button>
+          <Button
+            
+            href="/"
+            sx={{
+              color: "black",
+              marginRight: "1rem",
+              "&:hover": {
+                backgroundColor: "black",
+                color: "white",
+              },
+            }}
+          >
+            <b>Logout</b>
+          </Button>
         </Toolbar>
       </AppBar>
     </Container>
