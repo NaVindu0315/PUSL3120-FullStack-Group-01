@@ -14,12 +14,15 @@ const InventoryTable = ({ rows, selectInv, deleteInventory }) => {
   return (
     <TableContainer component={Paper}>
       <Typography
-        component="h1"
+        component={"h1"}
         sx={{
           color: "#000000",
+          fontSize: "3rem",
           fontWeight: "bold",
-          fontFamily: "Roboto, sans-serif",
-          fontSize: "40px",
+          backgroundColor: "#e6c235",
+          width: "100%",
+
+          textAlign: "center",
         }}
       >
         Inventory Details

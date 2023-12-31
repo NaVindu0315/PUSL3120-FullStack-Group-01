@@ -1,19 +1,19 @@
 //this is the homepage
 import {  Container, Box, Grid, Table, TableCell, TableHead,TableRow,TableBody } from "@mui/material";
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import MyComponent from './navbar'; 
 import posterImage from './Poster (2).png'; 
 import { IconButton } from '@mui/material';
 import PersonAddAltRoundedIcon from '@mui/icons-material/PersonAddAltRounded';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
-
+import MyComponent2 from "./navbar2";
 const Home = ({ props }) => {
-    const location = useLocation();
+  
     const navigate = useNavigate();
     return (
         <Container maxWidth="xl">
             <navbar>
-            <MyComponent activePage={location.pathname} />
+            <MyComponent2 />
             </navbar> 
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 0 }}>
     <div style={{ position: 'relative' }}>

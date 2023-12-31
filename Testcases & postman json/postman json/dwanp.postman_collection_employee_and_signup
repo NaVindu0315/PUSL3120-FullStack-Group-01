@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "54340031-7584-476a-8871-ae74999adfc0",
+		"name": "dwanp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25168295"
+	},
+	"item": [
+		{
+			"name": "createuser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":96,\r\n    \"name\" : \"ponna umesh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/createemp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"createemp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-emp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emp_code\":469,\r\n    \"emp_name\":\"pakaya\",\r\n    \"bdate\":\"2000/05/15\",\r\n    \"nic\":5489797,\r\n    \"adrs\":\"krngla\",\r\n    \"tel\":8789779,\r\n    \"civil\":\"thama na\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/createemp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"createemp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view-emp",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":96\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/getemployees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"getemployees"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "view-emp",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":96\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/getemployees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"getemployees"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "286"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"11e-9NrlhGNV9kKyQHtD/O2semdqa0c\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 24 Dec 2023 05:46:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": [\n        {\n            \"_id\": \"6585ed3cc8e4c8b6ef85a0ce\",\n            \"id\": 4,\n            \"name\": \"wesi\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6585ee4ac8e4c8b6ef85a0d0\",\n            \"id\": 5,\n            \"name\": \"ponna umesh\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6585eea00ca6a4a84fab252b\",\n            \"id\": 96,\n            \"name\": \"ponna umesh\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6586a93b6175936fb8706b15\",\n            \"id\": 96,\n            \"name\": \"wish\",\n            \"__v\": 0\n        }\n    ]\n}"
+				},
+				{
+					"name": "view-emp",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":96\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/getemployees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"getemployees"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "636"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"27c-IzoE2gkzhEmArchhYJbgQHRhwJA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 27 Dec 2023 17:12:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": [\n        {\n            \"_id\": \"65887533f3f508c398dc364e\",\n            \"emp_code\": 406,\n            \"emp_name\": \"pakaya\",\n            \"bdate\": \"2000/05/15\",\n            \"nic\": 5489797,\n            \"adrs\": \"krngla\",\n            \"tel\": 8789779,\n            \"civil\": \"thama na\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6588897ecd79eb9fb16ddb57\",\n            \"emp_code\": 33,\n            \"emp_name\": \"fd\",\n            \"bdate\": \"3432\",\n            \"nic\": 3242,\n            \"adrs\": \"dfs\",\n            \"tel\": 3234324,\n            \"civil\": \"03234324\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"658926eae4587a9d1b4100e0\",\n            \"emp_code\": 222222222,\n            \"emp_name\": \"sd\",\n            \"bdate\": \"sd\",\n            \"nic\": 22222222,\n            \"adrs\": \"sdd\",\n            \"tel\": 22222222,\n            \"civil\": \"22222222\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"658c2cf36c537cbf11e1e837\",\n            \"emp_code\": 222222222222222200,\n            \"emp_name\": \"ccc\",\n            \"bdate\": \"2sdad\",\n            \"nic\": 23423,\n            \"adrs\": \"sdfds\",\n            \"tel\": 3233,\n            \"civil\": \"03233\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "delete-emp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emp_code\":403\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/deleteemp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"deleteemp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-emp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emp_code\":69,\r\n    \"emp_name\":\"ponna balla\",\r\n    \"bdate\":\"2000/05/15\",\r\n    \"nic\":5489797,\r\n    \"adrs\":\"krngla\",\r\n    \"tel\":8789779,\r\n    \"civil\":\"thama na\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/updateemp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"updateemp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authusers - login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"navindu@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/user/userlogin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"user",
+						"userlogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authusers -signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"navindu99@gmail.com\",\r\n    \"password\":\"Nl@12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/user/usersignup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"user",
+						"usersignup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

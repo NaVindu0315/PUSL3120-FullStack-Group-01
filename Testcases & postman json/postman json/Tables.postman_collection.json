@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "5fcf5a94-055a-4658-b82f-b9ee8497c805",
+		"name": "Tables",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31968711"
+	},
+	"item": [
+		{
+			"name": "localhost:3001/api/tables",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/api/tables",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"tables"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/api/addtable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"table_no\": 1,\r\n    \"used_date\": \"2023-12-05\",\r\n    \"used_time\": \"22:23\",\r\n    \"person_count\": 8\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/addtable",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"addtable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/api/updatetable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"table_no\": 1,\r\n    \"used_date\": \"2023-12-05\",\r\n    \"used_time\": \"22:23\",\r\n    \"person_count\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/updatetable",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"updatetable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/api/deletetable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"table_no\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/api/deletetable",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"deletetable"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

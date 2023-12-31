@@ -24,20 +24,23 @@ function MyComponent() {
               flexGrow: 1,
             }}
           >
-            <b>Wish</b>
+            <b>DWANP</b> restaurent
           </Typography>
           <Button
-            color="inherit"
             href="/Home"
             sx={{
-              backgroundColor: "black",
-              color: "white",
+              color: "black",
+              marginRight: "1rem",
+              "&:hover": {
+                backgroundColor: "black",
+                color: "white",
+              },
             }}
           >
             <b>Home</b>
           </Button>
           <Button
-            color="inherit"
+
             href="/Employee"
             sx={{
               color: "black",
@@ -51,7 +54,6 @@ function MyComponent() {
             <b>Employee</b>
           </Button>
           <Button
-            color="inherit"
             href="/Inventory"
             sx={{
               color: "black",
@@ -65,7 +67,7 @@ function MyComponent() {
             <b>Inventory</b>
           </Button>
           <Button
-            color="inherit"
+            
             href="/Menu"
             sx={{
               color: "black",
@@ -79,7 +81,7 @@ function MyComponent() {
             <b>Menu</b>
           </Button>
           <Button
-            color="inherit"
+            
             href="/Order"
             sx={{
               color: "black",
@@ -93,8 +95,8 @@ function MyComponent() {
             <b>Order</b>
           </Button>
           <Button
-            color="inherit"
-            href="/Table"
+            
+            href="/tableview"
             sx={{
               color: "black",
               marginRight: "1rem",
@@ -106,6 +108,34 @@ function MyComponent() {
           >
             <b>Table</b>
           </Button>
+          <Button
+            
+            href="/chat"
+            sx={{
+              color: "black",
+              marginRight: "1rem",
+              "&:hover": {
+                backgroundColor: "black",
+                color: "white",
+              },
+            }}
+          >
+            <b>Contact</b>
+          </Button>
+          <Button
+            
+            href="/"
+            sx={{
+              color: "black",
+              marginRight: "1rem",
+              "&:hover": {
+                backgroundColor: "black",
+                color: "white",
+              },
+            }}
+          >
+            <b>Logout</b>
+          </Button>
         </Toolbar>
       </AppBar>
     </Container>
@@ -113,4 +143,3 @@ function MyComponent() {
 }
 
 export default MyComponent;
-

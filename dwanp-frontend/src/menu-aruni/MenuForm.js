@@ -42,12 +42,21 @@ const navigate = useNavigate();
     <Grid container spacing={2}
     sx={{ backgroundColor: "#ffffff", marginBottom: "30px" }}>
         <Grid item xs={12}>
-    <Typography component="h1" 
-    sx={{ color: "#000000", fontWeight: "bold", fontFamily: "Roboto, sans-serif" ,fontSize:"40px"}}>
-      Menu Page
-    </Typography>
-  </Grid>
+            <Typography 
+                component={'h1'} 
+                sx={{
+                color:'#000000', 
+                fontSize: '3rem',
+                fontWeight: 'bold',
+                backgroundColor:'#e6c235',
+                width: '100%',
+               
+                textAlign:"center",
+                
+                }}>Menu 
+                </Typography>
 
+      </Grid>
 
   <TableContainer component={Paper} >
     <Table

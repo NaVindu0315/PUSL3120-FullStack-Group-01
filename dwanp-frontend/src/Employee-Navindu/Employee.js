@@ -72,7 +72,7 @@ const Employee=()=>
               nic : data.nic,
               adrs :data.adrs,
               tel : data.tel,
-              civil : data.tel,
+              civil : data.civil,
 
   
           }
