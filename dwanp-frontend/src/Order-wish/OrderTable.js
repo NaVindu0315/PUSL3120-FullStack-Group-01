@@ -24,7 +24,7 @@ const OrderTable = ({rows, selectedOrder, deleteOrder}) => {
                
                 textAlign:"center",
                 
-                }}>Employee Details
+                }}>Order Details
                 </Typography>
         <Table>
             <TableHead>
