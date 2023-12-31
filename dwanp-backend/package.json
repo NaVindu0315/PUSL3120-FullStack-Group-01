@@ -17,6 +17,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.3",
     "socket.io": "^4.7.2",
+    "supertest": "^6.3.3",
     "validator": "^13.11.0"
   }
 }
