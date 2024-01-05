@@ -124,6 +124,20 @@ function MyComponent() {
           </Button>
           <Button
             
+            href="/Customerview"
+            sx={{
+              color: "black",
+              marginRight: "1rem",
+              "&:hover": {
+                backgroundColor: "black",
+                color: "white",
+              },
+            }}
+          >
+            <b>Customers</b>
+          </Button>
+          <Button
+            
             href="/"
             sx={{
               color: "black",

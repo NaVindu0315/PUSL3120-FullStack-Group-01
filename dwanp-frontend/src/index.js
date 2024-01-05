@@ -35,6 +35,7 @@ import Homepage from './Homepage2';
 import SignUp from './authenication/user_reg';
 import Login from './authenication/user_login';
 import ChatHome2 from './chat/ChatHome2';
+import Customerview from './customer-components/Customers';
 
 
 
@@ -76,6 +77,7 @@ root.render(
  <Route path ='/tableview' element ={<TableReserve/>}/>
  <Route path ='/tableform' element ={<TableForm/>}/>
  <Route path ='/tabletable' element ={<TableTable/>}/>
+ <Route path ='/customerview' element ={<Customerview/>}/>
 
  </Routes>
  </BrowserRouter>
