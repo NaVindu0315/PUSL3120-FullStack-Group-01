@@ -26,6 +26,8 @@ const tablerouter = require('./routes/table_router');
 //authentication  
 //importing auth router
 const auth_user_router = require('./routes/auth_user_router')
+//for custoomers
+const customerRouter = require("./routes/customer_router");
 
 app.use(cors());
 app.use(express.json());
