@@ -19,77 +19,7 @@ const Customerview=()=>
 {
   const navigate = useNavigate();
 
-  const [tables, setTables] = useState([]);
-  const [submitted, setSubmitted] = useState(false);
-  const [selectedTable, setSelectedTable] = useState({});
-  const [isUpdate, setIsUpdate] = useState(false);
-
-    useEffect(() => {
-        getTables();
-    }, []);
-
-    const getTables = () => {
-        Axios.get('http://localhost:3001/api/tables')
-            .then(response => {
-                setTables(response?.data?.response || []);
-            })
-            .catch(error => {
-                console.error("Axios Error : ", error);
-            });
-    }
-
-    const addTable = (data) => {
-        setSubmitted(true);
-
-        const payload = {
-            table_no: data.table_no,
-            used_date: data.used_date,
-            used_time: data.used_time,
-            person_count: data.person_count,
-        }
-
-        Axios.post('http://localhost:3001/api/addtable', payload)
-            .then(() => {
-                getTables();
-                setSubmitted(false);
-                setIsUpdate(false);
-            })
-            .catch(error => {
-                console.error("Axios Error : ", error);
-            });
-    }
-
-    const updateTable = (data) => {
-        setSubmitted(true);
-
-        const payload = {
-            table_no: data.table_no,
-            used_date: data.used_date,
-            used_time: data.used_time,
-            person_count: data.person_count,
-        }
-
-        Axios.post('http://localhost:3001/api/updatetable', payload)
-            .then(() => {
-                getTables();
-                setSubmitted(false);
-                setIsUpdate(false);
-            })
-            .catch(error => {
-                console.error("Axios Error : ", error);
-            });
-    }
-
-    const deleteTable = (data) => {
-        Axios.post('http://localhost:3001/api/deletetable', data)
-            .then(() => {
-               getTables();
-            })
-            .catch(error => {
-                console.error("Axios Error : ", error);
-            });
-    }
-
+  
     return (
         <Container maxWidth="xl">
            <navbar>
@@ -109,23 +39,19 @@ const Customerview=()=>
         fontWeight: 'bold',  
         fontSize: '60px',
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',  
-      }}>Table Reservation</h1>
+      }}>Customer Management</h1>
     </div>
    
   </Box>
 </Container>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
             <TableForm
-              addTable={addTable}
-              updateTable={updateTable}
-              submitted={submitted}
-              data={selectedTable}
-              isUpdate={isUpdate}
+
             />
             <TableTable 
-              rows={tables} 
+              rows={customers} 
               selectedTable ={data => {
-                  setSelectedTable(data);
+                  setselectedcustomer(data);
                   setIsUpdate(true);
               }}
               deleteTable={data => {
