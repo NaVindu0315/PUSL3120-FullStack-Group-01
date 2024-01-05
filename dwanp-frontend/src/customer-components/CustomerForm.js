@@ -130,9 +130,9 @@ const CustomerForm = ({props}) =>
                   backgroundColor: "black",  
                 },
               }}
-            onClick={() => isUpdate ? updateTable({table_no, used_date, used_time, person_count}) : addTable({table_no, used_date, used_time, person_count})}
+            onClick={null}
             >
-                {isUpdate ? "Update" : "Add"}
+                Add
             </Button>
                 </TableCell>
             </TableRow>
@@ -142,4 +142,4 @@ const CustomerForm = ({props}) =>
         </Grid>
     );
 }
-export default TableForm;
+export default CustomerForm;

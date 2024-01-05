@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 import posterImage from "../Poster (2).png";
 import MyComponent from "../navbar.js";
+import CustomerForm from "./CustomerForm";
 
 //import for connecting backend and front end
 import Axios from "axios";
@@ -45,7 +46,7 @@ const Customerview=()=>
   </Box>
 </Container>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
-            
+            <CustomerForm/>
             
           </Box>  
         </Container>
