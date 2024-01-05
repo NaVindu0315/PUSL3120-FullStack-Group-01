@@ -85,7 +85,33 @@ const CustomerForm = ({props}) =>
                 />
               </TableCell>
             </TableRow>
-            
+            <TableRow>
+              <TableCell>Address</TableCell>
+              <TableCell>
+              <Input 
+                  type="text" 
+                  id="address" 
+                  name="address" 
+                  sx={{width: "400px"}} 
+                  value={customeraddress} 
+                  onChange={e => setcustomeraddress(e.target.value)}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell>Birth Day</TableCell>
+              <TableCell>
+              <Input 
+                  type="date" 
+                  id="dt" 
+                  name="dt" 
+                  sx={{width: "400px"}} 
+                  value={dt} 
+                  onChange={e => setdt(e.target.value)}
+                />
+              </TableCell>
+            </TableRow>
+
 
 
           
