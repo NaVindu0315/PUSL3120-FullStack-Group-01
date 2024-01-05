@@ -14,7 +14,8 @@ const CustomerForm = ({props}) =>
     const[customername,setcustomername] = useState("");
     const[customernumber,setcustomernumber] = useState(0);
     const[customeraddress,setcustomeraddress] = useState("");
-    
+    const[dt,setdt] = useState("");
+
   
 
     return (
@@ -46,57 +47,48 @@ const CustomerForm = ({props}) =>
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell>Table No</TableCell>
+              <TableCell>Customer ID</TableCell>
               <TableCell>
               <Input 
                   type="number" 
-                  id="table_no" 
-                  name="table_no" 
+                  id="customerid"
+                  name="customerid" 
                   sx={{width: "400px"}} 
-                  value={table_no} 
-                  onChange={e => setTableNo(e.target.value)}
+                  value={customerid} 
+                  onChange={e => setcustomerid(e.target.value)}
                 />
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Date</TableCell>
+              <TableCell>Customer Name</TableCell>
               <TableCell>
               <Input 
-                  type="date" 
-                  id="used_date" 
-                  name="used_date" 
+                  type="text" 
+                  id="customername"
+                  name="customername" 
                   sx={{width: "400px"}} 
-                  value={used_date} 
-                  onChange={e => setUsedDate(e.target.value)}
+                  value={customername} 
+                  onChange={e => setcustomername(e.target.value)}
                 />
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell>Time</TableCell>
-              <TableCell>
-              <Input 
-                  type="time" 
-                  id="used_time" 
-                  name="used_time" 
-                  sx={{width: "400px"}} 
-                  value={used_time} 
-                  onChange={e => setUsedTime(e.target.value)}
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Person Count</TableCell>
+              <TableCell>Mobile</TableCell>
               <TableCell>
               <Input 
                   type="number" 
-                  id="person_count" 
-                  name="person_count" 
+                  id="customernumber" 
+                  name="customernumber" 
                   sx={{width: "400px"}} 
-                  value={person_count} 
-                  onChange={e => setPersonCount(e.target.value)}
+                  value={customernumber} 
+                  onChange={e => customernumber(e.target.value)}
                 />
               </TableCell>
             </TableRow>
+            
+
+
+          
             <TableRow>
                 <TableCell>
                     <Button 
