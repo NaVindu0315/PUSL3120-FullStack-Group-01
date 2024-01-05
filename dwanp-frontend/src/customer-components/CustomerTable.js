@@ -9,7 +9,7 @@ import React, { useEffect, useState } from "react";
 //import { Button, Grid, Typography, Input } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 
-const CustomerTable = ({rows, selectedTable, deleteTable}) =>
+const CustomerTable = (props) =>
 {
     return(
         <TableContainer component={Paper}>
@@ -56,7 +56,7 @@ const CustomerTable = ({rows, selectedTable, deleteTable}) =>
                                       opacity: 0.7,
                                       backgroundColor: "black",  /* Maintain black background on hover */
                                     },
-                                  }} onClick={() => selectedTable({table_no: row.table_no, used_date: row.used_date, used_time: row.used_time, person_count: row.person_count})}>
+                                  }} >
                                     Update
                                 </Button>
                                 <Button sx={{
@@ -70,7 +70,7 @@ const CustomerTable = ({rows, selectedTable, deleteTable}) =>
                                       opacity: 0.7,
                                       backgroundColor: "black",  /* Maintain black background on hover */
                                     },
-                                  }} onClick={() => deleteTable({table_no: row.table_no})}>
+                                  }} >
                                     Delete
                                 </Button>
                             </TableCell>
