@@ -45,19 +45,8 @@ const Customerview=()=>
   </Box>
 </Container>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 4 }}>
-            <TableForm
-
-            />
-            <TableTable 
-              rows={customers} 
-              selectedTable ={data => {
-                  setselectedcustomer(data);
-                  setIsUpdate(true);
-              }}
-              deleteTable={data => {
-                  window.confirm('Do you want to delete this table?') && deleteTable(data)
-              }}
-            />
+            
+            
           </Box>  
         </Container>
       );
