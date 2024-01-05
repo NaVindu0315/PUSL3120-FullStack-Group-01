@@ -116,4 +116,4 @@ app.use('/api', tablerouter);
 
 //for the authentication here um gonna use  my own but in the tutorial it says ('./api/user',auth_user_router)
 app.use('/api/user',auth_user_router);
-
+app.use(`/api/customer`,customerRouter);
