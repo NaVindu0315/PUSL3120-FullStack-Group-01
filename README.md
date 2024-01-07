@@ -100,7 +100,7 @@ Start the server
 
 ## Support
 
-For support, email navindulaksha99@gmail.com
+For support, email navindulakshan99@gmail.com
 
 ## Tech Stack
 
