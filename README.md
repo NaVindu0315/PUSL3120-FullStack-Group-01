@@ -1,8 +1,16 @@
-Restuarent Management System Group 1
 
-PUSL3120 Group Coursework   
-Group 01  
-MERN Project
+![Logo](https://firebasestorage.googleapis.com/v0/b/cam-test-2-78bd3.appspot.com/o/dwanp%2FPoster%20(2).png?alt=media&token=33efe42d-c30f-4cf3-b5c0-21314d34fbac)
+<div align='center'>
+
+
+
+<h1>PUSL3120 Group 01</h1>
+<p>MERN Web Application for Restuarant Management System </p>
+
+<h4> <span> · </span> <a href="https://github.com/NaVindu0315/PUSL3120-FullStack-Group-01/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/NaVindu0315/PUSL3120-FullStack-Group-01/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/NaVindu0315/PUSL3120-FullStack-Group-01/issues"> Request Feature </a> </h4>
+
+
+</div>
 
 ## Authors
 
@@ -11,35 +19,6 @@ MERN Project
 - [Pasindu Rathnathilake](https://github.com/pasindur2000)
 - [Aruni Nethmini](https://github.com/Aruni2000)
 - [Dumindu Athukorala](https://github.com/ADNAthukorala)
-
-## Deployment
-
-To deploy this project run
-
-for backend
-```bash
-cd dwanp-backend
-npm install
-
-```
-to run the server
-```bash
-cd dwanp-backend
-nodemon Server.js
-
-```
-for frontend
-```bash
-cd dwanp-frontend
-npm install
-
-```
-to run the react app
-```bash
-cd dwanp-frontend
-npm start
-
-```
 
 
 ## Environment Variables
@@ -61,7 +40,6 @@ npm start
 - Customer Management
 
 
-![Logo](https://firebasestorage.googleapis.com/v0/b/cam-test-2-78bd3.appspot.com/o/dwanp%2FPoster%20(2).png?alt=media&token=33efe42d-c30f-4cf3-b5c0-21314d34fbac)
 
 
 ## Run Locally
@@ -72,7 +50,7 @@ Clone the project
   git clone https://github.com/NaVindu0315/PUSL3120-FullStack-Group-01.git
 ```
 
-Go to the project directory
+To run the Server (Backend)
 
 ```bash
   cd dwanp-backend
@@ -88,6 +66,21 @@ Start the server
 
 ```bash
   nodemon Server.js
+```
+To run the React App (frontend)
+
+Install Dependancies
+
+```bash
+cd dwanp-frontend
+npm install
+
+```
+run the react app
+```bash
+cd dwanp-frontend
+npm start
+
 ```
 
 
